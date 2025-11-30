@@ -1,223 +1,422 @@
-ROOTED OPEN HARDENING TASKS (OFFICIAL SECURITY + SAFETY TODO)
+✅ ROOTED — OFFICIAL HARDENING TODO (CANONICAL MASTER)
 
-Authority Level: Canonical Engineering Doctrine
+Status: Phase 1 – Community + Core Markets
+Rule: No step is skipped. No step is reordered.
+Requirement: Governance → Feature Flags → RLS → Views → UI Gates (never reversed)
 
-Scope: Platform Lockdown, Safety, Vertical Readiness
+🔒 1️⃣ USER TIERS & FEATURE FLAGS (CANONICAL LOCK)
 
-Status: Live & Enforced
+✅ Already Locked
 
-🔒 SECURITY
+public.user_tiers is the sole authority:
 
- Enable RLS on internal analytics tables (if any remain)
+role
 
- Add admin_can_read_all on:
+tier
 
-bids
+account_status
 
-bulk_offers
+feature_flags
 
-bulk_offer_analytics
+has_feature(...) and current_user_has_feature(...) confirmed
 
-vendor_analytics_basic_daily
+Premium ≠ Premium Plus
 
-vendor_analytics_advanced_daily
+Institutions mirror market access appropriately
 
-provider_impact_snapshots
+Sanctuaries hard false for all market flags
 
-moderation_queue
+Admin full access, logged
 
-provider_badges
+✅ Remaining TODO
 
- Add admin read/write on:
+ Add hard deny flags for:
 
-notifications
+can_use_experience_market
 
-user_admin_actions
+can_use_event_bidding
 
+ Add feature flag enforcement audit for:
 
-👑 ADMIN
-
- Universal admin override for:
+RFQs
 
 Bids
 
 Bulk Offers
 
-Bulk Analytics
+Experience Quotes (future)
 
-Standard Analytics
+Event Bidding (future)
 
-Moderation Queue
+🛡️ 2️⃣ ADMIN OVERRIDE & AUDITABILITY
+
+✅ Already Locked
+
+user_admin_actions exists
+
+Admin role enforced via is_admin()
+
+Admin policies verified on:
+
+bids
+
+bulk_offers
+
+analytics
+
+moderation_queue
+
+provider_badges
+
+✅ Remaining TODO
+
+ Final verification:
+
+notifications admin read policy
+
+user_admin_actions admin read policy
+
+ Admin UI Toolkit (Phase 1.5)
+
+Moderation
+
+Roles & tiers
+
+Feature flags
 
 Badges
 
-Provider Impact
+Sanctuary verification
 
- Add admin notifications on:
+Kids-safe approvals
 
-All submissions
+🧒 3️⃣ KIDS MODE HARD LOCK (PILOT → EDUCATION VERTICAL)
 
-All moderation outcomes
+✅ Already Locked
 
- Admin alert fan-out pipeline (future)
+Kids Mode:
 
-🏛️ INSTITUTIONS
+No monetization
 
- Institutions mirror vendor access across:
+No RFQs
 
-UI
+No bids
 
-API
+No bulk
 
-SQL Views
+No marketplaces
 
-RLS
+is_kids_safe enforced on:
 
-Feature Flags
+events
 
- Institutions:
+landmarks
 
-Premium → Bulk + Basic Analytics
+Kids Explore uses kids-safe only
 
-Premium Plus → Bulk + Basic + Advanced + Bidding
+✅ Remaining TODO
 
-🧒 KIDS MODE
+ Kids-safe media approval pipeline
 
- Kids Mode monetization bans enforced globally
+ Kids-safe video/photo moderation
 
- Age brackets (future):
+ Age bracket enforcement (13–17 limited volunteer only)
 
-4–7
+ Kids Explore event-only views hardwired
 
-8–12
+ Education Vertical unlock gate
 
-13–17 (read-only)
+🐾 4️⃣ SANCTUARY & NONPROFIT ENFORCEMENT
 
- Volunteer age restrictions by bracket
+✅ Already Locked
 
- Kids-safe content must:
+Sanctuary identified via:
 
-Have is_kids_safe = true
+providers.specialty
 
-Be moderation_status = 'approved'
+SANCTUARY_VENDOR
 
-Belong to a provider with KIDS_MODE_SAFE badge
+NONPROFIT_VENDOR
 
- Kids-safe videos require admin approval
+Sanctuaries:
 
-🐾 SANCTUARIES
+✅ Volunteer events
 
- Sanctuary vendors:
+✅ Kids education
 
-Volunteer events only
+❌ RFQs
 
-No marketplace tools
+❌ Bids
 
-No pricing
+❌ Bulk
 
- Add specialty tag: SANCTUARY_VENDOR
+❌ Commercial analytics
 
- Sanctuary access locked at policy level
+provider_is_sanctuary(...) function exists
 
-📊 BULK MARKETPLACE ANALYTICS (NEW – LOCKED FOR LATER BUILD)
+✅ Remaining TODO
 
- Add feature flag: can_view_bulk_marketplace_analytics
+ Sanctuary-only volunteer view finalized in production
 
- Premium + Premium Plus Vendors → true
+ Sanctuary discoverability filters for:
 
- Premium + Premium Plus Institutions → true
+Kids Explore
 
- Add bulk_marketplace_analytics_view
+Volunteer maps
 
- Owner-based RLS + admin override
+🗺️ 5️⃣ COMMUNITY MAP & DISCOVERY ENFORCEMENT
 
-🗺️ MUNICIPALITIES (FUTURE VERTICAL – PREWIRED)
+✅ Already Locked
 
- Stored as institutions in backend
+Default map limit: 25 markers
 
- Not discoverable in community
+Breakdown:
 
- Legal-only backend access
+✅ 14 Vendors
 
- Emergency + infrastructure vertical later
+✅ 6 Institutions
 
-🧠 DATA + MEDIA
+✅ 5 Landmarks
 
- Kids-safe media moderation enforced
+✅ Minimum 3 Farms always shown
 
- Provider media ownership enforced
+Vendor view favors institutions
 
- Video transcription for kids content (future)
+Institution view favors vendors
 
- AI flag assistance (future, admin-gated)
+Backend-only institutions hidden from public
 
+Community Spots not in Community vertical
 
- with these bullet points:
+✅ Remaining TODO
 
-NEW provider_media.is_kids_safe boolean default false
+ Seasonal + curated boost ordering wired into default map view
 
-Extend admin_moderate_submission to handle entity_type = 'provider_media_kids'
+ Farm detection canonical rule (specialty vs badge)
 
-Kids Explore view must filter on:
+ Landmark vertical visibility enforcement
 
-is_kids_safe
+🧾 6️⃣ LICENSING, INSURANCE & COMPLIANCE VAULT
 
-moderation_status = 'approved'
+✅ Already Locked (LAW)
 
-provider has KIDS_MODE_SAFE badge
+No market access without:
 
-UI:
+LICENSED
 
-“Request Kids-Safe” button → writes to moderation_queue
+INSURED
 
-No direct toggle on the media row
+OR verified admin compliance
 
----
+Proof badges:
 
+LICENSED
 
-New feature flag key: "can_view_bulk_analytics": "true" | "false"
+INSURED
 
-Kids media pipeline (is_kids_safe column, moderation hook, Kids Explore view)
+USDA_ORGANIC
 
-Kids Explore relies on:
+ETHICALLY_SOURCED
 
-KIDS_MODE_SAFE badge
+Badges affect:
 
-moderation_status = 'approved'
+Discovery
 
-sanctuary/nonprofit rules
+Market eligibility
 
-New feature flag: can_view_bulk_analytics wired to vendor/institution premium & premium_plus only.
+Kids visibility
 
----
+❗ All compliance docs are PRIVATE
 
+Business licenses
 
- A Kids-safe providers view definition (kids_safe_providers) you can drop into SQL when you’re ready, which:
+Insurance
 
-Joins providers, provider_badges, and provider_media
+Health permits
 
-Filters to KIDS_MODE_SAFE + approved/public media
+Employee records
 
-Is safe for the Kids Explore page to query against
+Tax documents
 
----
+✅ Remaining TODO
 
-🧱 GOVERNANCE & DOCS
+ Private media bucket for compliance docs
 
- Constitution locked
+ Admin-only access policy
 
- Governance & Ethics law active
+ Provider-only owner read policy
 
- Data Sovereignty law active
+ Compliance badge verification UI
 
- Community Trust law active
+🧱 7️⃣ FIVE-TIER MARKET ARCHITECTURE (LOCKED)
 
- Access & Power law active
+✅ LOCKED
 
- Sanctuary law active
+Community Discovery (Non-commercial)
 
- Contributor governance notice active
+Bulk Goods Market (Premium / Premium+)
 
- Governance Index created
+Institutional RFQs & Bids (Institutions + Premium+)
 
- Open Hardening Task List created
+Experience Quote Market (Institutions + Premium+)
+
+Event-Based Institutional Bidding (Institutions + Premium+)
+
+✅ Analytics law locked
+
+Premium+ = full analytics
+
+Premium = bulk analytics only
+
+Institutions = their own RFQs / events only
+
+Community & Sanctuaries = none
+
+✅ Remaining TODO
+
+ Experience Quote analytics schema
+
+ Event Bidding analytics schema
+
+ Institutional performance dashboards
+
+ Locked payment flow design for Experiences
+
+🏗️ 8️⃣ LANDMARK VERTICAL CANONICALIZATION
+
+✅ Already Locked
+
+Community
+
+Education
+
+Arts & Culture
+
+Adult Experience
+
+✅ Already Locked
+
+Animal sanctuaries = community + education only
+
+Experience landmarks = never kids mode
+
+Adult adventure = waiver required
+
+Nightlife excluded from kids forever
+
+✅ Remaining TODO
+
+ Final landmarks.landmark_type → vertical enforcement mapping
+
+ Adult Experience vertical hard gate
+
+🧑‍⚖️ 9️⃣ MODERATION PIPELINE (CANONICAL V2)
+
+✅ Already Locked
+
+moderation_queue
+
+admin_moderate_submission(...)
+
+Events, landmarks, vendor apps, institution apps
+
+Notifications wired
+
+No auto-approval ever
+
+✅ Remaining TODO
+
+ Community uploads (future)
+
+ Kids-safe media moderation lane
+
+📊 🔐 1️⃣0️⃣ ANALYTICS & INTERNAL TABLE RLS
+
+✅ Already Identified Issue
+
+One internal analytics table with RLS missing was found
+
+✅ Remaining TODO
+
+ Enable RLS on remaining internal analytics table
+
+ Add:
+
+system insert
+
+admin full read
+
+ Re-run health snapshot after fix
+
+🏛️ 1️⃣1️⃣ INSTITUTION PARITY ENFORCEMENT
+
+✅ Already Locked
+
+Institutions fully mirror vendor markets
+
+Institutions:
+
+✅ Create RFQs
+
+✅ Issue event bids
+
+✅ Request experience quotes
+
+✅ See their own analytics
+
+✅ Remaining TODO
+
+ Verify all RLS parity on:
+
+rfqs
+
+bids
+
+experience_quotes
+
+event_bids
+
+🧬 1️⃣2️⃣ ADMIN TOOLKIT (PHASE 1.5)
+
+❗ Not required for launch, but formally tracked
+
+ Moderation queue UI
+
+ Feature flag admin panel
+
+ Badge assignment panel
+
+ Sanctuary verification panel
+
+ Kids-safe approval panel
+
+ Institutional verification panel
+
+✅ STATUS SUMMARY
+
+Hard Locked & Verified:
+
+Ethics, Constitution, Data Sovereignty
+
+Sanctuary law
+
+Kids Mode law
+
+Market separation
+
+Licensing & Trust
+
+Community map fairness
+
+Farm priority
+
+No social monetization
+
+No child monetization
+
+No data extraction
+
+Remaining Work Is Now CLEAN, FINITE, AND SEQUENTIAL.
+
+No more “infinite system sprawl.”
+Everything from here forward is pure execution only.
