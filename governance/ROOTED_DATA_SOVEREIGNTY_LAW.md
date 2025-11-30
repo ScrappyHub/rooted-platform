@@ -68,6 +68,21 @@ If tracking exists at all, it must be:
 
 ---
 
+## Life-First Technology Principle
+
+ROOTED must never:
+
+- Replace real human life
+- Dominate personal identity
+- Demand total attention
+- Trap contributors in platform dependency
+
+Education, safety, family, and personal growth always override platform demands.
+
+ROOTED is a tool — not a life replacement.
+
+---
+
 ## 🚨 VIOLATIONS
 
 Any violation of Data Sovereignty is considered a **Critical Platform Breach** and results in:
