@@ -149,6 +149,18 @@ No pricing
 
  AI flag assistance (future, admin-gated)
 
+
+ ---
+
+
+ A Kids-safe providers view definition (kids_safe_providers) you can drop into SQL when you’re ready, which:
+
+Joins providers, provider_badges, and provider_media
+
+Filters to KIDS_MODE_SAFE + approved/public media
+
+Is safe for the Kids Explore page to query against
+
 🧱 GOVERNANCE & DOCS
 
  Constitution locked
