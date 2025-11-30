@@ -114,3 +114,31 @@ Anti-surveillance
 Anti-exploitation
 
 Anti-power abuse
+---
+## Trauma-Informed Safety Architecture
+
+ROOTED’s safety systems exist specifically to prevent the real-world failures that occur when:
+
+- Family systems collapse
+- Institutions fail children
+- Communities lose coordination
+- Abuse goes structurally unobserved
+
+All design decisions affecting:
+
+- Kids Mode
+- Volunteer systems
+- Institutions
+- Messaging
+- Discovery
+- Moderation
+
+Must be evaluated through:
+
+✅ Power imbalance analysis  
+✅ Consent asymmetry analysis  
+✅ Abuse risk modeling  
+✅ Child safety precedence  
+
+If any feature increases exploitability, it must be blocked—even if it reduces growth or revenue.
+
