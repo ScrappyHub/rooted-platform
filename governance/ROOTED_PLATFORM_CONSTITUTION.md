@@ -155,6 +155,8 @@ Emergency exploitation
 
 Child safety overrides growth, revenue, and marketing
 
+Founder, verification, safety, sanctuary, and longevity badges are admin-assigned only. Self-assignment is structurally impossible.
+
 Status: ✅ Active Law
 
 🧒 SUPREME CHILD SAFETY CLAUSE
@@ -270,3 +272,4 @@ Cannot be overridden by partners or investors
 This file is the final authority on ROOTED’s identity, ethics, governance, safety, and power structure.
 
 There is no higher platform authority than this Constitution.
+
