@@ -1,14 +1,14 @@
-📜 ROOTED PLATFORM CONSTITUTION
+📜 ROOTED PLATFORM CONSTITUTION 
 
 Authority Level: Absolute Platform Law
 Applies To: All users, vendors, institutions, staff, contractors, developers, and administrators
-Enforcement: GitHub Governance → Database (RLS + Views + RPCs) → Admin Oversight → UI
+Enforcement Chain:
+GitHub Governance → Database (RLS + Views + RPCs) → Admin Oversight → UI
 Effective Date: Upon first public launch of ROOTED
 
 🧭 PURPOSE OF THIS CONSTITUTION
 
-ROOTED is not a typical application.
-It is a regional, civic, institutional, and community operating system.
+ROOTED is not a typical application. It is a regional, civic, institutional, and community operating system.
 
 This Constitution exists to ensure that ROOTED:
 
@@ -26,8 +26,7 @@ Cannot bypass its own safety rules through UI tricks, admin abuse, or hidden dat
 
 This Constitution is the highest governing authority inside ROOTED.
 
-If any code, policy, contract, UI design, or business decision conflicts with this Constitution →
-the Constitution always wins.
+If any code, policy, contract, UI design, or business decision conflicts with this Constitution → the Constitution always wins.
 
 🏛️ GOVERNANCE HIERARCHY (CHAIN OF AUTHORITY)
 
@@ -62,104 +61,27 @@ Never an authority layer
 If any layer conflicts with a higher layer, the higher layer overrides immediately.
 
 📚 ACTIVE PLATFORM LAWS (CANONICAL INDEX)
-
-The following laws together form the complete legal and ethical framework of ROOTED:
-
 🔒 1. ROOTED Governance & Ethics
 
 File: ROOTED_GOVERNANCE_ETHICS.md
-
-Covers:
-
-Consent-first governance
-
-Absolute Kids Mode monetization bans
-
-Landmark non-commercial status
-
-Cultural and holiday consent protection
-
-Political and surveillance prohibition
-
-Ethical identity of ROOTED
-
-Enforcement via removal from platform
-
 Status: ✅ Active Law
 
 🧠 2. ROOTED Data Sovereignty & User Consent Law
 
 File: ROOTED_DATA_SOVEREIGNTY_LAW.md
-
-Covers:
-
-User ownership of data
-
-Zero third-party data resale
-
-No hidden tracking or fingerprinting
-
-Right to view, export, correct, and delete data
-
-Transparent analytics only
-
-Legal consequences for silent data extraction
-
 Status: ✅ Active Law
 
 ⚙️ 3. ROOTED Platform Access & Power Limitation Law
 
 File: ROOTED_ACCESS_POWER_LAW.md
-
-Covers:
-
-No unlogged admin power
-
-Mandatory audit logging (user_admin_actions)
-
-Ban on silent overrides
-
-Prohibition on:
-
-Forcing holiday activation
-
-Bypassing Kids Mode
-
-Granting paid tools to prohibited entities
-
-GitHub as the only source of authority
-
 Status: ✅ Active Law
 
 🛡️ 4. ROOTED Community Trust & Safety Enforcement Law
 
 File: ROOTED_COMMUNITY_TRUST_LAW.md
-
-Covers:
-
-Moderation as a prerequisite for visibility
-
-Mandatory use of moderation_queue
-
-No shadow publishing
-
-Permanent bans for:
-
-Predatory behavior
-
-Targeting minors
-
-Volunteer system abuse
-
-Emergency exploitation
-
-Child safety overrides growth, revenue, and marketing
-
-Founder, verification, safety, sanctuary, and longevity badges are admin-assigned only. Self-assignment is structurally impossible.
-
 Status: ✅ Active Law
 
-🧒 SUPREME CHILD SAFETY CLAUSE
+🧒 SUPREME CHILD SAFETY CLAUSE (OVERRIDING LAW)
 
 Across all ROOTED systems:
 
@@ -182,6 +104,75 @@ Investor pressure
 Regional partnerships
 
 This clause is not negotiable.
+
+🧮 PLATFORM ACCESS & FEATURE ENTITLEMENT LAW (TIER GRID — CANONICAL)
+
+This section is now part of ROOTED_ACCESS_POWER_LAW and is legally binding platform-wide.
+
+✅ CANONICAL FEATURE GRID (ENFORCED BY DB + RLS)
+Role	Tier	Bid Market	Bulk Market	Basic Analytics	Advanced Analytics
+Vendor	Free	❌	❌	✅	❌
+Vendor	Premium	❌	✅	✅	❌
+Vendor	Premium Plus	✅	✅	✅	✅
+Institution	Free	❌	❌	✅	❌
+Institution	Premium	❌	✅	✅	❌
+Institution	Premium Plus	✅	✅	✅	✅
+Admin	Any	✅	✅	✅	✅
+🔒 Absolute Enforcement Rules
+
+Premium does NOT include bidding. Ever.
+
+Only Premium Plus may bid.
+
+Basic analytics is free for everyone except community users.
+
+Bulk marketplace is Premium and above.
+
+Advanced analytics is Premium Plus only.
+
+Admin always has full system access.
+
+Any future code, UI, or contract that violates this grid is automatically invalid.
+
+🏛️ INSTITUTION & VENDOR MIRROR LAW (EQUAL ACCESS GUARANTEE)
+
+Institutions and Vendors are governed by the same access logic at the same tier level.
+
+This means:
+
+If vendors at Premium can access Bulk → institutions at Premium must also access Bulk
+
+If vendors at Premium Plus can bid → institutions at Premium Plus must also bid
+
+Analytics access is mirrored identically
+
+UI, RLS, views, APIs, feature flags, and frontend gating must stay perfectly aligned
+
+There shall never exist:
+
+“Vendor-only privileged access”
+
+“Institution-restricted monetization”
+
+“Shadow paywalls by role”
+
+This mirror rule is absolute and non-overrideable.
+
+🛑 SANCTUARY & NONPROFIT COMMERCIAL RESTRICTION LAW
+
+Sanctuaries, rescues, and mission-only nonprofits:
+
+❌ May NOT access bidding
+
+❌ May NOT access bulk marketplace
+
+✅ May host volunteer-only events
+
+✅ May appear in discovery
+
+✅ Must pass full moderation
+
+Their purpose is public good, never commerce.
 
 🧾 ENFORCEMENT & LEGAL STANDING
 
@@ -243,8 +234,6 @@ Preserve cultural consent
 
 Prevent extractive technology models
 
-Any future evolution of ROOTED must preserve this intent.
-
 If a proposal undermines this intent → it is automatically invalid.
 
 ✅ RATIFICATION
@@ -272,4 +261,3 @@ Cannot be overridden by partners or investors
 This file is the final authority on ROOTED’s identity, ethics, governance, safety, and power structure.
 
 There is no higher platform authority than this Constitution.
-
