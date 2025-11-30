@@ -87,6 +87,10 @@ This must respect:
 
 RLS on notifications
 
+public.is_admin() access
+
+No direct contact to Kids accounts
+
 ---
 
 This system is CANONICAL and required for all verticals and moderation operations.
