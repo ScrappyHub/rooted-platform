@@ -1,8 +1,9 @@
 ROOTED OPEN HARDENING TASKS (OFFICIAL SECURITY + SAFETY TODO)
 
-File: ROOTED_OPEN_HARDENING_TASKS.md
 Authority Level: Canonical Engineering Doctrine
+
 Scope: Platform Lockdown, Safety, Vertical Readiness
+
 Status: Live & Enforced
 
 🔒 SECURITY
