@@ -1,76 +1,117 @@
-⚙️ NO UNLIMITED POWER PRINCIPLE
+# ⚙️ ROOTED PLATFORM ACCESS & POWER LIMITATION LAW  
+Version: Canonical  
+Authority Level: Absolute Platform Law  
+Enforcement: RLS + Feature Flags + Admin RPCs + Audit Logs  
+Effective Date: First Public Deployment
 
-No single human or system inside ROOTED may have:
+---
 
-Unlogged override authority
+## 🧭 PURPOSE
 
-Silent access to unrestricted data
+This law exists to ensure that **no human, account, or system inside ROOTED can ever possess unchecked power**.
 
-The ability to bypass:
+ROOTED explicitly rejects:
 
-Feature flags
+- Silent control
+- Shadow privileges
+- Unlogged overrides
+- “Founder exception” logic
+- Revenue-driven privilege escalation
 
-RLS
+Power inside ROOTED must always be:
 
-Moderation pipelines
+✅ Logged  
+✅ Audited  
+✅ Role-scoped  
+✅ Tier-scoped  
+✅ Feature-flag-scoped  
+✅ Time-bounded when possible  
 
-Governance laws
+---
 
-👤 ADMIN POWERS ARE:
+## 👤 ADMIN POWER IS RESTRICTED BY LAW
 
-✅ Logged
-✅ Audited
-✅ Role-scoped
-✅ Time-bounded when possible
+Admins **do not own ROOTED**. They are stewards bound by this law.
 
-Every privileged action must create a record in:
+Admins may only act through:
 
-user_admin_actions
+- RLS-protected tables
+- SECURITY DEFINER RPCs
+- Feature flag gates
+- Audit-logged operations
 
-Examples of logged admin actions:
+Every admin action **must write to**:
 
-Role changes
+`public.user_admin_actions`
 
-Tier changes
+---
 
-Feature flag changes
+## ✅ PERMITTED ADMIN ACTIONS (LOGGED ONLY)
 
-Moderation decisions
+Admins may perform:
 
-Account suspensions or lockouts
+- Role changes
+- Tier changes
+- Feature flag updates
+- Account suspensions or lockouts
+- Badge grants or revocations
+- Provider sanctions
+- Moderation approvals and rejections
 
-❌ ADMIN POWERS MAY NOT BE USED TO:
+These actions must be:
 
-Grant commercial tools to prohibited entities (e.g., sanctuaries)
+✅ Logged  
+✅ Auditable  
+✅ Reversible  
+✅ Reviewable  
 
-Bypass Kids Mode protections
+---
 
-Force holiday activations
+## ❌ ABSOLUTE ADMIN PROHIBITIONS
 
-Silence lawful community activity
+Admins may **never**:
 
-Manipulate discovery for financial benefit
+- Bypass RLS
+- Grant commercial tools to prohibited entities (e.g., sanctuaries)
+- Override Kids Mode protections
+- Force holiday activation
+- Silence lawful community activity
+- Inflate or manipulate analytics
+- Manipulate discovery for profit
+- Deploy shadow features outside governance
+- Override moderation outcomes without trace
 
-Override moderation outcomes without trace
+There are **no exceptions** — including founders.
 
-🧾 GIT-LOCKED LAW
+---
 
-All access control rules must exist in:
+## 🧾 GIT-LOCKED AUTHORITY
 
-GitHub governance files
+All access rules must exist in:
 
-Supabase functions
+- GitHub governance files
+- Supabase functions
+- RLS policies
 
-RLS policies
+> If a rule is not written in GitHub, it has **no legal authority inside ROOTED**.
 
-If a rule is not written in GitHub, it has no standing authority.
+---
 
-🚨 VIOLATIONS
+## 🚨 ENFORCEMENT
 
 Any unlogged or abusive use of power results in:
 
-Immediate privilege revocation
+- Immediate privilege revocation
+- Full forensic audit
+- Permanent governance removal
+- Potential legal escalation
 
-Full audit
+This law binds:
 
-Permanent removal from ROOTED governance
+- Admins
+- Developers
+- Founders
+- Contractors
+- Service accounts
+
+No one is exempt.
