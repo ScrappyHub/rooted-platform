@@ -34,6 +34,7 @@ notifications
 
 user_admin_actions
 
+
 👑 ADMIN
 
  Universal admin override for:
@@ -170,6 +171,23 @@ UI:
 “Request Kids-Safe” button → writes to moderation_queue
 
 No direct toggle on the media row
+
+---
+
+
+New feature flag key: "can_view_bulk_analytics": "true" | "false"
+
+Kids media pipeline (is_kids_safe column, moderation hook, Kids Explore view)
+
+Kids Explore relies on:
+
+KIDS_MODE_SAFE badge
+
+moderation_status = 'approved'
+
+sanctuary/nonprofit rules
+
+New feature flag: can_view_bulk_analytics wired to vendor/institution premium & premium_plus only.
 
 ---
 
