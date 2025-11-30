@@ -1,4 +1,4 @@
-##1. Age Tiers & Account Rules
+## 1. Age Tiers & Account Rules
 
 ROOTED recognizes age tiers, not exact birthdays in the UI:
 
@@ -88,7 +88,7 @@ If there’s ever a conflict between “youth convenience” and “youth safety
 
 ---
 
-##2️⃣ Kids Mode + Events / Landmarks (Law Level)
+## 2️⃣ Kids Mode + Events / Landmarks (Law Level)
 
 This is the part that touches community discovery:
 
@@ -176,7 +176,7 @@ Landmarks = map-based, educational, non-commercial “things to learn about.”
 
 ---
 
-##3️⃣ Kids-Safe Tags & Admin Control (Automation Law)
+## 3️⃣ Kids-Safe Tags & Admin Control (Automation Law)
 
 3.1 Kids-Safe Tags
 
