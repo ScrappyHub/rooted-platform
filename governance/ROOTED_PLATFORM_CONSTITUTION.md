@@ -256,6 +256,108 @@ Cannot be overridden by monetization pressure
 
 Cannot be overridden by partners or investors
 
+⚙️ NO UNLIMITED POWER PRINCIPLE (ABSOLUTE LAW)
+
+No single human, account, or system inside ROOTED may possess:
+
+Unlogged override authority
+
+Silent access to unrestricted data
+
+The ability to bypass:
+
+Feature flags
+
+Row Level Security (RLS)
+
+Moderation pipelines
+
+Any governance laws
+
+👤 ADMIN POWERS ARE:
+
+✅ Logged
+✅ Audited
+✅ Role-scoped
+✅ Time-bounded when possible
+
+Every privileged action must create a record in:
+
+public.user_admin_actions
+
+📌 Examples of Logged Admin Actions:
+
+Role changes
+
+Tier changes
+
+Feature flag changes
+
+Moderation decisions
+
+Account suspensions
+
+Account lockouts
+
+Forced provider disablement
+
+Revenue tool revocations
+
+❌ ADMIN POWERS MAY NOT BE USED TO:
+
+Grant commercial tools to prohibited entities (e.g., sanctuaries, rescues)
+
+Bypass Kids Mode protections
+
+Force holiday activations
+
+Silence lawful community activity
+
+Manipulate discovery for financial benefit
+
+Override moderation outcomes without trace
+
+Inflate analytics, impressions, or reach metrics
+
+Create shadow privileges outside of RLS + feature flags
+
+🧾 GIT-LOCKED LAW
+
+All access control rules must exist in:
+
+GitHub governance files
+
+Supabase functions
+
+RLS policies
+
+If a rule is not written in GitHub, it has no standing authority.
+
+🚨 VIOLATIONS
+
+Any unlogged or abusive use of power results in:
+
+Immediate privilege revocation
+
+Full internal audit
+
+Permanent removal from ROOTED governance
+
+This applies to:
+
+Admins
+
+Developers
+
+Contractors
+
+Founders
+
+Service accounts
+
+No one is exempt.
+
+
 🔚 FINAL AUTHORITY STATEMENT
 
 This file is the final authority on ROOTED’s identity, ethics, governance, safety, and power structure.
