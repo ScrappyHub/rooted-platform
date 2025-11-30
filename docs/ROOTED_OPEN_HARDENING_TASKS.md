@@ -151,7 +151,27 @@ No pricing
  AI flag assistance (future, admin-gated)
 
 
- ---
+ with these bullet points:
+
+NEW provider_media.is_kids_safe boolean default false
+
+Extend admin_moderate_submission to handle entity_type = 'provider_media_kids'
+
+Kids Explore view must filter on:
+
+is_kids_safe
+
+moderation_status = 'approved'
+
+provider has KIDS_MODE_SAFE badge
+
+UI:
+
+“Request Kids-Safe” button → writes to moderation_queue
+
+No direct toggle on the media row
+
+---
 
 
  A Kids-safe providers view definition (kids_safe_providers) you can drop into SQL when you’re ready, which:
@@ -161,6 +181,8 @@ Joins providers, provider_badges, and provider_media
 Filters to KIDS_MODE_SAFE + approved/public media
 
 Is safe for the Kids Explore page to query against
+
+---
 
 🧱 GOVERNANCE & DOCS
 
