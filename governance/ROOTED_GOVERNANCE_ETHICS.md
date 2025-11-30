@@ -23,3 +23,29 @@ If any system, contract, partner, or investor action introduces:
 - Growth-at-all-costs mechanics
 
 That system is legally incompatible with ROOTED and must be rejected.
+
+
+---
+
+## Community-Owned Identity Doctrine
+
+ROOTED is defined as:
+
+- A community operating system
+- A civic coordination layer
+- A trust-first institutional bridge
+
+ROOTED is explicitly NOT:
+
+❌ A personal brand platform  
+❌ A founder ego system  
+❌ A celebrity tech product  
+❌ A dominance-based startup  
+
+ROOTED may exist with or without the founder.
+
+Community trust always outweighs:
+- Recognition
+- Credit
+- Status
+- Control
