@@ -86,9 +86,11 @@ Must be documented and handled via admin/moderation + user_tiers
 
 If there’s ever a conflict between “youth convenience” and “youth safety” → youth safety wins.
 
+---
+
 2️⃣ Kids Mode + Events / Landmarks (Law Level)
 
-This is the part that touches your community discovery:
+This is the part that touches community discovery:
 
 2.1 Events (General)
 
@@ -172,13 +174,9 @@ Booking flows
 
 Landmarks = map-based, educational, non-commercial “things to learn about.”
 
+---
+
 3️⃣ Kids-Safe Tags & Admin Control (Automation Law)
-
-You also said:
-
-we also need to ensure automation goes through admin for kids safe content if this wish to have that tag and they also must submit videos for kids safe and be approved through admin
-
-So we make that explicit law:
 
 3.1 Kids-Safe Tags
 
