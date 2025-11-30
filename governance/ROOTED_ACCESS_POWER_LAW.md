@@ -114,4 +114,29 @@ This law binds:
 - Contractors
 - Service accounts
 
+## Founder Non-Centralization Clause
+
+ROOTED is not permitted to structurally depend on the founder for:
+
+- Daily operational control
+- Emergency override authority
+- Governance enforcement
+- Revenue gatekeeping
+- Political positioning
+- Platform identity
+
+The founder:
+
+- Must not be required to be present for ROOTED to function
+- Must not be treated as a single point of failure
+- Must not be transformed into a power authority
+- Must not be systemically irreplaceable
+
+All privileged powers must be:
+✅ Role-scoped  
+✅ Logged  
+✅ Audited  
+✅ Revocable  
+
+ROOTED is governed by law, not personality.
 No one is exempt.
