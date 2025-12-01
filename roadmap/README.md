@@ -1,6 +1,6 @@
 # ROOTED Long-Term Roadmap
 
-ROOTED is a 10–30 year platform.
+ROOTED is a Multi-dacade projected platform.
 
 ---
 
@@ -44,3 +44,4 @@ ROOTED is a 10–30 year platform.
 
 ROOTED does not rush phases.
 Trust always comes before scale.
+
