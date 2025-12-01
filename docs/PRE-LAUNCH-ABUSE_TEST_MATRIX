@@ -1,0 +1,400 @@
+🧪 ROOTED — PRE-LAUNCH ABUSE TEST MATRIX (CANONICAL v1)
+
+Purpose:
+Simulate malicious, negligent, and edge-case behavior across all trust surfaces before any real users touch ROOTED.
+
+Rule:
+If any test passes incorrectly → launch must pause until fixed.
+
+🔐 1. ACCOUNT & ROLE ABUSE TESTS
+1.1 Unauthorized Role Escalation
+
+Test:
+
+Log in as a normal user
+
+Attempt direct SQL / API call:
+
+UPDATE public.user_tiers SET role = 'admin';
+
+
+Expected Result:
+
+❌ RLS blocks
+
+❌ No update occurs
+
+✅ Error returned
+
+1.2 Feature Flag Self-Unlock
+
+Test:
+
+Non-admin tries:
+
+UPDATE public.user_tiers SET feature_flags = '{"construction_access": true}';
+
+
+Expected:
+
+❌ Blocked by RLS
+
+✅ Only admin_update_feature_flags() allowed
+
+1.3 Account Status Bypass
+
+Test:
+
+Suspend a test account
+
+Try:
+
+Posting
+
+Messaging
+
+Submitting events
+
+Submitting vendor applications
+
+Expected:
+
+❌ All actions blocked
+
+✅ UI + API both enforce
+
+🧾 2. ADMIN ABUSE + AUDIT TAMPERING
+2.1 Silent Admin Action
+
+Test:
+
+Admin attempts raw:
+
+UPDATE public.user_tiers SET tier = 'premium_plus';
+
+
+Expected:
+
+❌ Operation allowed ONLY if RLS allows
+
+🚨 But no audit row created → this is a FAIL
+
+✅ All admin mutations must go through RPCs with logging
+
+2.2 Audit Log Deletion
+
+Test:
+
+DELETE FROM public.user_admin_actions;
+
+
+Expected:
+
+❌ Blocked
+
+✅ Append-only behavior holds
+
+2.3 Admin Acting While Suspended
+
+Test:
+
+Set an admin’s account_status = 'suspended'
+
+Try calling admin_set_account_status()
+
+Expected:
+
+❌ Blocked
+
+✅ public.is_admin() enforces both:
+
+role = admin
+
+account_status = active
+
+🧭 3. MODERATION BYPASS TESTS (CRITICAL)
+3.1 Event Visibility Without Approval
+
+Test:
+
+Insert an event with:
+
+moderation_status = 'pending'
+
+
+Query through:
+
+SELECT * FROM public.events_public_v1;
+
+
+Expected:
+
+✅ Event does NOT appear
+
+3.2 Direct Table Bypass Attempt
+
+Test:
+
+Query:
+
+SELECT * FROM public.events;
+
+
+from anon or authenticated user
+
+Expected:
+
+❌ RLS blocks or returns limited results
+
+✅ Frontend must never point to raw tables
+
+3.3 Fake Approval Attempt
+
+Test:
+
+UPDATE public.events SET moderation_status='approved';
+
+
+Expected:
+
+❌ Blocked unless internal service or RPC
+
+✅ Only admin_moderate_submission() allowed
+
+🧒 4. KIDS MODE SAFETY ABUSE TESTS (SUPREME CLAUSE)
+4.1 API Kids Mode Bypass
+
+Test:
+
+kids_mode_enabled() = false
+
+Call any kids-only RPC
+
+Expected:
+
+❌ Hard exception thrown
+
+✅ No UI-only enforcement allowed
+
+4.2 Unsafe Content Flag Injection
+
+Test:
+
+Submit unsafe event with:
+
+is_kids_safe = true
+
+
+Expected:
+
+✅ Still blocked until moderation approval
+
+✅ Moderation overrides submitter flags
+
+4.3 Landmark Kids Leakage
+
+Test:
+
+Create landmark:
+
+is_kid_safe = false
+
+
+Query kids view
+
+Expected:
+
+✅ Never appears
+
+🐾 5. SANCTUARY / NONPROFIT PROTECTION TESTS
+5.1 Sanctuary Marketplace Access
+
+Test:
+
+Sanctuary vendor attempts to:
+
+Create RFQ
+
+Submit bid
+
+Create bulk offer
+
+Expected:
+
+❌ All blocked via feature flags + compliance overlays
+
+5.2 Sanctuary Ad Monetization Attempt
+
+Test:
+
+Attempt to attach:
+
+Ads
+
+Sponsored content
+
+Paid promotions
+
+Expected:
+
+❌ Blocked at schema + UI
+
+✅ Mission-only behavior enforced
+
+🏛️ 6. MUNICIPAL DISCOVERY HIBERNATION
+6.1 Civic Entity in Community Discovery
+
+Test:
+
+Insert civic provider
+
+Set:
+
+provider_type = 'municipal'
+
+
+Attempt discovery via Community views
+
+Expected:
+
+✅ Hidden by default
+
+✅ Only appears in Government vertical later
+
+⚒️ 7. PROVIDER AUTO-INHERITANCE TESTS
+7.1 Specialty Compliance Injection
+
+Test:
+
+Create provider with:
+
+specialty = 'ELECTRICIAN'
+
+
+Expected Auto-Attached Overlays:
+
+✅ LICENSE_REQUIRED
+
+✅ INSURANCE_REQUIRED
+
+✅ OSHA awareness (if seeded)
+
+7.2 Kids Overlay Auto-Mapping
+
+Test:
+
+Specialty = FARM
+
+Kids Mode ON
+
+Expected:
+
+✅ ANIMAL_EDUCATION overlay auto-attached
+
+✅ FOOD_SYSTEMS overlay attached
+
+🔔 8. NOTIFICATION ABUSE TESTS
+8.1 Double Approval Spam
+
+Test:
+
+Attempt:
+
+admin_moderate_submission(...approved...)
+admin_moderate_submission(...approved...) again
+
+
+Expected:
+
+✅ Second attempt either:
+
+Does nothing
+
+Raises duplicate state warning
+
+❌ No duplicate notifications sent
+
+8.2 Private Rejection Reason Leak
+
+Test:
+
+Reject submission with internal reason
+
+Attempt to view reason as another user
+
+Expected:
+
+✅ Only submitter + admins see it
+
+💣 9. DELETION PIPELINE ABUSE
+9.1 Raw User Delete
+
+Test:
+
+DELETE FROM auth.users WHERE id = '<user>';
+
+
+Expected:
+
+❌ Blocked
+
+✅ Only deletion pipeline allowed
+
+9.2 Post-Deletion Access
+
+Test:
+
+User in pending_deletion
+
+Try to:
+
+Post
+
+Message
+
+Submit events
+
+Apply as vendor
+
+Expected:
+
+❌ All blocked
+
+🌐 10. PUBLIC DISCOVERY FINAL FIREWALL
+10.1 Map Query
+
+Test:
+
+Load public map
+
+Verify all results satisfy:
+
+moderation_status = 'approved'
+
+10.2 Search Results
+
+Test:
+
+Keyword search
+
+Expected:
+
+✅ Does NOT return:
+
+Pending
+
+Rejected
+
+Suspended providers
+
+✅ PASS/FAIL CERTIFICATION
+
+Only when ALL tests pass:
+
+✅ Governance Safe
+✅ Kids Safe
+✅ Civic-Trust Safe
+✅ Legal Safe
+✅ Abuse-Resistant
+
+🎯 ROOTED MAY GO LIVE
