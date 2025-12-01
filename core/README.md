@@ -63,7 +63,6 @@ Forbidden work from here forward (unless a critical bug is found):
 
 ❌ Admin power expansion
 
-You passed the irreversible systems threshold.
 
 
 ---
@@ -73,4 +72,5 @@ You passed the irreversible systems threshold.
 - Core rules override vertical behavior
 - Core governance cannot be bypassed by UI
 - Core enforcement happens at the database layer
+
 
