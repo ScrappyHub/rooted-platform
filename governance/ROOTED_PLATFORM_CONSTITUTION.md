@@ -357,6 +357,36 @@ Service accounts
 
 No one is exempt.
 
+---
+
+🧬 CONSTITUTIONAL & LEGAL LAYER — ✅ PERMANENTLY LOCKED
+
+These documents now function as platform law:
+
+✅ ROOTED Platform Constitution
+
+✅ Data Sovereignty & Consent Law
+
+✅ Admin Power Limitation Law
+
+✅ Community Trust & Safety Law
+
+✅ Sanctuary & Nonprofit Protection Law
+
+✅ Contributor Governance Notice
+
+✅ Founder Non-Centralization Clause
+
+✅ Ownership & Control Doctrine (Single-Member LLC Only)
+
+Effect:
+
+No admin, founder, contractor, or system process can override child safety, consent, or sanctuary protection.
+
+All monetization, discovery, and moderation logic is legally constrained.
+
+ROOTED is now law-governed, not personality-governed.
+
 
 🔚 FINAL AUTHORITY STATEMENT
 
