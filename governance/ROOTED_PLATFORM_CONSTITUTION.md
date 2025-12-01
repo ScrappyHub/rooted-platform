@@ -6,6 +6,30 @@ Enforcement Chain:
 GitHub Governance → Database (RLS + Views + RPCs) → Admin Oversight → UI
 Effective Date: Upon first public launch of ROOTED
 
+---
+
+🧬 CONSTITUTIONAL & LEGAL LAYER — ✅ PERMANENTLY LOCKED
+
+These documents now function as platform law:
+
+✅ ROOTED Platform Constitution
+
+✅ Data Sovereignty & Consent Law
+
+✅ Admin Power Limitation Law
+
+✅ Community Trust & Safety Law
+
+✅ Sanctuary & Nonprofit Protection Law
+
+✅ Contributor Governance Notice
+
+✅ Founder Non-Centralization Clause
+
+✅ Ownership & Control Doctrine (Single-Member LLC Only)
+
+---
+
 🧭 PURPOSE OF THIS CONSTITUTION
 
 ROOTED is not a typical application. It is a regional, civic, institutional, and community operating system.
@@ -60,26 +84,36 @@ Never an authority layer
 
 If any layer conflicts with a higher layer, the higher layer overrides immediately.
 
+---
+
 📚 ACTIVE PLATFORM LAWS (CANONICAL INDEX)
 🔒 1. ROOTED Governance & Ethics
 
 File: ROOTED_GOVERNANCE_ETHICS.md
 Status: ✅ Active Law
 
+---
+
 🧠 2. ROOTED Data Sovereignty & User Consent Law
 
 File: ROOTED_DATA_SOVEREIGNTY_LAW.md
 Status: ✅ Active Law
+
+---
 
 ⚙️ 3. ROOTED Platform Access & Power Limitation Law
 
 File: ROOTED_ACCESS_POWER_LAW.md
 Status: ✅ Active Law
 
+---
+
 🛡️ 4. ROOTED Community Trust & Safety Enforcement Law
 
 File: ROOTED_COMMUNITY_TRUST_LAW.md
 Status: ✅ Active Law
+
+---
 
 🧒 SUPREME CHILD SAFETY CLAUSE (OVERRIDING LAW)
 
@@ -104,6 +138,8 @@ Investor pressure
 Regional partnerships
 
 This clause is not negotiable.
+
+---
 
 🧮 PLATFORM ACCESS & FEATURE ENTITLEMENT LAW (TIER GRID — CANONICAL)
 
@@ -134,6 +170,8 @@ Admin always has full system access.
 
 Any future code, UI, or contract that violates this grid is automatically invalid.
 
+---
+
 🏛️ INSTITUTION & VENDOR MIRROR LAW (EQUAL ACCESS GUARANTEE)
 
 Institutions and Vendors are governed by the same access logic at the same tier level.
@@ -157,6 +195,8 @@ There shall never exist:
 “Shadow paywalls by role”
 
 This mirror rule is absolute and non-overrideable.
+
+---
 
 🛑 SANCTUARY & NONPROFIT COMMERCIAL RESTRICTION LAW
 
@@ -192,6 +232,8 @@ External legal escalation where applicable
 
 No revenue source, sponsor, partner, or institution is exempt from enforcement.
 
+---
+
 🧑‍💼 DEVELOPER & CONTRIBUTOR BINDING CLAUSE
 
 Any person who:
@@ -218,6 +260,8 @@ Performance targets
 
 As justification for violating ROOTED law.
 
+---
+
 🧠 INTENT PRESERVATION CLAUSE
 
 ROOTED is designed to:
@@ -235,6 +279,8 @@ Preserve cultural consent
 Prevent extractive technology models
 
 If a proposal undermines this intent → it is automatically invalid.
+
+---
 
 ✅ RATIFICATION
 
@@ -273,6 +319,8 @@ Row Level Security (RLS)
 Moderation pipelines
 
 Any governance laws
+
+---
 
 👤 ADMIN POWERS ARE:
 
@@ -321,6 +369,8 @@ Inflate analytics, impressions, or reach metrics
 
 Create shadow privileges outside of RLS + feature flags
 
+---
+
 🧾 GIT-LOCKED LAW
 
 All access control rules must exist in:
@@ -332,6 +382,8 @@ Supabase functions
 RLS policies
 
 If a rule is not written in GitHub, it has no standing authority.
+
+---
 
 🚨 VIOLATIONS
 
@@ -359,25 +411,6 @@ No one is exempt.
 
 ---
 
-🧬 CONSTITUTIONAL & LEGAL LAYER — ✅ PERMANENTLY LOCKED
-
-These documents now function as platform law:
-
-✅ ROOTED Platform Constitution
-
-✅ Data Sovereignty & Consent Law
-
-✅ Admin Power Limitation Law
-
-✅ Community Trust & Safety Law
-
-✅ Sanctuary & Nonprofit Protection Law
-
-✅ Contributor Governance Notice
-
-✅ Founder Non-Centralization Clause
-
-✅ Ownership & Control Doctrine (Single-Member LLC Only)
 
 Effect:
 
@@ -386,6 +419,8 @@ No admin, founder, contractor, or system process can override child safety, cons
 All monetization, discovery, and moderation logic is legally constrained.
 
 ROOTED is now law-governed, not personality-governed.
+
+---
 
 
 🔚 FINAL AUTHORITY STATEMENT
