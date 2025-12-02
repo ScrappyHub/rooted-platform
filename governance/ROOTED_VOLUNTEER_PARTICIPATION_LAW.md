@@ -1,4 +1,4 @@
-1. Who Can Host Volunteer Opportunities?
+## 1. Who Can Host Volunteer Opportunities?
 
 Volunteer opportunities are events, not jobs, not gigs, not paid shifts.
 
@@ -39,7 +39,9 @@ Not allowed to host volunteers in Community vertical:
 Volunteer = community contribution.
 Not a stealth labor market.
 
-2. Who Can Join Volunteer Opportunities?
+---
+
+## 2. Who Can Join Volunteer Opportunities?
 
 We line this up with your age + account rules.
 
@@ -97,7 +99,9 @@ Adults may also:
 
 Host volunteer events if they are owners of providers (vendor/institution).
 
-3. Sanctuaries vs Institutions vs Vendors (Volunteer-Specific Rules)
+---
+
+## 3. Sanctuaries vs Institutions vs Vendors (Volunteer-Specific Rules)
 
 We now align volunteer logic with your sanctuary + institution law.
 
