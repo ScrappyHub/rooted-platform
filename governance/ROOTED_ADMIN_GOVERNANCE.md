@@ -1,212 +1,166 @@
-# ROOTED — ADMIN GOVERNANCE & MUTATION POLICY (v1)
+Authority Level: Canonical Governance Law
+Enforcement: Constitution → Stop Layer → Database (RLS + RPCs) → Admin UI
+Effective Date: First Public Launch
 
-Owner / Architect: Alec  
-Scope: ROOTED Core + All Verticals  
-Status: ✅ ACTIVE POLICY
+This file governs all administrative power inside ROOTED.
 
----
+If this file conflicts with:
 
-## 1. Admin Role Definition
+ROOTED_PLATFORM_CONSTITUTION.md
 
-Admins in ROOTED are:
+ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md
 
-- Guardians of governance and safety
-- Not “super users” in the consumer sense
-- Bound to audit, logs, and non-bypassable constraints
+👉 Those files override this one immediately.
 
-Admin identity is enforced through:
+1. PURPOSE
 
-- `public.is_admin()` helper (SQL/RPC)
-- `user_tiers.role = 'admin'`
-- RLS policies on admin-only tables and RPCs
+Admin access exists only for platform safety and continuity, never for:
 
----
+Profit extraction
 
-## 2. Canonical Admin-Only Surfaces
+Political influence
 
-Admin actions MUST go through:
+Discovery manipulation
 
-1. **Account Governance:**
-   - `public.admin_user_accounts` (view, read-only)
-   - `public.admin_get_user_accounts()` (RPC, read-only)
-   - `public.admin_set_account_status()` (RPC)
-   - `public.admin_set_role_tier()` (RPC)
-   - `public.admin_update_feature_flags()` (RPC)
+Personal convenience
 
-2. **Taxonomy & Governance:**
-   - `badges` (insert-only, no deletes)
-   - `specialty_types` (insert-only, no deletes)
-   - `experience_types` (insert-only, no deletes)
-   - `compliance_overlays` (insert-only, no deletes)
-   - `landmark_types` (insert-only, no deletes)
-   - `kids_mode_overlays` (insert-only, no deletes)
+Investor pressure
 
-3. **Audit Log:**
-   - `user_admin_actions` (append-only)
+Admin power is custodial, not sovereign.
 
-No other tables should be mutated directly for governance purposes.
+2. WHO IS AN ADMIN (LEGAL DEFINITION)
 
----
+A user is an Admin ONLY IF:
 
-## 3. Prohibited Admin Behaviors
+public.user_tiers.role = 'admin'
 
-Admins MAY NOT:
+public.user_tiers.account_status = 'active'
 
-- Bypass `user_tiers` for any feature access
-- Change roles, tiers, or statuses via raw SQL UPDATE
-- Delete audit logs (`user_admin_actions`)
-- Delete taxonomy rows (badges, specialties, overlays, landmarks, kids overlays)
-- Override Kids Mode behavior directly via front-end hacks
-- Hard-delete users outside of the official account deletion pipeline
+No UI toggle, environment variable, or backend key grants admin status outside public.user_tiers.
 
----
+Cross-Reference:
+ROOTED_ACCOUNT_GOVERNANCE_LAW.md
+ROOTED_ACCESS_POWER_LAW.md
 
-## 4. Account Lifecycle Controls
+3. WHAT ADMINS ARE ALLOWED TO DO
 
-All account-level mutations must go through RPCs:
+Admins may ONLY perform the following actions:
 
-1. **Status Changes**
-   - `admin_set_account_status(target_user, new_status)`
-   - Allowed transitions:
-     - `active → suspended`
-     - `active → locked`
-     - `active → pending_deletion`
-     - `suspended → active` (if resolved)
-   - Each change:
-     - Updates `user_tiers.account_status`
-     - Writes to `user_admin_actions`
-     - Has immediate site-wide effect
+Account status changes (active / suspended / locked)
 
-2. **Role & Tier Changes**
-   - `admin_set_role_tier(target_user, new_role, new_tier)`
-   - Examples:
-     - `guest → vendor`
-     - `vendor → institution`
-     - `any → admin` (highly restricted)
-   - Must:
-     - Update dashboards and feature access
-     - Emit admin audit entry
+Role adjustments (user ↔ vendor ↔ institution ↔ admin)
 
-3. **Feature Flag Updates**
-   - `admin_update_feature_flags(target_user, new_flags jsonb)`
-   - Controls:
-     - Vertical access (construction, emergency, etc.)
-     - Experimental features
-     - Marketing eligibility
-     - Kids Mode availability
-   - Must:
-     - Preserve required keys
-     - Write diff to `user_admin_actions`
+Tier adjustments (free / premium / premium_plus)
 
----
+Feature flag updates (governed)
 
-## 5. Taxonomy Change Policy
+Moderation decisions (approve / reject)
 
-### 5.1 Allowed Changes
+Emergency safety interventions
 
-Admins MAY:
+Abuse response actions
 
-- Add new rows to:
-  - `badges`
-  - `specialty_types`
-  - `experience_types`
-  - `compliance_overlays`
-  - `landmark_types`
-  - `kids_mode_overlays`
+All actions MUST go through admin RPCs only.
 
-Under conditions:
+4. WHAT ADMINS ARE NEVER ALLOWED TO DO
 
-- New codes are unique and stable
-- New entries map to an existing or clearly documented vertical
-- Changes are recorded in release notes / migrations
+❌ Bypass RLS
+❌ Create shadow permissions
+❌ Grant commercial access to prohibited entities
+❌ Override Kids Mode
+❌ Force holiday activation
+❌ Suppress lawful speech
+❌ Alter analytics
+❌ Target discovery for revenue
+❌ Access raw PII outside scoped views
+❌ Perform manual SQL edits to governance tables
 
-### 5.2 Forbidden Changes
+Cross-References:
+ROOTED_KIDS_MODE_GOVERNANCE.md
+ROOTED_COMMUNITY_TRUST_LAW.md
+ROOTED_DATA_SOVEREIGNTY_LAW.md
 
-Admins MAY NOT:
+5. MANDATORY ADMIN LOGGING (NON-NEGOTIABLE)
 
-- Delete canonical seed rows
-- Rename codes that are already in use
-- Mutate meaning of existing codes
+Every admin mutation MUST be recorded in:
 
-If something must be “removed”:
+public.user_admin_actions
 
-- Mark as deprecated via a boolean or metadata
-- Do not delete the row
+This includes:
 
----
+Role changes
 
-## 6. Logging & Audit Requirements
+Tier changes
 
-All admin mutations MUST:
+Feature flag changes
 
-- Be performed via official RPCs or admin UI
-- Write to `user_admin_actions` with:
-  - `admin_id`
-  - `target_user_id`
-  - `action_type`
-  - `details` (JSONB diff/summary)
-  - `created_at` timestamp
+Suspensions
 
-Audit logs must be:
+Lockouts
 
-- Append-only
-- Non-editable by admins
-- Retained for legal and safety reasons
+Forced provider disablement
 
----
+Moderation approvals / rejections
 
-## 7. Account Deletion Governance
+Revenue tool revocation
 
-Account deletion is never a raw DELETE.
+Unlogged admin action = platform law violation.
 
-Pipeline:
+6. EMERGENCY POWERS (STRICTLY LIMITED)
 
-1. User triggers account deletion →  
-   `account_deletion_requests` row created with `status = 'pending'`.
+Admins may perform emergency actions ONLY to prevent:
 
-2. Account enters restricted mode:
-   - No posting
-   - No messaging
-   - No marketplace access
+Child harm
 
-3. Admin processes deletion queue:
-   - `pending → in_progress → completed`
-   - PII anonymized
-   - Provider relationships soft-detached
-   - Legal procurement history retained
+Physical danger
 
-All transitions and actions must be:
+Real-world criminal activity
 
-- Logged in `user_admin_actions`
-- Non-bypassable via UI
+Data poisoning
 
----
+Infrastructure compromise
 
-## 8. Kids Mode & Sensitive Surfaces
+Emergency powers:
 
-Admins:
+Are time-limited
 
-- Cannot override Kids Mode safely via UI
-- Cannot force unsafe content into Kids Mode surfaces
-- Must rely on:
-  - `kids_mode_overlays`
-  - Taxonomy mappings (specialty ↔ kids overlay)
-  - Predefined compliance overlays (YOUTH_SAFETY, NO_MEDICAL_DATA, HI_PII_RESTRICTED)
+Are scope-limited
 
----
+Are fully logged
 
-## 9. Governance Philosophy
+Are automatically audited
 
-ROOTED is:
+Cross-Reference:
+ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md
 
-- Governance-first, not “growth-hack-first”
-- Community and safety-oriented
-- Designed for civic, educational, and institutional trust
+7. ADMINS ARE BOUND BY LAW
 
-Admin powers are:
+Admins are legally bound by:
 
-- Narrowly scoped
-- Fully logged
-- Never silent or invisible to the audit layer
+Platform Constitution
 
-This document represents the official, canonical admin governance standard for ROOTED.
+Stop Layer
+
+Data Sovereignty Law
+
+Kids Mode Governance
+
+Sanctuary & Nonprofit Law
+
+“I was an admin” is never a legal defense.
+
+8. VIOLATIONS
+
+Any admin who violates governance is subject to:
+
+Immediate privilege revocation
+
+Full internal audit
+
+Permanent governance disqualification
+
+Legal escalation where applicable
+
+✅ Admin power in ROOTED is logged, audited, and law-bound.
+✅ No admin is sovereign.
+✅ No admin outranks the Constitution.
