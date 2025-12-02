@@ -32,7 +32,7 @@ If a developer breaks the matrix → the code is illegal.
 
 ---
 
-# 🔒 1. ENFORCEMENT OVERVIEW
+## 🔒 1. ENFORCEMENT OVERVIEW
 
 Each ROOTED governance law must map to:
 
@@ -52,11 +52,11 @@ If ANY row below is broken → the system becomes non-compliant.
 
 ---
 
-# 📘 2. THE FULL ENFORCEMENT MATRIX
+## 📘 2. THE FULL ENFORCEMENT MATRIX
 
 
 
-# 🧒 2.1 CHILD SAFETY LAWS
+## 🧒 2.1 CHILD SAFETY LAWS
 
 | Governance Law | SQL Tables | RLS Enforcement | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
 |----------------|------------|------------------|------------------|--------------|-----------|----------------|
@@ -72,7 +72,7 @@ governance/ROOTED_CONSTITUTIONAL_STOP_LAYER.md
 
 ---
 
-# 🔐 2.2 DATA SOVEREIGNTY & PRIVACY
+## 🔐 2.2 DATA SOVEREIGNTY & PRIVACY
 
 | Governance Law | SQL Tables | RLS Enforcement | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
 |----------------|------------|------------------|------------------|--------------|-----------|----------------|
@@ -87,7 +87,7 @@ governance/ROOTED_CONSTITUTIONAL_STOP_LAYER.md
 
 ---
 
-# 🚫 2.3 ANTI-PROFILING LAW
+## 🚫 2.3 ANTI-PROFILING LAW
 
 | Governance Law | SQL Tables | RLS | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
 |----------------|------------|------|------------------|--------------|-----------|----------------|
@@ -102,7 +102,7 @@ ROOTED_PLATFORM_CONSTITUTION.md
 
 ---
 
-# 🐾 2.4 SANCTUARY & NONPROFIT PROTECTION
+## 🐾 2.4 SANCTUARY & NONPROFIT PROTECTION
 
 | Governance Law | SQL Tables | RLS | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
 |----------------|------------|------|------------------|--------------|-----------|----------------|
@@ -115,7 +115,7 @@ ROOTED_VOLUNTEER_PARTICIPATION_LAW.md
 
 ---
 
-# ⚙️ 2.5 ADMIN POWER & ACCESS CONTROL
+## ⚙️ 2.5 ADMIN POWER & ACCESS CONTROL
 
 | Governance Law | SQL Tables | RLS | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
 |----------------|------------|------|------------------|--------------|-----------|----------------|
@@ -130,7 +130,7 @@ governance/ROOTED_CONSTITUTIONAL_STOP_LAYER.md
 
 ---
 
-# 🛡️ 2.6 DISCOVERY & MODERATION LAW
+## 🛡️ 2.6 DISCOVERY & MODERATION LAW
 
 | Governance Law | SQL Tables | RLS | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
 |----------------|------------|------|------------------|--------------|-----------|----------------|
@@ -143,7 +143,7 @@ ROOTED_GOVERNANCE_ETHICS.md
 
 ---
 
-# 🧒 2.7 KIDS MODE + CONTENT FILTERING
+## 🧒 2.7 KIDS MODE + CONTENT FILTERING
 
 | Governance Law | SQL Tables | RLS | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
 |----------------|------------|------|------------------|--------------|-----------|----------------|
@@ -157,7 +157,7 @@ governance/ROOTED_CONSTITUTIONAL_STOP_LAYER.md
 
 ---
 
-# 🌱 2.8 SEASONAL KNOWLEDGE STREAMS
+## 🌱 2.8 SEASONAL KNOWLEDGE STREAMS
 
 | Governance Law | SQL Tables | RLS | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
 |----------------|------------|------|------------------|--------------|-----------|----------------|
@@ -171,7 +171,7 @@ ROOTED_KIDS_MODE_GOVERNANCE.md
 
 ---
 
-# 🔨 3. MUTATION RULES (CANONICAL)
+## 🔨 3. MUTATION RULES (CANONICAL)
 ❌ You may NOT mutate directly:
 
 providers
@@ -196,7 +196,7 @@ SECURITY DEFINER Admin RPCs
 
 ---
 
-# 🛑 4. NON-NEGOTIABLE RLS GUARDRAILS
+## 🛑 4. NON-NEGOTIABLE RLS GUARDRAILS
 
 These cannot ever be bypassed:
 
@@ -220,7 +220,7 @@ Everything else is optional — these are not.
 
 ---
 
-# 📚 5. CROSS-REFERENCE MAP
+## 📚 5. CROSS-REFERENCE MAP
 
 | Law File | Defines | Enforced By |
 |----------|----------|--------------|
@@ -237,7 +237,7 @@ Everything else is optional — these are not.
 
 ---
 
-# 🧩 6. FINAL ENGINEERING GUARANTEE
+## 🧩 6. FINAL ENGINEERING GUARANTEE
 
 If a developer follows this matrix:
 
