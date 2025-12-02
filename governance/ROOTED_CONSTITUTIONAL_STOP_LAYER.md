@@ -1,90 +1,148 @@
-# 🧬 ROOTED — CONSTITUTIONAL & LEGAL STOP LAYER
-Authority Level: ABSOLUTE  
-Enforcement: GitHub → Database → Admin RPCs → UI  
-Effective Date: First Public Launch  
+# 🧬 ROOTED — CONSTITUTIONAL & LEGAL STOP LAYER (FINAL · STANDALONE)
 
-This document defines the **highest possible authority inside ROOTED**.  
-If any file, feature, contract, UI, admin action, or monetization rule conflicts with anything listed here —  
-👉 **THIS LAYER WINS. NO EXCEPTIONS.**
+Authority Level: ABSOLUTE
+Enforcement Chain: GitHub → Database (RLS + Views + RPCs) → Admin Oversight → UI
+Effective Date: First Public Launch
+
+This document defines the highest possible authority inside ROOTED.
+
+If any file, feature, contract, UI behavior, admin action, monetization rule, partner request, or investor demand conflicts with anything listed here →
+👉 THIS STOP LAYER WINS. NO EXCEPTIONS.
+
+✅ PERMANENTLY LOCKED PLATFORM LAWS (BINDING)
+
+These documents are permanently binding platform law and are protected by this Stop Layer:
+
+ROOTED_PLATFORM_CONSTITUTION.md
+
+ROOTED_DATA_SOVEREIGNTY_LAW.md
+
+ROOTED_ACCESS_POWER_LAW.md
+
+ROOTED_COMMUNITY_TRUST_LAW.md
+
+ROOTED_SANCTUARY_NONPROFIT_LAW.md
+
+ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md
+
+ROOTED_KIDS_MODE_GOVERNANCE.md
+
+ROOTED_ADMIN_GOVERNANCE.md
+
+ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md
+
+ROOTED_ACCOUNT_GOVERNANCE_LAW.md
+
+ROOTED_GOVERNANCE_INDEX_CHAIN_OF_AUTHORITY.md
+
+If a rule is not written in one of these files → it has NO legal authority inside ROOTED.
 
 ---
 
-## ✅ PERMANENTLY LOCKED PLATFORM LAWS
-
-These documents now function as **binding platform law**:
-
-✅ ROOTED_PLATFORM_CONSTITUTION.md  
-✅ ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION.md
-✅ ROOTED_DATA_SOVEREIGNTY_LAW.md  
-✅ ROOTED_ACCESS_POWER_LAW.md  
-✅ ROOTED_COMMUNITY_TRUST_LAW.md  
-✅ ROOTED_SANCTUARY_NONPROFIT_LAW.md  
-✅ ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md  
-✅ ROOTED_KIDS_MODE_GOVERNANCE.md  
-✅ ROOTED_ADMIN_GOVERNANCE.md  
-✅ ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md  
-
----
-
-## 🧒 SUPREME CHILD SAFETY CLAUSE (OVERRIDING LAW)
+🧒 SUPREME CHILD SAFETY CLAUSE (OVERRIDING LAW)
 
 If child safety ever conflicts with:
 
-- Revenue
-- Growth
-- Advertising
-- Partnerships
-- Institutional pressure
-- Investor pressure
+Revenue
 
-**Child safety ALWAYS wins. This clause overrides everything.**
+Growth
+
+Advertising
+
+Partnerships
+
+Institutional pressure
+
+Investor pressure
+
+Regional politics
+
+✅ CHILD SAFETY ALWAYS WINS.
+
+This clause explicitly overrides:
+
+Marketplace logic
+
+Analytics logic
+
+Monetization logic
+
+Partner agreements
+
+Marketing strategies
+
+Cross-References:
+
+ROOTED_KIDS_MODE_GOVERNANCE.md
+
+ROOTED_COMMUNITY_TRUST_LAW.md
+
+ROOTED_PLATFORM_CONSTITUTION.md
 
 ---
 
-## 🐾 SANCTUARY & NONPROFIT ABSOLUTE PROTECTION
+🐾 SANCTUARY & NONPROFIT ABSOLUTE PROTECTION
 
-Sanctuaries, rescues, and mission-only nonprofits:
+Sanctuaries, rescues & mission-only nonprofits:
 
-❌ May NOT access commerce  
-❌ May NOT access bidding  
-❌ May NOT access bulk markets  
-✅ May host volunteer & education events only  
-✅ Always discovery-safe  
-✅ Always moderation-required  
+❌ No commerce
+❌ No bidding
+❌ No bulk markets
+✅ Volunteer & education events only
+✅ Always moderation-required
+✅ Always discovery-safe
 
-Their existence on ROOTED is for **public good only** — never profit.
+Cross-Reference: ROOTED_SANCTUARY_NONPROFIT_LAW.md
 
 ---
 
-## ⚙️ NO UNLIMITED POWER PRINCIPLE
+⚙️ NO UNLIMITED POWER PRINCIPLE
 
-No human, account, admin, or system process inside ROOTED may possess:
+No human, system, admin, founder, or service account inside ROOTED may possess:
 
-❌ Unlogged override authority  
-❌ Silent access to restricted data  
+❌ Unlogged override power
+❌ Silent access to restricted data
 ❌ The ability to bypass:
-- RLS
-- Feature flags
-- Moderation
-- Kids Mode
-- Compliance law  
+
+RLS
+
+Feature Flags
+
+Moderation
+
+Kids Mode
+
+Compliance Law
+
+Cross-References:
+
+ROOTED_ACCESS_POWER_LAW.md
+
+ROOTED_ADMIN_GOVERNANCE.md
+
+ROOTED_ACCOUNT_GOVERNANCE_LAW.md
 
 ---
 
-## 🧾 GIT IS LAW
+🧾 GIT IS LAW
 
-All authority must exist in:
+All enforceable authority must exist in:
 
-- GitHub
-- SQL policies
-- Exposed RPCs
+GitHub governance files
 
-If it is **not written in GitHub, it has no legal authority inside ROOTED**.
+SQL policies
 
----
+RLS rules
 
-✅ This Stop Layer is FINAL  
-✅ No override mechanisms exist  
-✅ No founder exception exists  
-✅ No monetization exception exists  
-✅ No admin convenience exception exists
+Canonical Views
+
+Exposed RPCs
+
+If a rule is not in GitHub → it does not legally exist inside ROOTED.
+
+✅ No founder exception
+✅ No admin convenience exception
+✅ No monetization exception
+✅ No investor exception
+
+This Stop Layer is the final override ceiling of the entire platform.
