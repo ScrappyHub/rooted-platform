@@ -6,6 +6,8 @@ Constitution → Stop Layer → RLS → Admin RPCs → UI
 Applies To: ALL user accounts, including:
 Community • Vendors • Institutions • Sanctuaries • Developers • Admins • Parents/Guardians
 
+---
+
 Cross-References:
 
 ROOTED_PLATFORM_CONSTITUTION.md
