@@ -53,43 +53,105 @@ If ANY row below is broken → the system becomes non-compliant.
 
 
 
-2.1 CHILD SAFETY LAWS
-Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI Enforcement
-Supreme Child Safety Clause	user_tiers, kids_mode_overlays, events, landmarks	RLS blocks pricing, messaging, commerce	kids_safe_events_v1, kids_landmarks_v1	kids_mode_enabled	admin_set_kids_safe_state()	No pricing, no ads, no bookings, no direct messaging
-No messaging to minors	messages, conversations	Sender must NOT be a minor	N/A	N/A	admin_moderate_conversation()	Messaging buttons hidden in Kids Mode
-No commerce in Kids Mode	rfqs, bids, subscriptions, payments	Hard RLS deny when kids_mode_enabled=true	N/A	N/A	N/A	Entire billing/marketplace UI removed in Kids Mode
-2.2 DATA SOVEREIGNTY & PRIVACY
-Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI Enforcement
-User owns their data	auth.users, profiles	Row-level user_id = auth.uid()	public_user_profile_v1	N/A	admin_export_user_data()	Export & edit buttons allowed only by user
-No tracking / fingerprinting	N/A	No tracking tables permitted	N/A	analytics_enabled (only aggregated)	None allowed	No SDKs, no 3rd-party analytics
-Deletion rights	account_deletion_requests	Only owner can request	pending_deletions_v1	N/A	admin_process_deletion()	Delete account button always accessible
-2.3 ANTI-PROFILING LAW
-Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI Enforcement
-No demographic segmentation	NONE allowed	N/A	No demographic fields in ANY view	N/A	N/A	No demographic filters, no identity labels
-Story-based discovery only	providers, provider_media	Discovery requires moderation + active status	providers_discovery_v1	N/A	N/A	Sort ONLY by trust, compliance, craft, education
-2.4 SANCTUARY & NONPROFIT PROTECTION LAW
-Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI Enforcement
-Sanctuaries cannot do commerce	providers	RLS blocks all marketplace tables for type='sanctuary'	sanctuary_public_profile_v1	can_use_marketplace=false	N/A	Marketplace tabs hidden
-Volunteer-only access	events	events.type='volunteer' only allowed for sanctuary_id	volunteer_events_v1	N/A	N/A	Experience cards restricted to volunteer/education
-2.5 ADMIN POWER & ACCESS CONTROL
-Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI Enforcement
-Admin actions must log	user_admin_actions	Insert restricted to admin RPCs	admin_activity_v1	N/A	All admin RPCs log mutations	Admin UI shows audit trail
-No silent privilege escalation	user_tiers	RLS: admin cannot update directly	public_user_tier_v1	N/A	admin_update_user_role()	UI prevents changes outside RPC
-No direct SQL to core tables	ALL	RLS denies direct mutation	Canonical read-only views enforce law	N/A	RPC-only mutation	UI cannot mutate roles or tiers
-2.6 DISCOVERY & MODERATION LAW
-Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI Enforcement
-No shadow publishes	moderation_queue	Only approved content appears in views	providers_discovery_v1, events_public_v1	N/A	admin_moderate_item()	UI only shows approved content
-Trust = visibility	providers	provider.active AND discoverable must be true	providers_discovery_v1	N/A	N/A	UI hides inactive, unmoderated, or undiscoverable providers
-2.7 KIDS MODE + CONTENT FILTERING
-Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI Enforcement
-Kids-safe mapping	kids_mode_overlays	RLS ensures only approved overlays appear	kids_safe_content_v1	kids_mode_enabled	admin_assign_kids_overlay()	Kids Mode hides adult surfaces
-No Kids uploads	provider_media, events	RLS blocks minors from uploading	N/A	N/A	N/A	UI disables upload buttons
-2.8 SEASONAL KNOWLEDGE STREAMS
-Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI Enforcement
-Recipes = Premium Plus only	recipes	RLS restricts to tier='premium_plus'	seasonal_recipes_v1	premium_plus_enabled	N/A	Lock icon + upsell
-Seeds/Produce/Crafts = all users	seasonal_items	Public read (moderated only)	seasonal_current_month_v1	N/A	admin_rotate_seasonal_month()	Surface monthly education
-Kids Mode seasonal filters	seasonal_items	RLS excludes unsafe items	kids_seasonal_v1	kids_mode_enabled	N/A	Kids UI shows only safe crafts/produce
+🧒 2.1 CHILD SAFETY LAWS
+Law	SQL Tables	RLS Enforcement	Views	Feature Flag	Admin RPC	UI Enforcement
+Supreme Child Safety Clause	user_tiers, kids_mode_overlays, events, landmarks	Blocks pricing, messaging, commerce when kids enabled	kids_safe_events_v1, kids_landmarks_v1	kids_mode_enabled	admin_set_kids_safe_state()	No pricing, no ads, no bookings, no DM
+No Messaging to Minors	messages, conversations	Sender must NOT be a minor	N/A	N/A	admin_moderate_conversation()	Messaging buttons hidden
+No Commerce in Kids Mode	rfqs, bids, subscriptions, payments	Hard RLS deny when kids_mode_enabled = true	N/A	N/A	N/A	Entire marketplace removed
 
+Cross-Refs:
+
+ROOTED_PLATFORM_CONSTITUTION.md
+
+ROOTED_KIDS_MODE_GOVERNANCE.md
+
+ROOTED_COMMUNITY_TRUST_LAW.md
+
+STOP LAYER
+
+🔐 2.2 DATA SOVEREIGNTY & PRIVACY
+Law	SQL Tables	RLS Enforcement	Views	Feature Flag	Admin RPC	UI Enforcement
+User Owns Their Data	auth.users, profiles	user_id = auth.uid()	public_user_profile_v1	N/A	admin_export_user_data()	Export & edit only by owner
+No Tracking / Fingerprinting	NONE allowed	No tracking tables permitted	N/A	analytics_enabled (aggregates only)	❌ None allowed	No SDKs / no 3rd-party analytics
+Deletion Rights	account_deletion_requests	Only owner can insert	pending_deletions_v1	N/A	admin_process_deletion()	Delete button always visible
+
+Cross-Refs:
+
+ROOTED_DATA_SOVEREIGNTY_LAW.md
+
+STOP LAYER
+
+🚫 2.3 ANTI-PROFILING LAW
+Law	SQL Tables	RLS	Views	Feature Flag	Admin RPC	UI Enforcement
+No Demographic Segmentation	❌ NONE allowed	N/A	❌ No demographic fields in ANY view	N/A	N/A	No demographic filters
+Story-Based Discovery Only	providers, provider_media	Requires active + moderated	providers_discovery_v1	N/A	N/A	Sort ONLY by trust, craft, education
+
+Cross-Refs:
+
+ROOTED_GOVERNANCE_ETHICS.md
+
+ROOTED_COMMUNITY_TRUST_LAW.md
+
+ROOTED_PLATFORM_CONSTITUTION.md
+
+🐾 2.4 SANCTUARY & NONPROFIT PROTECTION
+Law	SQL Tables	RLS	Views	Feature Flag	Admin RPC	UI Enforcement
+No Commerce for Sanctuaries	providers	Blocks all marketplace tables for type='sanctuary'	sanctuary_public_profile_v1	can_use_marketplace=false	N/A	Marketplace tabs hidden
+Volunteer-Only Access	events	events.type='volunteer' only	volunteer_events_v1	N/A	N/A	Volunteer-only cards
+
+Cross-Refs:
+
+ROOTED_SANCTUARY_NONPROFIT_LAW.md
+
+ROOTED_VOLUNTEER_PARTICIPATION_LAW.md
+
+⚙️ 2.5 ADMIN POWER & ACCESS CONTROL
+Law	SQL Tables	RLS	Views	Feature Flag	Admin RPC	UI Enforcement
+Admin Actions Must Log	user_admin_actions	Insert restricted to RPC	admin_activity_v1	N/A	✅ All admin RPCs	Audit trail visible
+No Silent Privilege Escalation	user_tiers	Admin cannot update directly	public_user_tier_v1	N/A	admin_update_user_role()	No UI bypass
+No Direct SQL to Core Tables	ALL CORE	Canonical views deny direct mutation	Read-only canonical views	N/A	RPC-only mutation	UI cannot change roles
+
+Cross-Refs:
+
+ROOTED_ADMIN_GOVERNANCE.md
+
+ROOTED_ACCESS_POWER_LAW.md
+
+STOP LAYER
+
+🛡️ 2.6 DISCOVERY & MODERATION LAW
+Law	SQL Tables	RLS	Views	Feature Flag	Admin RPC	UI Enforcement
+No Shadow Publishing	moderation_queue	Only approved rows selectable	providers_discovery_v1, events_public_v1	N/A	admin_moderate_item()	UI shows approved only
+Trust = Visibility	providers	Must be active AND discoverable	providers_discovery_v1	N/A	N/A	Hides inactive/unapproved
+
+Cross-Refs:
+
+ROOTED_COMMUNITY_TRUST_LAW.md
+
+ROOTED_GOVERNANCE_ETHICS.md
+
+🧒 2.7 KIDS MODE + CONTENT FILTERING
+Law	SQL Tables	RLS	Views	Feature Flag	Admin RPC	UI Enforcement
+Kids-Safe Mapping	kids_mode_overlays	Only approved overlays	kids_safe_content_v1	kids_mode_enabled	admin_assign_kids_overlay()	Adult surfaces hidden
+No Kids Uploads	provider_media, events	Minors blocked	N/A	N/A	N/A	Upload UI disabled
+
+Cross-Refs:
+
+ROOTED_KIDS_MODE_GOVERNANCE.md
+
+ROOTED_PLATFORM_CONSTITUTION.md
+
+🌱 2.8 SEASONAL KNOWLEDGE STREAMS
+Law	SQL Tables	RLS	Views	Feature Flag	Admin RPC	UI Enforcement
+Recipes = Premium Plus	recipes	tier='premium_plus'	seasonal_recipes_v1	premium_plus_enabled	N/A	Lock icon + upsell
+Seeds / Produce / Crafts	seasonal_items	Public read, moderated	seasonal_current_month_v1	N/A	admin_rotate_seasonal_month()	Monthly education
+Kids Seasonal Filters	seasonal_items	Unsafe excluded	kids_seasonal_v1	kids_mode_enabled	N/A	Safe only
+
+Cross-Refs:
+
+ROOTED_SEASONAL_KNOWLEDGE_STREAMS_LAW.md
+
+ROOTED_KIDS_MODE_GOVERNANCE.md
 
 ---
 
