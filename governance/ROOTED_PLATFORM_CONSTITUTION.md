@@ -1,4 +1,4 @@
-ROOTED PLATFORM CONSTITUTION (FINAL)
+## ROOTED PLATFORM CONSTITUTION (FINAL)
 
 Authority Level: SUPREME PLATFORM LAW
 Enforcement Chain: GitHub → Database → Admin RPCs → UI
@@ -23,6 +23,8 @@ If anything conflicts with this Constitution → this Constitution wins, unless 
 Cross-Reference:
 ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md
 
+---
+
 🧒 SUPREME CHILD SAFETY CLAUSE
 
 Child safety always overrides:
@@ -42,6 +44,8 @@ Investor pressure
 Cross-Reference:
 ROOTED_KIDS_MODE_GOVERNANCE.md
 ROOTED_COMMUNITY_TRUST_LAW.md
+
+---
 
 🚫 ANTI-PROFILING & NON-IDENTITY SORTING LAW
 
@@ -76,12 +80,16 @@ Cross-Reference:
 ROOTED_DATA_SOVEREIGNTY_LAW.md
 ROOTED_COMMUNITY_TRUST_LAW.md
 
+---
+
 🐾 SANCTUARY PROTECTION
 
 Sanctuaries exist for public good only, never commerce.
 
 Cross-Reference:
 ROOTED_SANCTUARY_NONPROFIT_LAW.md
+
+---
 
 ⚙️ NO UNLIMITED POWER
 
@@ -92,12 +100,16 @@ ROOTED_ACCESS_POWER_LAW.md
 ROOTED_ADMIN_GOVERNANCE.md
 ROOTED_ACCOUNT_GOVERNANCE_LAW.md
 
+---
+
 🧾 GIT-LOCKED SOVEREIGNTY
 
 If a rule is not in GitHub → it has no legal standing inside ROOTED.
 
 Cross-Reference:
 ROOTED_GOVERNANCE_INDEX_CHAIN_OF_AUTHORITY.md
+
+---
 
 ✅ Ratified by:
 
