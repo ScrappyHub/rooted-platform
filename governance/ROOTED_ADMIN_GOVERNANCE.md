@@ -1,166 +1,97 @@
-Authority Level: Canonical Governance Law
-Enforcement: Constitution → Stop Layer → Database (RLS + RPCs) → Admin UI
-Effective Date: First Public Launch
+# ⚖️ ROOTED — ADMIN GOVERNANCE LAW
 
-This file governs all administrative power inside ROOTED.
+Authority Level: Absolute Platform Law  
+Enforcement: Constitution → RLS + Feature Flags + Admin RPCs  
+Effective Date: First Public Launch  
 
-If this file conflicts with:
+Admins exist to protect ROOTED — not control it.
 
-ROOTED_PLATFORM_CONSTITUTION.md
+---
 
-ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md
+## ✅ LEGAL ADMIN POWERS (LIMITED & LOGGED)
 
-👉 Those files override this one immediately.
+Admins may ONLY perform actions that are:
 
-1. PURPOSE
+✅ Governed by Feature Flags  
+✅ Enforced by RLS  
+✅ Executed via public RPCs  
+✅ Logged in `public.user_admin_actions`  
 
-Admin access exists only for platform safety and continuity, never for:
+### Allowed Domains:
 
-Profit extraction
+- User Role changes
+- Tier changes
+- Account status changes
+- Moderation approvals/rejections
+- Feature flag updates
+- Badge grants/revocations
+- Provider suspensions
+- Safety enforcement actions
 
-Political influence
+---
 
-Discovery manipulation
+## ❌ ABSOLUTE PROHIBITIONS
 
-Personal convenience
+Admins may NEVER:
 
-Investor pressure
+- Assign themselves silent privileges
+- Write direct SQL to bypass RLS
+- Override Kids Mode
+- Monetize sanctuaries
+- Force discovery placement
+- Edit analytics for appearances
+- Silence reports without trace
+- Create shadow features
 
-Admin power is custodial, not sovereign.
+---
 
-2. WHO IS AN ADMIN (LEGAL DEFINITION)
+## 🧾 MANDATORY AUDIT LOGGING
 
-A user is an Admin ONLY IF:
+Every admin RPC MUST:
 
-public.user_tiers.role = 'admin'
+1. Call `public.is_admin()`
+2. Write to `public.user_admin_actions`
+3. Store:
+   - admin_id
+   - target_user_id
+   - action_type
+   - details
+   - created_at
 
-public.user_tiers.account_status = 'active'
+Failure to log = illegal action.
 
-No UI toggle, environment variable, or backend key grants admin status outside public.user_tiers.
+---
 
-Cross-Reference:
-ROOTED_ACCOUNT_GOVERNANCE_LAW.md
-ROOTED_ACCESS_POWER_LAW.md
+## 🚨 EMERGENCY OVERRIDES (INTERNAL ONLY)
 
-3. WHAT ADMINS ARE ALLOWED TO DO
+Only internal service-role functions may bypass `public.is_admin()`:
 
-Admins may ONLY perform the following actions:
+- `_admin_*_internal`
+- Not exposed to frontend
+- Not callable by user sessions
 
-Account status changes (active / suspended / locked)
+Emergency use requires:
 
-Role adjustments (user ↔ vendor ↔ institution ↔ admin)
+- Incident reason
+- Timestamp
+- Post-action audit
 
-Tier adjustments (free / premium / premium_plus)
+---
 
-Feature flag updates (governed)
+## ⚖️ ENFORCEMENT
 
-Moderation decisions (approve / reject)
+Violations result in:
 
-Emergency safety interventions
+- Immediate admin removal
+- Forensic audit
+- Governance expulsion
+- Possible legal escalation
 
-Abuse response actions
+---
 
-All actions MUST go through admin RPCs only.
-
-4. WHAT ADMINS ARE NEVER ALLOWED TO DO
-
-❌ Bypass RLS
-❌ Create shadow permissions
-❌ Grant commercial access to prohibited entities
-❌ Override Kids Mode
-❌ Force holiday activation
-❌ Suppress lawful speech
-❌ Alter analytics
-❌ Target discovery for revenue
-❌ Access raw PII outside scoped views
-❌ Perform manual SQL edits to governance tables
-
-Cross-References:
-ROOTED_KIDS_MODE_GOVERNANCE.md
-ROOTED_COMMUNITY_TRUST_LAW.md
-ROOTED_DATA_SOVEREIGNTY_LAW.md
-
-5. MANDATORY ADMIN LOGGING (NON-NEGOTIABLE)
-
-Every admin mutation MUST be recorded in:
-
-public.user_admin_actions
-
-This includes:
-
-Role changes
-
-Tier changes
-
-Feature flag changes
-
-Suspensions
-
-Lockouts
-
-Forced provider disablement
-
-Moderation approvals / rejections
-
-Revenue tool revocation
-
-Unlogged admin action = platform law violation.
-
-6. EMERGENCY POWERS (STRICTLY LIMITED)
-
-Admins may perform emergency actions ONLY to prevent:
-
-Child harm
-
-Physical danger
-
-Real-world criminal activity
-
-Data poisoning
-
-Infrastructure compromise
-
-Emergency powers:
-
-Are time-limited
-
-Are scope-limited
-
-Are fully logged
-
-Are automatically audited
-
-Cross-Reference:
-ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md
-
-7. ADMINS ARE BOUND BY LAW
-
-Admins are legally bound by:
-
-Platform Constitution
-
-Stop Layer
-
-Data Sovereignty Law
-
-Kids Mode Governance
-
-Sanctuary & Nonprofit Law
-
-“I was an admin” is never a legal defense.
-
-8. VIOLATIONS
-
-Any admin who violates governance is subject to:
-
-Immediate privilege revocation
-
-Full internal audit
-
-Permanent governance disqualification
-
-Legal escalation where applicable
-
-✅ Admin power in ROOTED is logged, audited, and law-bound.
-✅ No admin is sovereign.
-✅ No admin outranks the Constitution.
+**Cross-Reference:**
+- ROOTED_PLATFORM_CONSTITUTION.md  
+- ROOTED_ACCESS_POWER_LAW.md  
+- ROOTED_ADMIN_OVERRIDES_LAW.md  
+- ROOTED_COMMUNITY_TRUST_LAW.md  
+- ROOTED_KIDS_MODE_GOVERNANCE.md  
