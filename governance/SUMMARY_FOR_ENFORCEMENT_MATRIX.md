@@ -1,9 +1,11 @@
-ROOTED — ENFORCEMENT MATRIX (CANONICAL)
+# ROOTED — ENFORCEMENT MATRIX (CANONICAL)
 
 File: /governance/ENFORCEMENT_MATRIX.md
 Authority Level: Binding Engineering Law
 Enforcement Chain: Constitution → Stop Layer → SQL → RLS → Feature Flags → RPCs → UI
 Purpose: Guarantee that every ROOTED law is enforced in the correct backend and UI layer with zero ambiguity.
+
+---
 
 This is the forensic blueprint that prevents:
 
@@ -25,6 +27,8 @@ Vendor/institution misclassification
 
 If a developer breaks the matrix → the code is illegal.
 
+---
+
 🔒 1. ENFORCEMENT OVERVIEW
 
 Each ROOTED governance law must map to:
@@ -42,6 +46,8 @@ Admin RPCs
 UI Enforcement Rules
 
 If ANY row below is broken → the system becomes non-compliant.
+
+---
 
 📘 2. THE FULL ENFORCEMENT MATRIX
 
@@ -83,6 +89,10 @@ Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI En
 Recipes = Premium Plus only	recipes	RLS restricts to tier='premium_plus'	seasonal_recipes_v1	premium_plus_enabled	N/A	Lock icon + upsell
 Seeds/Produce/Crafts = all users	seasonal_items	Public read (moderated only)	seasonal_current_month_v1	N/A	admin_rotate_seasonal_month()	Surface monthly education
 Kids Mode seasonal filters	seasonal_items	RLS excludes unsafe items	kids_seasonal_v1	kids_mode_enabled	N/A	Kids UI shows only safe crafts/produce
+
+
+---
+
 🔨 3. MUTATION RULES (CANONICAL)
 ❌ You may NOT mutate directly:
 
@@ -106,6 +116,8 @@ ALL mutations must go through:
 
 SECURITY DEFINER Admin RPCs
 
+---
+
 🛑 4. NON-NEGOTIABLE RLS GUARDRAILS
 
 These cannot ever be bypassed:
@@ -128,6 +140,8 @@ No unreviewed content in ANY discovery view
 
 Everything else is optional — these are not.
 
+---
+
 📚 5. CROSS-REFERENCE MAP
 Law File	Defines	Enforced By
 ROOTED_PLATFORM_CONSTITUTION.md	Identity, ethics, children, profiling	Every database layer
@@ -140,6 +154,9 @@ ROOTED_SANCTUARY_NONPROFIT_LAW.md	No commerce for sanctuaries	provider_type
 ROOTED_ACCOUNT_GOVERNANCE_LAW.md	Role, tier, deletion	user_tiers, deletion_requests
 ROOTED_ADMIN_GOVERNANCE.md	Admin RPC limits	admin_* RPCs
 ROOTED_VOLUNTEER_PARTICIPATION_LAW.md	Youth participation	events
+
+---
+
 🧩 6. FINAL ENGINEERING GUARANTEE
 
 If a developer follows this matrix:
