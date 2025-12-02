@@ -1,8 +1,11 @@
 # ROOTED — ENFORCEMENT MATRIX (CANONICAL)
 
 File: /governance/ENFORCEMENT_MATRIX.md
+
 Authority Level: Binding Engineering Law
+
 Enforcement Chain: Constitution → Stop Layer → SQL → RLS → Feature Flags → RPCs → UI
+
 Purpose: Guarantee that every ROOTED law is enforced in the correct backend and UI layer with zero ambiguity.
 
 ---
