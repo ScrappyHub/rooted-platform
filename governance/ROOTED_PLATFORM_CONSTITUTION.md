@@ -1,356 +1,283 @@
-📜 ROOTED PLATFORM CONSTITUTION 
+📜 ROOTED PLATFORM CONSTITUTION
 
 Authority Level: Absolute Platform Law
-Applies To: All users, vendors, institutions, staff, contractors, developers, and administrators
+Applies To: All users, vendors, institutions, admins, developers, contractors, service accounts
 Enforcement Chain:
 GitHub Governance → Database (RLS + Views + RPCs) → Admin Oversight → UI
-Effective Date: Upon first public launch of ROOTED
+Effective Date: First Public Launch
 
----
+🧬 ROOTED — CONSTITUTIONAL & LEGAL STOP LAYER
 
-# 🧬 ROOTED — CONSTITUTIONAL & LEGAL STOP LAYER
-Authority Level: ABSOLUTE  
-Enforcement: GitHub → Database → Admin RPCs → UI  
-Effective Date: First Public Launch  
+Authority Level: ABSOLUTE
+Enforcement: GitHub → Database → Admin RPCs → UI
 
-This document defines the **highest possible authority inside ROOTED**.  
-If any file, feature, contract, UI, admin action, or monetization rule conflicts with anything listed here —  
-👉 **THIS LAYER WINS. NO EXCEPTIONS.**
+This section defines the highest possible authority inside ROOTED.
 
----
+If ANY of the following ever conflict with this Stop Layer:
 
-## ✅ PERMANENTLY LOCKED PLATFORM LAWS
+Features
 
-These documents now function as **binding platform law**:
+Monetization
 
-✅ ROOTED_PLATFORM_CONSTITUTION.md  
-✅ ROOTED_DATA_SOVEREIGNTY_LAW.md  
-✅ ROOTED_ACCESS_POWER_LAW.md  
-✅ ROOTED_COMMUNITY_TRUST_LAW.md  
-✅ ROOTED_SANCTUARY_NONPROFIT_LAW.md  
-✅ ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md  
-✅ ROOTED_KIDS_MODE_GOVERNANCE.md  
-✅ ROOTED_ADMIN_GOVERNANCE.md  
-✅ ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md  
+Contracts
 
----
+UI behavior
 
-## 🧒 SUPREME CHILD SAFETY CLAUSE (OVERRIDING LAW)
+Admin actions
 
-If child safety ever conflicts with:
+Partner requests
 
-- Revenue
-- Growth
-- Advertising
-- Partnerships
-- Institutional pressure
-- Investor pressure
+Investor pressure
 
-**Child safety ALWAYS wins. This clause overrides everything.**
+👉 THIS STOP LAYER WINS. NO EXCEPTIONS.
 
----
+✅ PERMANENTLY LOCKED PLATFORM LAWS (BINDING)
 
-## 🐾 SANCTUARY & NONPROFIT ABSOLUTE PROTECTION
+These files function as non-overrideable platform law:
 
-Sanctuaries, rescues, and mission-only nonprofits:
+✅ ROOTED_PLATFORM_CONSTITUTION.md
 
-❌ May NOT access commerce  
-❌ May NOT access bidding  
-❌ May NOT access bulk markets  
-✅ May host volunteer & education events only  
-✅ Always discovery-safe  
-✅ Always moderation-required  
+✅ ROOTED_DATA_SOVEREIGNTY_LAW.md
 
-Their existence on ROOTED is for **public good only** — never profit.
+✅ ROOTED_ACCESS_POWER_LAW.md
 
----
+✅ ROOTED_COMMUNITY_TRUST_LAW.md
 
-## ⚙️ NO UNLIMITED POWER PRINCIPLE
+✅ ROOTED_SANCTUARY_NONPROFIT_LAW.md
 
-No human, account, admin, or system process inside ROOTED may possess:
+✅ ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md
 
-❌ Unlogged override authority  
-❌ Silent access to restricted data  
-❌ The ability to bypass:
-- RLS
-- Feature flags
-- Moderation
-- Kids Mode
-- Compliance law  
+✅ ROOTED_KIDS_MODE_GOVERNANCE.md
 
----
+✅ ROOTED_ADMIN_GOVERNANCE.md
 
-## 🧾 GIT IS LAW
+✅ ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md
 
-All authority must exist in:
-
-- GitHub
-- SQL policies
-- Exposed RPCs
-
-If it is **not written in GitHub, it has no legal authority inside ROOTED**.
-
----
-
-✅ This Stop Layer is FINAL  
-✅ No override mechanisms exist  
-✅ No founder exception exists  
-✅ No monetization exception exists  
-✅ No admin convenience exception exists
-
----
-
-🧭 PURPOSE OF THIS CONSTITUTION
-
-ROOTED is not a typical application. It is a regional, civic, institutional, and community operating system.
-
-This Constitution exists to ensure that ROOTED:
-
-Cannot be ethically compromised as it scales
-
-Cannot be captured by monetization-first incentives
-
-Cannot be weaponized politically
-
-Cannot exploit children, communities, or institutions
-
-Cannot become a surveillance platform
-
-Cannot bypass its own safety rules through UI tricks, admin abuse, or hidden data extraction
-
-This Constitution is the highest governing authority inside ROOTED.
-
-If any code, policy, contract, UI design, or business decision conflicts with this Constitution → the Constitution always wins.
-
-🏛️ GOVERNANCE HIERARCHY (CHAIN OF AUTHORITY)
-
-ROOTED is governed in the following strict order:
-
-✅ GitHub Governance Files (Platform Law)
-
-✅ Database Enforcement
-
-Row Level Security (RLS)
-
-Canonical Views
-
-Feature Flags
-
-Admin RPCs
-
-✅ Admin Oversight
-
-Moderation actions
-
-Account governance
-
-Feature flag management
-
-✅ User Interface (UI)
-
-Display layer only
-
-Never an authority layer
-
-If any layer conflicts with a higher layer, the higher layer overrides immediately.
-
----
-
-📚 ACTIVE PLATFORM LAWS (CANONICAL INDEX)
-🔒 1. ROOTED Governance & Ethics
-
-File: ROOTED_GOVERNANCE_ETHICS.md
-Status: ✅ Active Law
-
----
-
-🧠 2. ROOTED Data Sovereignty & User Consent Law
-
-File: ROOTED_DATA_SOVEREIGNTY_LAW.md
-Status: ✅ Active Law
-
----
-
-⚙️ 3. ROOTED Platform Access & Power Limitation Law
-
-File: ROOTED_ACCESS_POWER_LAW.md
-Status: ✅ Active Law
-
----
-
-🛡️ 4. ROOTED Community Trust & Safety Enforcement Law
-
-File: ROOTED_COMMUNITY_TRUST_LAW.md
-Status: ✅ Active Law
-
----
+If it is not expressed in one of these files → it has no authority inside ROOTED.
 
 🧒 SUPREME CHILD SAFETY CLAUSE (OVERRIDING LAW)
 
-Across all ROOTED systems:
-
-If child safety ever conflicts with any other function of the platform, child safety always wins.
-
-This clause overrides:
+If child safety ever conflicts with:
 
 Revenue
-
-Analytics
 
 Growth
 
 Advertising
 
+Partnerships
+
 Institutional pressure
 
 Investor pressure
 
-Regional partnerships
+Regional politics
 
-This clause is not negotiable.
+✅ CHILD SAFETY ALWAYS WINS.
 
----
+This clause overrides:
 
-🧮 PLATFORM ACCESS & FEATURE ENTITLEMENT LAW (TIER GRID — CANONICAL)
+Marketplace logic
 
-This section is now part of ROOTED_ACCESS_POWER_LAW and is legally binding platform-wide.
+Analytics logic
 
-✅ CANONICAL FEATURE GRID (ENFORCED BY DB + RLS)
-Role	Tier	Bid Market	Bulk Market	Basic Analytics	Advanced Analytics
-Vendor	Free	❌	❌	✅	❌
-Vendor	Premium	❌	✅	✅	❌
-Vendor	Premium Plus	✅	✅	✅	✅
-Institution	Free	❌	❌	✅	❌
-Institution	Premium	❌	✅	✅	❌
-Institution	Premium Plus	✅	✅	✅	✅
-Admin	Any	✅	✅	✅	✅
-🔒 Absolute Enforcement Rules
+Monetization logic
 
-Premium does NOT include bidding. Ever.
+Partner agreements
 
-Only Premium Plus may bid.
+Marketing strategy
 
-Basic analytics is free for everyone except community users.
+Cross Reference:
+→ ROOTED_KIDS_MODE_GOVERNANCE.md
+→ ROOTED_COMMUNITY_TRUST_LAW.md
 
-Bulk marketplace is Premium and above.
+🧒 ROOTED KIDS MODE — ABSOLUTE LEGAL SAFETY SYSTEM
 
-Advanced analytics is Premium Plus only.
+Kids Mode is not a feature. It is a legal-grade safety sandbox.
 
-Admin always has full system access.
+✅ CANONICAL AGE TIERS (UI-ENFORCED, NOT STORED):
+Age	Tier	Capability
+0–3	Parent-Only Passive	View-only
+4–7	Guided Exploration	View-only
+8–11	Independent Discovery	View-only
+12–13	Limited Participation	Education + volunteer preview
+13+	Legal Community Account	Full community role
+❌ Kids Mode MUST NEVER show:
 
-Any future code, UI, or contract that violates this grid is automatically invalid.
+Pricing
 
----
+Purchases
 
-🏛️ INSTITUTION & VENDOR MIRROR LAW (EQUAL ACCESS GUARANTEE)
+Bookings
 
-Institutions and Vendors are governed by the same access logic at the same tier level.
+Fundraising
 
-This means:
+Ads
 
-If vendors at Premium can access Bulk → institutions at Premium must also access Bulk
+RFQs
 
-If vendors at Premium Plus can bid → institutions at Premium Plus must also bid
+Bids
 
-Analytics access is mirrored identically
+Messaging
 
-UI, RLS, views, APIs, feature flags, and frontend gating must stay perfectly aligned
+Commercial CTAs
 
-There shall never exist:
+Political content
 
-“Vendor-only privileged access”
+Religious instruction
 
-“Institution-restricted monetization”
+✅ Kids Mode MAY show:
 
-“Shadow paywalls by role”
+Farm education
 
-This mirror rule is absolute and non-overrideable.
+Animal education
 
----
+Nature learning
 
-🛑 SANCTUARY & NONPROFIT COMMERCIAL RESTRICTION LAW
+Cultural awareness (opt-in, non-political)
 
-Sanctuaries, rescues, and mission-only nonprofits:
+Environmental science
 
-❌ May NOT access bidding
+Food education (non-sales)
 
-❌ May NOT access bulk marketplace
+Cross Reference:
+→ ROOTED_KIDS_MODE_GOVERNANCE.md
+→ ROOTED_COMMUNITY_TRUST_LAW.md
 
-✅ May host volunteer-only events
+🚫 ROOTED ANTI-PROFILING & NON-IDENTITY SORTING LAW
 
-✅ May appear in discovery
+Authority Level: Absolute
+Enforcement: Constitution → RLS → Views → Feature Flags → UI
 
-✅ Must pass full moderation
+ROOTED does not permit profiling or demographic sorting by:
 
-Their purpose is public good, never commerce.
+Race
 
-🧾 ENFORCEMENT & LEGAL STANDING
+Ethnicity
 
-Any action that violates one or more platform laws may result in:
+Skin color
 
-Immediate feature revocation
+Religion
 
-Immediate discovery removal
+Political belief
 
-Account suspension or termination
+Gender identity
 
-Permanent ban
+Sexual orientation
 
-Full internal audit
+Immigration status
 
-External legal escalation where applicable
+Family structure
 
-No revenue source, sponsor, partner, or institution is exempt from enforcement.
+Disability
 
----
+✅ These are never required
+✅ Never inferred
+✅ Never requested
+✅ Never ranked
+✅ Never used in discovery
+✅ Never targeted by ads
+
+✅ STORY OVER SEGMENTATION LAW
+
+ROOTED operates by:
+
+“Tell your story.
+Show your work.
+Let the community choose you by trust — not labels.”
+
+Businesses are surfaced by:
+
+Craft
+
+Ethics
+
+Education
+
+Environmental care
+
+Community service
+
+Safety compliance
+
+Not by identity marketing.
+
+Cross Reference:
+→ ROOTED_COMMUNITY_TRUST_LAW.md
+→ ROOTED_DATA_SOVEREIGNTY_LAW.md
+
+🐾 SANCTUARY & NONPROFIT ABSOLUTE PROTECTION
+
+Sanctuaries, rescues & mission-only nonprofits:
+
+❌ No commerce
+❌ No bidding
+❌ No bulk markets
+✅ Volunteer & education events only
+✅ Always moderation-required
+✅ Always discovery-safe
+
+Cross Reference:
+→ ROOTED_SANCTUARY_NONPROFIT_LAW.md
+
+⚙️ NO UNLIMITED POWER PRINCIPLE
+
+No human, system, admin, founder, or service account inside ROOTED may possess:
+
+❌ Unlogged override power
+❌ Silent access to restricted data
+❌ The ability to bypass:
+
+RLS
+
+Feature flags
+
+Moderation
+
+Kids Mode
+
+Compliance overlays
+
+🧾 GIT IS LAW
+
+All enforceable authority must live in:
+
+GitHub governance files
+
+SQL policies
+
+RLS rules
+
+Canonical Views
+
+Exposed RPCs
+
+If a rule is not in GitHub → it does not legally exist in ROOTED.
+
+🏛️ GOVERNANCE HIERARCHY (CHAIN OF AUTHORITY)
+
+1️⃣ GitHub Governance (LAW)
+2️⃣ Database Enforcement (RLS + Views + Flags + RPCs)
+3️⃣ Admin Oversight (Logged only)
+4️⃣ UI (Display only)
+
+Lower layers cannot override higher layers. Ever.
 
 🧑‍💼 DEVELOPER & CONTRIBUTOR BINDING CLAUSE
 
-Any person who:
+Every person who:
 
-Writes code for ROOTED
+Writes code
 
-Designs systems for ROOTED
+Designs UI
 
-Manages data for ROOTED
+Touches data
 
-Administers ROOTED systems
+Administers systems
 
-Is legally and ethically bound by all files listed in this Constitution.
+Is legally & ethically bound by this Constitution and all referenced laws.
 
-No contributor may claim:
-
-Ignorance of governance
-
-Business necessity
-
-Investor pressure
-
-Performance targets
-
-As justification for violating ROOTED law.
-
----
-
-🧠 INTENT PRESERVATION CLAUSE
-
-ROOTED is designed to:
-
-Strengthen local economies
-
-Protect children
-
-Empower communities
-
-Support institutions
-
-Preserve cultural consent
-
-Prevent extractive technology models
-
-If a proposal undermines this intent → it is automatically invalid.
-
----
+Ignorance is never a defense.
 
 ✅ RATIFICATION
 
@@ -358,143 +285,20 @@ This Constitution is ratified by:
 
 The ROOTED Founder
 
-The ROOTED Governance Framework
+The Governance Framework
 
-The first public deployment of the platform
+The first public deployment
 
-Once ratified, this Constitution:
+Once ratified:
 
-Cannot be overridden by UI
-
-Cannot be overridden by admin convenience
-
-Cannot be overridden by monetization pressure
-
-Cannot be overridden by partners or investors
-
-⚙️ NO UNLIMITED POWER PRINCIPLE (ABSOLUTE LAW)
-
-No single human, account, or system inside ROOTED may possess:
-
-Unlogged override authority
-
-Silent access to unrestricted data
-
-The ability to bypass:
-
-Feature flags
-
-Row Level Security (RLS)
-
-Moderation pipelines
-
-Any governance laws
-
----
-
-👤 ADMIN POWERS ARE:
-
-✅ Logged
-✅ Audited
-✅ Role-scoped
-✅ Time-bounded when possible
-
-Every privileged action must create a record in:
-
-public.user_admin_actions
-
-📌 Examples of Logged Admin Actions:
-
-Role changes
-
-Tier changes
-
-Feature flag changes
-
-Moderation decisions
-
-Account suspensions
-
-Account lockouts
-
-Forced provider disablement
-
-Revenue tool revocations
-
-❌ ADMIN POWERS MAY NOT BE USED TO:
-
-Grant commercial tools to prohibited entities (e.g., sanctuaries, rescues)
-
-Bypass Kids Mode protections
-
-Force holiday activations
-
-Silence lawful community activity
-
-Manipulate discovery for financial benefit
-
-Override moderation outcomes without trace
-
-Inflate analytics, impressions, or reach metrics
-
-Create shadow privileges outside of RLS + feature flags
-
----
-
-🧾 GIT-LOCKED LAW
-
-All access control rules must exist in:
-
-GitHub governance files
-
-Supabase functions
-
-RLS policies
-
-If a rule is not written in GitHub, it has no standing authority.
-
----
-
-🚨 VIOLATIONS
-
-Any unlogged or abusive use of power results in:
-
-Immediate privilege revocation
-
-Full internal audit
-
-Permanent removal from ROOTED governance
-
-This applies to:
-
-Admins
-
-Developers
-
-Contractors
-
-Founders
-
-Service accounts
-
-No one is exempt.
-
----
-
-
-Effect:
-
-No admin, founder, contractor, or system process can override child safety, consent, or sanctuary protection.
-
-All monetization, discovery, and moderation logic is legally constrained.
-
-ROOTED is now law-governed, not personality-governed.
-
----
-
+❌ No UI override
+❌ No admin convenience override
+❌ No monetization override
+❌ No partner override
+❌ No investor override
 
 🔚 FINAL AUTHORITY STATEMENT
 
-This file is the final authority on ROOTED’s identity, ethics, governance, safety, and power structure.
+This file is the highest authority inside ROOTED.
 
 There is no higher platform authority than this Constitution.
