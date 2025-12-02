@@ -60,7 +60,6 @@ Marketing
 
 Partnerships
 
----
 
 🚫 MISUSE OF TRUST
 
@@ -78,7 +77,6 @@ Abuse of volunteer systems
 
 Exploitation of emergencies
 
----
 
 ⚖️ FINAL ENFORCEMENT AUTHORITY
 
@@ -122,7 +120,9 @@ Anti-surveillance
 Anti-exploitation
 
 Anti-power abuse
+
 ---
+
 ## Trauma-Informed Safety Architecture
 
 ROOTED’s safety systems exist specifically to prevent the real-world failures that occur when:
