@@ -5,7 +5,7 @@ Purpose: Plain-English trust document for users, families, schools, and the publ
 
 ---
 
-🌱 WHAT ROOTED IS
+## 🌱 WHAT ROOTED IS
 
 ROOTED is:
 
@@ -25,7 +25,7 @@ ROOTED is governed by written law, not vibes, not profit pressure, not hidden al
 
 ---
 
-🧒 CHILD SAFETY IS THE HIGHEST LAW
+## 🧒 CHILD SAFETY IS THE HIGHEST LAW
 
 Children on ROOTED are never exposed to:
 
@@ -53,7 +53,7 @@ Child safety wins automatically.
 
 ---
 
-🔐 YOU OWN YOUR DATA
+## 🔐 YOU OWN YOUR DATA
 
 Your data is never sold
 
@@ -75,7 +75,7 @@ No third-party profiling
 
 ---
 
-🚫 ROOTED DOES NOT PROFILE PEOPLE
+## 🚫 ROOTED DOES NOT PROFILE PEOPLE
 
 ROOTED does NOT sort, rank, or target anyone by:
 
@@ -113,7 +113,7 @@ Not labels. Not demographics.
 
 ---
 
-🐾 SANCTUARIES & NONPROFITS ARE PROTECTED
+## 🐾 SANCTUARIES & NONPROFITS ARE PROTECTED
 
 Sanctuaries:
 
@@ -127,7 +127,7 @@ They exist on ROOTED only for public good.
 
 ---
 
-⚙️ ADMINS DO NOT HAVE UNLIMITED POWER
+## ⚙️ ADMINS DO NOT HAVE UNLIMITED POWER
 
 Admins:
 
@@ -143,7 +143,7 @@ Every admin action is logged permanently.
 
 ---
 
-🧾 ALL RULES ARE GIT-LOCKED
+## 🧾 ALL RULES ARE GIT-LOCKED
 
 If a rule is not written in ROOTED’s public governance files →
 It has no legal authority.
@@ -160,7 +160,7 @@ Political interference
 
 ---
 
-👤 THE FOUNDER DOES NOT CONTROL YOU
+## 👤 THE FOUNDER DOES NOT CONTROL YOU
 
 The Founder:
 
@@ -178,7 +178,7 @@ ROOTED is law-governed — not personality-governed.
 
 ---
 
-✅ WHAT ROOTED GUARANTEES
+## ✅ WHAT ROOTED GUARANTEES
 
 Safety before profit
 
@@ -190,4 +190,4 @@ Education before monetization
 
 Governance before convenience
 
-🛡️ ROOTED exists to serve communities — not extract from them.
+## 🛡️ ROOTED exists to serve communities — not extract from them.
