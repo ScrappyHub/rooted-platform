@@ -51,7 +51,7 @@ If ANY row below is broken → the system becomes non-compliant.
 
 📘 2. THE FULL ENFORCEMENT MATRIX
 
-(You can paste this directly to GitHub — formatting is GitHub-friendly.)
+
 
 2.1 CHILD SAFETY LAWS
 Governance Law	SQL Table(s)	RLS Enforcement	View(s)	Feature Flag	Admin RPC	UI Enforcement
