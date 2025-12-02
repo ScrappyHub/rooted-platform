@@ -1,95 +1,82 @@
-# 🧠 ROOTED DATA SOVEREIGNTY & USER CONSENT LAW  
-Version: Canonical  
+# ROOTED — Data Sovereignty & User Consent Law
+
 Authority Level: Absolute Platform Law  
 Enforcement: Database Policy + RLS + Admin Oversight  
-Effective Date: First Public Deployment
+Effective Date: First Public Launch
 
 ---
 
-## 🧠 DATA SOVEREIGNTY PRINCIPLE
+## 1. Data Ownership
 
-All data created inside ROOTED belongs to the **user or organization that generated it**, not to the platform.
-
-ROOTED is a **steward**, not an owner, of user data.
-
----
-
-## ✅ EXPLICIT CONSENT REQUIREMENT
-
-ROOTED may only:
-
-- Collect data that is **directly required** to operate features the user explicitly chose
-- Store data that the user:
-  - Intentionally submitted
-  - Or that is required for verified platform security
-
-ROOTED may **not**:
-
-❌ Harvest behavioral data for third-party resale  
-❌ Profile users for advertising networks  
-❌ Build hidden data enrichment systems  
-❌ Correlate data across verticals without consent  
-❌ Share personal data with brokers, ad networks, or political entities  
+All data belongs to the user or organization who created it.  
+ROOTED is a steward — not an owner.
 
 ---
 
-## 🔐 USER DATA CONTROL RIGHTS
+## 2. Explicit Consent Only
 
-Every user has the absolute right to:
+ROOTED may only collect:
 
-✅ View their stored data  
-✅ Correct their stored data  
-✅ Export their stored data  
-✅ Delete their stored data  
-✅ Revoke previously granted consent  
+- Data required to operate opted-in features
+- Data required for platform security
 
-Account deletion requests must:
+ROOTED may NEVER:
 
-- Be honored within legal and security limits
-- Be logged via `account_deletion_requests`
-- **Never be blocked by monetization or revenue considerations**
+- Sell user data
+- Profile users for third parties
+- Enrich shadow identity graphs
+- Share data with brokers or political entities
 
 ---
 
-## 🛑 ZERO SILENT TRACKING
+## 3. User Rights
 
-ROOTED does **not** allow:
+All users have the right to:
 
-❌ Hidden device fingerprinting  
-❌ Silent GPS harvesting  
-❌ Passive background data scraping  
-❌ Third-party analytics that extract raw user identity  
+- View their data
+- Correct their data
+- Export their data
+- Delete their data
+- Revoke consent
 
-If tracking exists at all, it must be:
+Deletion requests must use:
 
-✅ Transparent  
-✅ Auditable  
-✅ Disablable  
+`public.account_deletion_requests`
 
 ---
 
-## Life-First Technology Principle
+## 4. Zero Silent Tracking
+
+ROOTED prohibits:
+
+- Device fingerprinting
+- Silent GPS harvesting
+- Passive background scraping
+- Identity-leaking analytics
+
+Any tracking must be:
+- Transparent
+- Auditable
+- Disablable
+
+---
+
+## 5. Life-First Technology Principle
 
 ROOTED must never:
-
-- Replace real human life
-- Dominate personal identity
+- Replace real human relationships
 - Demand total attention
-- Trap contributors in platform dependency
-
-Education, safety, family, and personal growth always override platform demands.
-
-ROOTED is a tool — not a life replacement.
+- Trap users in platform dependency
 
 ---
 
-## 🚨 VIOLATIONS
+## 6. Violations
 
-Any violation of Data Sovereignty is considered a **Critical Platform Breach** and results in:
+Violations trigger:
 
 - Immediate system lockdown
-- Full forensic audit
-- Permanent removal of responsible accounts
-- Potential legal escalation
+- Forensic audit
+- Permanent governance removal
+- Legal escalation
 
-There are **no exceptions based on revenue, investors, or partnerships**.
+Revenue does not override sovereignty.
