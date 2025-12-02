@@ -140,6 +140,7 @@ It is a **self-defending governance architecture.**
 
 ---
 
-🛡️ If you are a developer, admin, contractor, or operator:
+# 🛡️ If you are a developer, admin, contractor, or operator:
 
 By touching this system, **you are legally and ethically bound by every file in this folder**.
+
