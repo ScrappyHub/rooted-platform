@@ -1,6 +1,6 @@
 # ROOTED — Kids Mode Governance & Safety
 
-Owner / Architect: Alec  
+Founder / Architect: Alec  
 Authority Level: Absolute Platform Law  
 Enforcement: Constitution → Database (RLS + Flags + Views) → UI  
 Effective Date: First Public Launch
