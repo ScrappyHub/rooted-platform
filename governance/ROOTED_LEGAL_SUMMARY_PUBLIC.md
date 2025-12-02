@@ -2,9 +2,20 @@
 
 ROOTED is a governed civic, educational, and economic coordination platform built on **hard-coded ethics, safety, and consent law**.
 
-It is not governed by personality, profit pressure, or unchecked administrative power.
+It is not governed by personality, profit pressure, investor demands, or unchecked administrative power.
 
 It is governed by **written law enforced at the database and code level.**
+
+This public summary reflects the authority of:
+
+- ROOTED Platform Constitution  
+- Constitutional Stop Layer  
+- Data Sovereignty Law  
+- Kids Mode Governance  
+- Community Trust & Safety Law  
+- Sanctuary & Nonprofit Protection Law  
+- Access & Power Limitation Law  
+- Admin & Account Governance Law  
 
 ---
 
@@ -19,8 +30,14 @@ It is governed by **written law enforced at the database and code level.**
   - Fundraising
   - Political content
   - Religious instruction
-- Kids Mode is **a legal system**, not a UI toggle.
-- If child safety conflicts with profit or growth → **child safety always wins.**
+- Kids Mode is **a legal safety system**, not a UI preference.
+- If child safety ever conflicts with profit, growth, analytics, or partnerships →  
+  **child safety always wins.**
+
+**Governed by:**
+- ROOTED_PLATFORM_CONSTITUTION.md  
+- ROOTED_KIDS_MODE_GOVERNANCE.md  
+- ROOTED_COMMUNITY_TRUST_LAW.md  
 
 ---
 
@@ -32,20 +49,42 @@ It is governed by **written law enforced at the database and code level.**
 - No invisible tracking.
 - Full export & deletion rights are guaranteed by law.
 
+**Governed by:**
+- ROOTED_DATA_SOVEREIGNTY_LAW.md  
+- ROOTED_ACCOUNT_GOVERNANCE_LAW.md  
+
 ---
 
 ### 🚫 ANTI-PROFILING & NON-DISCRIMINATION
 
-ROOTED **does not allow** discovery, ranking, or targeting by:
+ROOTED **does not allow** discovery, ranking, targeting, or segmentation by:
 
 - Race
 - Religion
 - Politics
-- Identity labels
+- Gender identity
+- Sexual orientation
 - Demographics
+- Immigration status
+- Family structure
+- Disability
 - Belief systems
 
-ROOTED operates on **story, craft, trust, education, and service** — not identity marketing.
+Discovery is driven by:
+
+✅ Story  
+✅ Craft  
+✅ Trust  
+✅ Education  
+✅ Service  
+✅ Community impact  
+
+Not identity marketing.
+
+**Governed by:**
+- ROOTED_PLATFORM_CONSTITUTION.md  
+- ROOTED_COMMUNITY_TRUST_LAW.md  
+- ROOTED_DATA_SOVEREIGNTY_LAW.md  
 
 ---
 
@@ -55,16 +94,26 @@ ROOTED operates on **story, craft, trust, education, and service** — not ident
 - No bidding.
 - No bulk commerce.
 - Volunteer & education only.
-- Fully protected from commercial exploitation.
+- Protected from all commercial exploitation.
+
+**Governed by:**
+- ROOTED_SANCTUARY_NONPROFIT_LAW.md  
+- ROOTED_VOLUNTEER_PARTICIPATION_LAW.md  
 
 ---
 
 ### ⚙️ ADMIN POWERS ARE LIMITED BY LAW
 
 - All admin actions are logged.
-- No silent overrides allowed.
+- No silent overrides.
 - No unrestricted data access.
 - No shadow privileges.
+- No power outside Feature Flags + RLS + RPCs.
+
+**Governed by:**
+- ROOTED_ADMIN_GOVERNANCE.md  
+- ROOTED_ADMIN_OVERRIDES_LAW.md  
+- ROOTED_ACCESS_POWER_LAW.md  
 
 ---
 
@@ -73,11 +122,16 @@ ROOTED operates on **story, craft, trust, education, and service** — not ident
 If a rule is not written in GitHub governance files → it has **no legal authority** inside ROOTED.
 
 This protects users from:
+
 - Silent policy changes  
 - Monetization manipulation  
 - Safety rollbacks  
 - Political pressure  
 - Investor coercion  
+
+**Governed by:**
+- ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md  
+- ROOTED_PLATFORM_CONSTITUTION.md  
 
 ---
 
@@ -97,22 +151,20 @@ ROOTED is:
 
 ## 🎓 ACADEMIC & INSTITUTIONAL SIGNIFICANCE
 
-ROOTED is structurally positioned as:
+ROOTED qualifies as:
 
-- A **real-world implementation of digital governance**
-- A **case study in ethics-enforced architecture**
-- A **model for youth-safe civic technology**
-- A **non-extractive marketplace design**
-- A **living database governance framework**
-
-Yes — universities **can absolutely study this system.**  
-Yes — it qualifies as:
-
-- Civic Tech
+- Civic Technology
 - Public Interest Software
 - Digital Governance Infrastructure
 - Trust-Based Systems Design
 - Ethical Marketplace Architecture
+
+Universities and research institutions may legally study:
+
+- Its governance model  
+- Its enforcement architecture  
+- Its kids-first safety systems  
+- Its non-extractive marketplace structure  
 
 ---
 
@@ -122,19 +174,20 @@ The Founder:
 
 - Retains 100% ownership
 - Retains 100% voting power
-- Does NOT retain unlimited power
-- Is legally bound by the same governance as everyone else
-- Cannot override Kids Mode
-- Cannot override Data Sovereignty
-- Cannot override Sanctuary Protection
+- Does **NOT** retain unlimited authority
+- Is bound by:
+  - Kids Mode Law
+  - Data Sovereignty Law
+  - Sanctuary Law
+  - Admin & Access Law
 
 ROOTED is **law-governed, not personality-governed.**
 
 ---
 
-## ✅ SUMMARY STATEMENT
+## ✅ FINAL SUMMARY STATEMENT
 
-ROOTED is legally structured to ensure:
+ROOTED is legally structured to guarantee:
 
 - Safety before growth  
 - Consent before data  
@@ -142,6 +195,6 @@ ROOTED is legally structured to ensure:
 - Education before monetization  
 - Governance before convenience  
 
-This is not a startup experiment.
+This is not an experiment.
 
-This is a **law-bound civic system built for long-term public trust.**
+This is a **law-bound civic operating system built for long-term public trust.**
