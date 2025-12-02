@@ -1,7 +1,8 @@
 # 📜 ROOTED CONTRIBUTOR GOVERNANCE NOTICE  
+
 **Applies To:** Developers, Designers, Contractors, Data Engineers, Admins, Integrators  
-**Authority Level:** Binding  
-**Accepted Upon:** First access to ROOTED systems or repositories
+**Authority Level:** Binding Governance Law  
+**Accepted Upon:** First access to any ROOTED systems or repositories  
 
 ---
 
@@ -17,7 +18,11 @@ It is governed by:
 - Child protection over growth  
 - Institutional trust over speed  
 
-These rules are **not optional**.
+These rules are **not optional** for any contributor.
+
+**Cross-Reference:**  
+- `ROOTED_PLATFORM_CONSTITUTION.md`  
+- `ROOTED_GOVERNANCE_ETHICS.md`  
 
 ---
 
@@ -27,30 +32,38 @@ All contributors must treat **child safety as an absolute priority**.
 
 You may **never**:
 
-- Monetize Kids Mode
-- Expose pricing, fundraising, subscriptions, RFQs, or bids to minors
-- Allow vendors or institutions to message children
-- Introduce analytics, ads, or tracking into Kids Mode
-- Circumvent kids-safe content filters
+- Monetize Kids Mode in any way  
+- Expose pricing, fundraising, subscriptions, RFQs, or bids to minors  
+- Allow vendors or institutions to directly message children  
+- Introduce analytics, ads, or tracking into Kids Mode  
+- Circumvent kids-safe content filters in UI or backend  
 
 Violation of child safety rules results in:
 
-- Immediate removal from ROOTED systems
-- Permanent contributor ban
-- Potential legal escalation
+- Immediate removal from ROOTED systems  
+- Permanent contributor ban  
+- Possible legal escalation  
+
+**Cross-Reference:**  
+- `ROOTED_KIDS_MODE_GOVERNANCE.md`  
+- `ROOTED_COMMUNITY_TRUST_LAW.md`  
 
 ---
 
 ## 🎭 CULTURAL & HOLIDAY CONSENT IS MANDATORY
 
-You may **never**:
+Contributors may **never**:
 
-- Auto-enable holidays
-- Infer religion, ethnicity, or culture
-- Apply holiday themes without user and business opt-in
-- Override Kids Mode holiday restrictions
+- Auto-enable holidays or cultural sets  
+- Infer religion, ethnicity, or culture from behavior  
+- Apply holiday themes without explicit user AND business opt-in  
+- Override Kids Mode holiday restrictions  
 
 Cultural consent is a **human right**, not a feature toggle.
+
+**Cross-Reference:**  
+- `ROOTED_DATA_SOVEREIGNTY_LAW.md`  
+- `ROOTED_GOVERNANCE_ETHICS.md`  
 
 ---
 
@@ -58,19 +71,21 @@ Cultural consent is a **human right**, not a feature toggle.
 
 You may **never**:
 
-- Add silent data collection
-- Add hidden tracking
-- Add third-party data resale
-- Create behavioral profiling pipelines
-- Share user data outside ROOTED systems
+- Add silent data collection  
+- Add hidden tracking or fingerprinting  
+- Add third-party data resale paths  
+- Create behavioral profiling pipelines  
+- Share user data outside governed ROOTED systems  
 
 All data systems must honor:
 
-- Access
-- Export
-- Correction
-- Deletion
-- Consent revocation
+- Access  
+- Export  
+- Correction  
+- Deletion  
+- Consent revocation  
+
+**Cross-Reference:** `ROOTED_DATA_SOVEREIGNTY_LAW.md`  
 
 ---
 
@@ -78,13 +93,17 @@ All data systems must honor:
 
 You may **never**:
 
-- Use admin access without logging
-- Grant commercial access to prohibited entities (sanctuaries, kids, etc.)
-- Force discovery placement for profit
-- Bypass feature flags
-- Override moderation outcomes silently
+- Use admin access without logging  
+- Grant commercial access to prohibited entities (sanctuaries, kids, etc.)  
+- Force discovery placement for profit or favoritism  
+- Bypass feature flags or RLS  
+- Override moderation outcomes silently  
 
-All power inside ROOTED is **auditable**.
+All power inside ROOTED is **narrow, logged, and auditable**.
+
+**Cross-Reference:**  
+- `ROOTED_ADMIN_OVERRIDES_LAW.md`  
+- `ROOTED_ACCESS_POWER_LAW.md`  
 
 ---
 
@@ -92,10 +111,12 @@ All power inside ROOTED is **auditable**.
 
 You may **never**:
 
-- Surface unmoderated content publicly
-- Publish draft or rejected content
-- Create shadow publishing systems
-- Bypass discovery safety views
+- Surface unmoderated content publicly  
+- Publish draft or rejected content to discovery  
+- Create shadow publishing systems  
+- Bypass discovery safety views or moderation queues  
+
+**Cross-Reference:** `ROOTED_COMMUNITY_TRUST_LAW.md`  
 
 ---
 
@@ -110,7 +131,9 @@ No contributor may claim:
 - Revenue incentives  
 - Personal authority  
 
-As justification for breaking ROOTED governance.
+…as justification for breaking ROOTED governance law.
+
+There are **no special cases**.
 
 ---
 
@@ -118,11 +141,11 @@ As justification for breaking ROOTED governance.
 
 By contributing to ROOTED in any capacity, you agree that:
 
-- ROOTED governance files are legally and ethically binding.
-- Violations result in:
-  - Immediate access revocation
-  - Permanent contributor removal
-  - Potential civil or criminal liability depending on severity
+- ROOTED governance files are **legally and ethically binding**.  
+- Violations may result in:
+  - Immediate access revocation  
+  - Permanent contributor removal  
+  - Potential civil or criminal liability depending on severity  
 
 ---
 
@@ -130,12 +153,11 @@ By contributing to ROOTED in any capacity, you agree that:
 
 ROOTED is building infrastructure for:
 
-- Communities
-- Institutions
-- Children
-- Culture
-- Public trust
+- Communities  
+- Institutions  
+- Children  
+- Culture  
+- Public trust  
 
-If your values are not aligned with these principles, **you must not contribute to this platform**.
-
----
+If your values are not aligned with these principles,  
+**you must not contribute to this platform.**
