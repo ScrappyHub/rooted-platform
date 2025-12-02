@@ -1,178 +1,190 @@
+# 🌱 ROOTED VOLUNTEER PARTICIPATION LAW
+
+Authority Level: Canonical Vertical Law (Community & Future Verticals)  
+Enforcement: Constitution → Governance → Database (RLS + Views) → UI  
+Effective Date: First Public Launch  
+
+Volunteer systems in ROOTED are **civic participation**, not labor markets.
+
+---
+
 ## 1. Who Can Host Volunteer Opportunities?
 
-Volunteer opportunities are events, not jobs, not gigs, not paid shifts.
+Volunteer opportunities are **events**, not jobs, gigs, or paid shifts.
 
-Allowed volunteer hosts (Community vertical):
+Allowed volunteer hosts in the Community vertical:
 
-✅ Vendors:
+✅ Vendors (in good standing):  
+- Farms  
+- Markets and orchards  
+- Food vendors and community staples  
+- Other approved community businesses  
 
-Farms
+✅ Sanctuaries / rescues / mission-driven nonprofits:  
+- Farm animal sanctuaries  
+- Wildlife rehabilitation centers  
+- Equine rescues  
+- Conservation / environmental orgs, etc.  
 
-Sanctuaries (mission-only)
+✅ Institutions:  
+- Schools and universities  
+- Libraries  
+- Community centers  
+- Nonprofits  
+- Municipal or civic entities configured for Community  
 
-Markets, orchards, food vendors, etc. (when configured)
+**Not allowed to host volunteers in Community:**
 
-✅ Institutions:
+❌ Purely backend / infrastructure-only institutions  
+❌ Any provider not in good standing (suspended / locked)  
+❌ Any provider attempting to combine “volunteer” with hidden paid work  
 
-Schools
+> Volunteer = community contribution,  
+> **not** stealth labor or misclassified employment.
 
-Universities
-
-Libraries
-
-Community centers
-
-Nonprofits
-
-✅ Sanctuaries / rescues / nonprofits:
-
-As mission entities (no commercial compensation attached)
-
-Not allowed to host volunteers in Community vertical:
-
-❌ Purely backend institutions (e.g. infrastructure-only municipals)
-
-❌ Any provider that is not in good standing / suspended / locked
-
-❌ Any provider attempting to combine “volunteer” with hidden paid work
-
-Volunteer = community contribution.
-Not a stealth labor market.
+**Cross-Reference:**  
+- `ROOTED_SANCTUARY_NONPROFIT_LAW.md`  
+- `ROOTED_COMMUNITY_TRUST_LAW.md`  
 
 ---
 
 ## 2. Who Can Join Volunteer Opportunities?
 
-We line this up with your age + account rules.
+Volunteer participation is aligned with ROOTED’s age and account laws.
 
-2.1 Children (0–12)
+### 2.1 Children (0–12)
 
-No independent account.
+- No independent account.  
+- May attend **family / children-friendly** volunteer-style experiences only when:
+  - A parent/guardian is the one interacting with the app  
+  - The event is flagged kids-safe and family-appropriate  
 
-May attend volunteer-style experiences only when:
+Children are **never recorded as independent volunteers** in the system.
 
-A parent/guardian is the one interacting with the app.
+---
 
-The event is flagged as family / children friendly.
+### 2.2 Youth (13–17)
 
-Children are never recorded as independent volunteers in the system.
+Youth accounts (`role = individual/community`) may:
 
-2.2 Youth (13–17)
+✅ See youth-appropriate volunteer opportunities, including:  
+- Farms  
+- Sanctuaries and rescues  
+- Educational institutions that pass moderation and age rules  
 
-Youth accounts (role = individual/community) may:
+✅ Register themselves as volunteers **only** for events explicitly flagged as:
 
-✅ See youth-appropriate volunteer opportunities:
+- `volunteer = true`  
+- `youth_appropriate = true`  
+- Not a job or compensated role  
 
-Farms
+They **cannot**:
 
-Sanctuaries / rescues
+❌ Access any paid roles through volunteer flows  
+❌ See RFQ, bid, or procurement details  
+❌ Message vendors/institutions freely outside approved channels  
 
-Educational institutions that pass moderation & age rules
+> Youth volunteer = protected civic participation,  
+> **not** early labor exploitation.
 
-✅ Register themselves as volunteers only for:
+---
 
-Events flagged explicitly as:
-
-youth-appropriate, and
-
-volunteer, not “work” or “job”.
-
-❌ They cannot:
-
-Access any paid roles through volunteer flows.
-
-See internal RFQ/bid-level details.
-
-Message vendors/institutions directly outside approved channels.
-
-Youth volunteer = protected civic participation, not early labor exploitation.
-
-2.3 Adults (18+)
+### 2.3 Adults (18+)
 
 Adults may:
 
-View and register for all volunteer events that are public & approved.
+- View and register for any public, approved volunteer events  
+- Interact with hosts according to normal messaging + event rules  
 
-Interact with hosts according to normal messaging + event rules.
+Adults who own or manage providers (vendor/institution) may:
 
-Adults may also:
-
-Host volunteer events if they are owners of providers (vendor/institution).
+- Host volunteer events under the rules of this law  
 
 ---
 
 ## 3. Sanctuaries vs Institutions vs Vendors (Volunteer-Specific Rules)
 
-We now align volunteer logic with your sanctuary + institution law.
+Volunteer rules are aligned with your sanctuary, nonprofit, and institution law.
 
-3.1 Sanctuaries / Rescues / Nonprofits
+### 3.1 Sanctuaries / Rescues / Nonprofits
 
-Sanctuaries:
+Sanctuaries / rescues:
 
-✅ May host volunteer events only.
-
+✅ May host **volunteer events only**  
 ✅ May appear as hosts in:
-
-Volunteer map
-
-Volunteer lists
-
-Kids Explore (if kids-safe)
+- Volunteer map
+- Volunteer lists
+- Kids Explore (if kids-safe)
 
 ❌ May not:
 
-Wrap volunteer events in any financial transaction.
+- Wrap volunteer events in any financial transaction  
+- Attach donations or fundraising flows inside Kids Mode  
+- Turn volunteer events into paid “educational packages” in Kids Mode  
 
-Attach donations or fundraising mechanisms directly in Kids Mode.
+> Sanctuary volunteer =  
+> “Come help, learn, care for animals,”  
+> not “buy tickets / pay for a package.”
 
-Turn volunteer events into “institutional educational experiences” that are billed.
+**Cross-Reference:** `ROOTED_SANCTUARY_NONPROFIT_LAW.md`  
 
-So:
+---
 
-Sanctuary volunteer =
-“Come help, learn, care for animals,”
-not “buy tickets / pay for a package.”
+### 3.2 Institutions
 
-3.2 Institutions
+Institutions (schools, universities, civic organizations):
 
-Institutions (schools, universities, etc.):
+✅ May host volunteer events such as:
 
-✅ May host volunteer events:
+- School-related service  
+- Community service days  
+- After-school / weekend projects  
 
-School-related
-
-Community service
-
-After-school or weekend projects
-
-✅ May see volunteer registrations at institution level (admin views).
+✅ May see volunteer registrations at the institution level (admin views)  
 
 ❌ May not:
 
-Target kids in Kids Mode with recruitment-style language.
+- Target minors in Kids Mode with recruitment language  
+- Convert youth volunteer flows into paid or political engagement  
 
-Convert volunteer flows with minors into paid or political engagement.
+> Institutional volunteering =  
+> “Help your community / school / city,”  
+> not opaque recruitment.
 
-Volunteer with institutions is:
+---
 
-“Help your community / school / city,”
-not “be recruited into something opaque.”
-
-3.3 Vendors (non-sanctuary)
+### 3.3 Vendors (Non-Sanctuary)
 
 Vendors:
 
-✅ May host volunteer events:
+✅ May host volunteer events, including:
 
-Farm volunteer days
+- Farm volunteer days  
+- Market help days  
+- Community cleanup events  
 
-Market help days
+✅ May surface in Kids Explore as learning opportunities if:
 
-Community cleanups, etc.
-
-✅ May surface in Kids Explore as learning if events & provider are kids-safe.
+- Provider passes kids-safe rules  
+- Events are properly flagged  
 
 ❌ May not:
-Use “volunteer events” to circumvent wages.
 
-Attach donation/sales flows in Kids Mode
+- Use “volunteer” events to circumvent wages  
+- Attach donation or sales flows in Kids Mode  
+
+> Volunteer with vendors must remain clearly non-commercial in youth contexts.
+
+---
+
+## 4. Enforcement
+
+Violations of this law (e.g., wage theft, misclassification, exploitation) may result in:
+
+- Immediate removal of volunteer features  
+- Suspension or termination of provider account  
+- Permanent ban for repeat or severe misuse  
+- Escalation via community and institutional governance  
+
+Volunteer systems are governed as **trust infrastructure**,  
+not growth or revenue funnels.
