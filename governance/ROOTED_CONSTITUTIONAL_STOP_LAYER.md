@@ -11,11 +11,10 @@ If any file, feature, contract, UI, admin action, or monetization rule conflicts
 
 ## ✅ PERMANENTLY LOCKED PLATFORM LAWS
 
-
 These documents now function as **binding platform law**:
 
-✅ ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION.md
 ✅ ROOTED_PLATFORM_CONSTITUTION.md  
+✅ ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION.md
 ✅ ROOTED_DATA_SOVEREIGNTY_LAW.md  
 ✅ ROOTED_ACCESS_POWER_LAW.md  
 ✅ ROOTED_COMMUNITY_TRUST_LAW.md  
