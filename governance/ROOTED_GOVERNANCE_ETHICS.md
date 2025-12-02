@@ -87,7 +87,7 @@ ROOTED may:
 - Revoke any feature set  
 - Permanently ban any entity  
 
-…when trust or safety is compromised.
+…when trust or safety is compromised. 
 
 ---
 
