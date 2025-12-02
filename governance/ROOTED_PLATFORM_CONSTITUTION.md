@@ -31,9 +31,9 @@ Investor pressure
 
 👉 THIS STOP LAYER WINS. NO EXCEPTIONS.
 
-✅ PERMANENTLY LOCKED PLATFORM LAWS (BINDING)
-
 These files function as non-overrideable platform law:
+
+✅ PERMANENTLY LOCKED PLATFORM LAWS (BINDING)
 
 ✅ ROOTED_PLATFORM_CONSTITUTION.md
 
