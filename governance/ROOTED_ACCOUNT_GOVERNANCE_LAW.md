@@ -1,133 +1,98 @@
-Authority Level: Absolute Platform Law
-Enforcement: Constitution → Stop Layer → Database
-Effective Date: First Public Launch
+# 🧾 ROOTED — ACCOUNT GOVERNANCE LAW
 
-This file defines the only legal way accounts exist, change, suspend, or terminate inside ROOTED.
+Authority Level: Absolute Platform Law  
+Enforcement: Constitution → Database (RLS + RPCs + Views)  
+Effective Date: First Public Launch  
 
-If this file conflicts with:
+This law defines the **only legal way accounts may be governed inside ROOTED.**
 
-ROOTED_PLATFORM_CONSTITUTION.md
+---
 
-ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md
+## ✅ SOLE SOURCE OF TRUTH
 
-👉 Those files override this one immediately.
+`public.user_tiers` is the ONLY legal source of truth for:
 
-1. SINGLE SOURCE OF TRUTH
+- role
+- tier
+- account_status
+- feature_flags
 
-All identity state is defined ONLY in:
+No other table, cache, or UI state may override this.
 
-public.user_tiers
+---
 
-This table exclusively controls:
+## ✅ LEGAL ACCOUNT STATUS VALUES
 
-role (guest / individual / vendor / institution / admin)
+Only these values are permitted:
 
-tier (free / premium / premium_plus)
+- active
+- suspended
+- locked
+- pending_deletion
 
-account_status (active / suspended / locked / pending_deletion)
+Any undefined 상태 = illegal.
 
-feature_flags (JSONB)
+---
 
-No other table, UI element, or API may override this.
+## ✅ ADMIN MUTATION PIPELINE (REQUIRED)
 
-2. ADMIN MUTATION LOG (MANDATORY)
+All account changes MUST go through:
 
-All governance mutations must log into:
+- `admin_set_account_status()`
+- `admin_set_role_tier()`
+- `admin_update_feature_flags()`
 
-public.user_admin_actions
+Direct SQL edits are forbidden.
 
-No mutation has legal authority without a log entry.
+---
 
-3. ACCOUNT DELETION (ONLY LEGAL PATH)
+## ✅ IMMUTABLE AUDIT SYSTEM
 
-All account deletion flows must use:
+All changes MUST be recorded in:
 
-public.account_deletion_requests
+- `public.user_admin_actions`
 
-Deletion states:
+This log is:
 
-pending
+✅ Append-only  
+✅ Non-editable  
+✅ Forensic-grade  
 
-in_progress
+---
 
-completed
+## ✅ LEGAL DELETION PIPELINE
 
-No hard deletes are allowed outside this pipeline.
+All deletions MUST go through:
 
-Monetization may NEVER block deletion.
+- `public.account_deletion_requests`
 
-Cross-Reference:
-ROOTED_DATA_SOVEREIGNTY_LAW.md
+No manual deletions.
+No silent deletions.
+No monetization blocks allowed.
 
-4. ACCOUNT STATUS EFFECTS
-Status	Effect
-active	Normal access
-suspended	No posting, messaging, or editing
-locked	No login
-pending_deletion	All creation blocked
-5. FEATURE FLAGS ARE LAW
+---
 
-Feature flags are:
+## ❌ ABSOLUTE PROHIBITIONS
 
-The only legal gating mechanism
+- No shadow roles
+- No shadow flags
+- No invisible suspensions
+- No monetization coercion blocking deletion
 
-Enforced at:
+---
 
-SQL
+## ⚖️ ENFORCEMENT
 
-Views
+Violations trigger:
 
-RLS
+- Immediate privilege removal
+- Full audit
+- Potential governance termination
 
-RPC
+---
 
-UI
-
-No UI-only paywalls are legal.
-
-6. ROLE / TIER MIRROR LAW
-
-Institution and Vendor access must mirror at matching tiers.
-
-No shadow monetization by role.
-
-Cross-Reference:
-ROOTED_ACCESS_POWER_LAW.md
-
-7. KIDS MODE & ACCOUNT GOVERNANCE
-
-If kids_mode_enabled = true:
-
-Messaging is disabled
-
-Monetization is disabled
-
-Discovery is restricted
-
-Educational overlays only
-
-Cross-Reference:
-ROOTED_KIDS_MODE_GOVERNANCE.md
-
-8. PROHIBITED PRACTICES
-
-❌ Manual role edits via SQL
-❌ Silent tier upgrades
-❌ Account resurrection after deletion
-❌ Shadow flags
-❌ Hidden bans
-❌ Revenue-based access overrides
-
-9. VIOLATIONS
-
-Violations result in:
-
-Immediate admin audit
-
-Platform lockdown if systemic
-
-Permanent governance removal
-
-Legal escalation where applicable
-
-✅ All accounts in ROOTED are governed — not improvised.
+**Cross-Reference:**
+- ROOTED_PLATFORM_CONSTITUTION.md  
+- ROOTED_DATA_SOVEREIGNTY_LAW.md  
+- ROOTED_ADMIN_GOVERNANCE.md  
+- ROOTED_ACCESS_POWER_LAW.md  
