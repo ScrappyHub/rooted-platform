@@ -1,209 +1,193 @@
-# 🌱 ROOTED — CONSUMER GOVERNANCE & TRUST SUMMARY
+# 🌱 ROOTED — CONSUMER GOVERNANCE SUMMARY (Public Trust Version)
 
-ROOTED is a **community-first, safety-first civic platform** designed to help people discover:
-
-- Local farms  
-- Markets  
-- Makers  
-- Schools  
-- Sanctuaries  
-- Institutions  
-- Volunteer opportunities  
-- Educational experiences  
-
-ROOTED is **not** a social media platform, an advertising network, or a data-mining company.
-
-This page explains, in plain language, what ROOTED **guarantees** to every person who uses it.
+File: /governance/CONSUMER_GOVERNANCE_SUMMARY.md
+Purpose: Plain-English trust document for users, families, schools, and the public.
 
 ---
 
-## 🧒 CHILD SAFETY IS THE HIGHEST LAW
-
-Children are never treated as a market.
-
-In ROOTED:
-
-- ✅ No ads are shown to children  
-- ✅ No buying or selling is shown to children  
-- ✅ No fundraising is shown to children  
-- ✅ No business messaging is allowed to children  
-- ✅ No political content is shown to children  
-- ✅ No adult-only content is shown to children  
-
-Kids Mode is not a “setting.”  
-It is a **hard safety system built into the platform itself**.
-
-If anything ever conflicts with child safety → **child safety always wins.**
-
----
-
-## 🔐 YOU OWN YOUR DATA — NOT ROOTED
-
-ROOTED does **not** sell user data. Ever.
-
-You always have the right to:
-
-- ✅ See your data  
-- ✅ Download your data  
-- ✅ Correct your data  
-- ✅ Delete your data  
-- ✅ Revoke your consent  
-
-ROOTED does **not**:
-
-- Track you invisibly  
-- Sell your behavior  
-- Share your identity with ad networks  
-- Build hidden profiles about you  
-
----
-
-## 🚫 NO PROFILING, NO LABELING, NO TARGETING
-
-ROOTED does not sort people or businesses by:
-
-- Race  
-- Religion  
-- Politics  
-- Identity  
-- Gender  
-- Belief  
-- Demographics  
-
-ROOTED does **not** divide people into “markets.”
-
-Instead, ROOTED surfaces:
-
-- Real stories  
-- Real work  
-- Community impact  
-- Education  
-- Service  
-- Trust & safety standing  
-
-You are discovered for **who you are and how you serve**, not what label you fit.
-
----
-
-## 🐾 SANCTUARIES & NONPROFITS ARE PROTECTED
-
-Animal sanctuaries, rescues, and mission-only nonprofits:
-
-- ❌ Cannot be monetized  
-- ❌ Cannot sell access  
-- ❌ Cannot be forced into commerce  
-- ✅ Can host volunteer opportunities  
-- ✅ Can offer educational programs  
-- ✅ Are protected from commercial exploitation  
-
-Their presence on ROOTED is for **public good only**.
-
----
-
-## ⚙️ ADMIN POWER IS LIMITED & AUDITED
-
-No one inside ROOTED has unlimited power.
-
-That includes:
-
-- Admins  
-- Developers  
-- Staff  
-- The Founder  
-
-Every serious action is:
-
-- ✅ Logged  
-- ✅ Audited  
-- ✅ Reviewable  
-- ✅ Bound by written platform law  
-
-There are **no secret overrides**.
-
----
-
-## 🧾 NO SILENT RULE CHANGES
-
-Every rule that affects:
-
-- Safety  
-- Data  
-- Kids Mode  
-- Discovery  
-- Monetization  
-- Admin power  
-
-Must be written in public governance files.
-
-If a rule is not written down → **it has no authority inside ROOTED.**
-
----
-
-## 🌍 WHAT ROOTED IS
+🌱 WHAT ROOTED IS
 
 ROOTED is:
 
-✅ A local discovery system  
-✅ A volunteer coordination network  
-✅ An educational platform  
-✅ A civic & cultural map  
-✅ A youth-safe environment  
-✅ A trust-based community space  
+A community discovery system
+
+A youth-safe education network
+
+A local economic coordination layer
+
+A trust-based civic platform
+
+A volunteer + institution connector
+
+A non-extractive digital commons
+
+ROOTED is governed by written law, not vibes, not profit pressure, not hidden algorithms.
 
 ---
 
-## 🚫 WHAT ROOTED IS NOT
+🧒 CHILD SAFETY IS THE HIGHEST LAW
 
-ROOTED is **not**:
+Children on ROOTED are never exposed to:
 
-❌ A social media addiction engine  
-❌ A surveillance platform  
-❌ A political tool  
-❌ A data-extraction system  
-❌ A pay-to-win marketplace  
-❌ A platform for targeting people by identity  
+Ads
+
+Sales
+
+Subscriptions
+
+Messaging with adults
+
+Bookings
+
+Fundraising
+
+Political content
+
+Religious instruction
+
+Kids Mode is not a feature.
+It is a legal safety system.
+
+If profit ever conflicts with child safety →
+Child safety wins automatically.
 
 ---
 
-## 👤 THE FOUNDER DOES NOT HAVE UNLIMITED POWER
+🔐 YOU OWN YOUR DATA
+
+Your data is never sold
+
+You can:
+
+View it
+
+Export it
+
+Delete it
+
+Revoke consent
+
+No silent tracking
+
+No surveillance advertising
+
+No third-party profiling
+
+---
+
+🚫 ROOTED DOES NOT PROFILE PEOPLE
+
+ROOTED does NOT sort, rank, or target anyone by:
+
+Race
+
+Religion
+
+Gender
+
+Sexuality
+
+Politics
+
+Immigration
+
+Disability
+
+Identity labels
+
+Discovery is based on:
+
+Craft
+
+Service
+
+Education
+
+Trust
+
+Safety
+
+Community impact
+
+Not labels. Not demographics.
+
+---
+
+🐾 SANCTUARIES & NONPROFITS ARE PROTECTED
+
+Sanctuaries:
+
+Can never be monetized
+
+Can never be sold as inventory
+
+Can never be forced into commerce
+
+They exist on ROOTED only for public good.
+
+---
+
+⚙️ ADMINS DO NOT HAVE UNLIMITED POWER
+
+Admins:
+
+Cannot act silently
+
+Cannot change safety laws
+
+Cannot override Kids Mode
+
+Cannot unlock paid tools improperly
+
+Every admin action is logged permanently.
+
+---
+
+🧾 ALL RULES ARE GIT-LOCKED
+
+If a rule is not written in ROOTED’s public governance files →
+It has no legal authority.
+
+This prevents:
+
+Policy manipulation
+
+Safety rollback
+
+Monetization pressure
+
+Political interference
+
+---
+
+👤 THE FOUNDER DOES NOT CONTROL YOU
 
 The Founder:
 
-- Owns the platform  
-- Protects the governance  
-- Architected the system  
+Owns the company
 
-But:
+Does NOT own your data
 
-- ❌ Cannot override Kids Mode  
-- ❌ Cannot override data sovereignty  
-- ❌ Cannot monetize children  
-- ❌ Cannot silently change safety rules  
+Does NOT control your identity
 
-ROOTED is **law-governed, not personality-governed**.
+Does NOT control what you believe
+
+Cannot override safety law
+
+ROOTED is law-governed — not personality-governed.
 
 ---
 
-## ✅ FINAL PROMISE TO THE PUBLIC
+✅ WHAT ROOTED GUARANTEES
 
-ROOTED exists to protect:
+Safety before profit
 
-- Families  
-- Children  
-- Farmers  
-- Teachers  
-- Makers  
-- Volunteers  
-- Institutions  
-- Communities  
+Consent before data
 
-ROOTED will never trade:
+Trust before growth
 
-- Safety for growth  
-- Trust for profit  
-- Consent for convenience  
-- Children for revenue  
+Education before monetization
 
-This platform is built for the long term.
+Governance before convenience
 
-For people — not for extraction.
+🛡️ ROOTED exists to serve communities — not extract from them.
