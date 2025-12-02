@@ -22,6 +22,8 @@ ROOTED_KIDS_MODE_GOVERNANCE.md
 
 ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md
 
+---
+
 🧬 1. Account Governance Principles
 
 Account governance inside ROOTED protects:
@@ -45,6 +47,8 @@ Sanctuaries
 Community institutions
 
 This file defines the only legal rules for account lifecycle.
+
+---
 
 🧩 2. Source of Truth Tables (Immutable)
 
@@ -78,6 +82,8 @@ This table is never edited or deleted.
 
 The only legal entry point for account deletion.
 
+---
+
 🔒 3. Illegal Account Mutations
 
 The following actions are fully prohibited:
@@ -99,6 +105,8 @@ Self-assigning admin privileges
 Reintroducing deleted accounts outside the legal deletion pipeline
 
 All such attempts = invalid, logged violation, and automatic block.
+
+---
 
 🧒 4. Youth & Kids Mode Account Rules
 
@@ -130,6 +138,8 @@ No RFQs
 
 No institutional messaging
 
+---
+
 🐾 5. Sanctuary & Nonprofit Account Rules
 
 Cross-Ref: ROOTED_SANCTUARY_NONPROFIT_LAW.md
@@ -147,6 +157,8 @@ Can host volunteer & education events only
 Cannot be charged monetization fees
 
 Their protection is permanent and immune to leadership change.
+
+---
 
 ⚙️ 6. Account Status & Enforcement
 
@@ -167,6 +179,8 @@ deleted_final
 Only Admin RPCs may perform transitions.
 
 Direct SQL → blocked, logged, invalid.
+
+---
 
 🧾 7. Legal Deletion Process (Required)
 
@@ -192,6 +206,8 @@ Institutional pressure
 
 Data value
 
+---
+
 🧠 8. Cross-Vertical Identity Stability
 
 No vertical may:
@@ -207,6 +223,8 @@ Infer demographics
 Create monetization based on identity
 
 Accounts remain human-first, not marketing-first.
+
+---
 
 🔚 Final Declaration
 
