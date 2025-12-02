@@ -1,3 +1,7 @@
+- `ROOTED_PLATFORM_CONSTITUTION.md` — **highest authority**, includes Constitutional Stop Layer and references all other platform laws.
+
+---
+
 # ROOTED Platform — Master Control Repository
 
 ROOTED is a governed, vertically expandable civic, economic, and educational operating system.
