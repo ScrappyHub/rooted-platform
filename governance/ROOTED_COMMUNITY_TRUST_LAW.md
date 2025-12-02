@@ -1,5 +1,7 @@
 🧩 TRUST IS A PREREQUISITE FOR VISIBILITY
 
+---
+
 No entity may appear publicly in ROOTED unless:
 
 ✅ Identity is verifiable
@@ -9,6 +11,8 @@ No entity may appear publicly in ROOTED unless:
 ✅ Discoverability is explicitly enabled
 
 There are no “shadow publishes”.
+
+---
 
 🛡️ MODERATION AS A FIRST-CLASS SYSTEM
 
@@ -56,6 +60,8 @@ Marketing
 
 Partnerships
 
+---
+
 🚫 MISUSE OF TRUST
 
 The following permanently ban an entity:
@@ -71,6 +77,8 @@ Fraud
 Abuse of volunteer systems
 
 Exploitation of emergencies
+
+---
 
 ⚖️ FINAL ENFORCEMENT AUTHORITY
 
@@ -191,6 +199,8 @@ These attributes:
 ✅ Are never stored as segmentation controls
 
 ROOTED does not categorize humans. ROOTED surfaces stories, work, and community impact.
+
+---
 
 🚫 NO “IDENTITY-BASED BUSINESS LABELING”
 
