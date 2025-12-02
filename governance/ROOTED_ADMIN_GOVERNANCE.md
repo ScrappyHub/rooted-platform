@@ -1,222 +1,75 @@
-# ⚖️ ROOTED_ADMIN_GOVERNANCE.md (Canonical)
-
-Authority Level: Constitutional Enforcement Layer
-Enforcement Chain:
-Constitution → Stop Layer → Admin RPCs → RLS → Views → UI
-Applies To: Admins, Moderators, Developers, Service Accounts
-Effective Date: First Public Deployment
-
-This file defines the only legal administrative powers inside ROOTED.
-Admins protect the system — they do not control it.
+# 🧑‍⚖️ ROOTED — ADMIN GOVERNANCE LAW
+Authority Level: Absolute Platform Law  
+Enforcement: Constitution → Stop Layer → Database (RLS + RPCs) → Audit Logs → UI  
+Effective Date: First Public Launch  
 
 Cross-References:
+→ ROOTED_PLATFORM_CONSTITUTION.md  
+→ ROOTED_STOP_LAYER.md  
+→ ROOTED_ACCOUNT_GOVERNANCE_LAW.md  
+→ ROOTED_KIDS_MODE_GOVERNANCE.md  
 
-ROOTED_PLATFORM_CONSTITUTION.md
+Admins exist to protect the system — not control it.
 
-ROOTED_STOP_LAYER.md
+---
 
-ROOTED_ADMIN_OVERRIDES_LAW.md
+## ✅ LEGAL ADMIN POWERS
 
-ROOTED_ACCOUNT_GOVERNANCE_LAW.md
+Admins may ONLY execute actions that are:
 
-ROOTED_ACCESS_POWER_LAW.md
+✅ Enforced by RLS  
+✅ Executed via public RPCs  
+✅ Logged in public.user_admin_actions  
 
-ROOTED_COMMUNITY_TRUST_LAW.md
+Allowed Domains:
 
-ROOTED_KIDS_MODE_GOVERNANCE.md
+- Role & tier changes
+- Account status changes
+- Moderation approvals/rejections
+- Feature flag updates
+- Badge grants/revocations
+- Provider suspensions
+- Safety sanctions
 
-ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md
+---
 
-🧭 1. Purpose of Admin Governance
+## ❌ ABSOLUTE PROHIBITIONS
 
-Admins operate within strict limits to:
+Admins may NEVER:
 
-Protect users
+❌ Assign themselves silent privileges  
+❌ Bypass RLS  
+❌ Override Kids Mode  
+❌ Grant commerce to sanctuaries  
+❌ Force holiday activations  
+❌ Alter analytics for appearance  
+❌ Disable moderation  
+❌ Create shadow features  
 
-Enforce trust & safety
+---
 
-Maintain moderation flows
+## 🧾 MANDATORY AUDIT LOGGING
 
-Uphold constitutional law
+Every admin RPC MUST write:
 
-Admins do not possess authority to:
+- admin_id
+- target_user_id
+- action_type
+- details (jsonb)
+- created_at
 
-Change governance
+Failure to log = Illegal Action.
 
-Override safety systems
+---
 
-Modify access law
+## ⚖️ ENFORCEMENT
 
-Change platform identity
+Violation results in:
 
-Make political/economic decisions for ROOTED
+- Immediate admin removal
+- Forensic audit
+- Permanent governance expulsion
+- Legal escalation if applicable
 
-All admin power is bounded, logged, reversible, and non-transferable.
+Admins are never above the law.
 
-🛡️ 2. Allowed Admin Powers (Fully Legal)
-
-Admins may perform actions ONLY through approved RPCs and logged paths:
-
-2.1 User & Account Management
-
-Approve / reject moderation items
-
-Lock / unlock accounts
-
-Suspend / reinstate providers
-
-Change account status (active, suspended)
-
-Initiate account deletion workflow (never silent deletion)
-
-2.2 Feature & Access Controls
-
-Toggle feature flags
-
-Manage non-commercial access states
-
-Manage Kids Mode safety exemptions (safe → safer, never weaker)
-
-2.3 Marketplace & Vendor Oversight
-
-Remove fraudulent listings
-
-Remove unsafe events
-
-Remove adult-only content outside policy
-
-2.4 Safety & Incident Actions
-
-Execute safety escalations
-
-Trigger emergency internal-only functions
-
-Freeze accounts during investigations
-
-All powers require a logged entry in user_admin_actions.
-
-❌ 3. Forbidden Powers (Absolute Prohibitions)
-
-These cannot be granted under ANY circumstance.
-
-Admins may never:
-
-3.1 Attempt to Gain Silent Power
-
-Bypass RLS
-
-Execute direct SQL updates to roles, tiers, or security columns
-
-Create shadow admin routes
-
-Use service-role keys outside sanctioned RPCs
-
-3.2 Violate Child Safety
-
-Override Kids Mode
-
-Grant messaging access to minors
-
-Show commercial surfaces to Kids Mode
-
-Bypass youth-safe overlays
-
-Constitutional Override Applies.
-
-3.3 Violate Sanctuary & Nonprofit Protection
-
-Grant commercial tools to sanctuaries
-
-Enable bidding / bulk commerce
-
-Enable Premium/Premium+ tiers
-
-3.4 Violate Data Sovereignty
-
-Export user data silently
-
-Access private data outside legal scope
-
-Introduce third-party tracking
-
-3.5 Violate Cultural & Holiday Consent
-
-Auto-enable holidays
-
-Add cultural inference logic
-
-3.6 Alter Discoverability Unlawfully
-
-Force public visibility
-
-Override moderation
-
-Publish unapproved content
-
-🧾 4. Mandatory Audit Logging
-
-Every admin action must be written to:
-
-public.user_admin_actions
-
-
-Logged fields:
-
-admin_id
-
-target_user_id
-
-action_type
-
-action_details (JSONB)
-
-timestamp
-
-Failure to log = illegal action, automatically invalid under governance law.
-
-🚨 5. Emergency Powers
-
-Emergency RPC functions:
-
-Begin with _admin_*_internal
-
-Are service-role protected
-
-Are NOT accessible by any user session
-
-Auto-log full incident context
-
-Emergency power may only be used for:
-
-Child safety
-
-Catastrophic system failure
-
-Security threats
-
-Legal compliance
-
-Use outside these = prohibited & punishable violation.
-
-⚖️ 6. Enforcement & Consequences
-
-Violations result in:
-
-Immediate admin removal
-
-Full forensic audit
-
-Governance expulsion
-
-Account lock
-
-(If applicable) legal escalation
-
-No admin, founder, developer, or contractor is exempt.
-
-🔚 Final Declaration
-
-Admins operate under law, not discretion.
-ROOTED’s governance is constitution-first, not admin-first.
-
-This file is binding and enforced at the database level.
