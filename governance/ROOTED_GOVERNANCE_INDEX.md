@@ -1,207 +1,234 @@
-# ROOTED — GOVERNANCE INDEX & CHAIN OF AUTHORITY (v2)
+🧬 ROOTED — GOVERNANCE INDEX & CHAIN OF AUTHORITY (v3 • CANONICAL)
+🧭 PURPOSE
 
-## 🧭 PURPOSE
-
-This file is the **single entry point** for all governance inside ROOTED.
+This file is the single entry point for all governance inside ROOTED.
 
 It defines:
 
-- What laws exist  
-- What order they apply in  
-- How conflicts are resolved  
-- What systems enforce them  
-- What documents hold legal authority  
+What laws exist
 
-If **anything** contradicts this index → **this index wins.**
+What order they apply in
 
----
+How conflicts are resolved
 
-## 🏛️ GOVERNANCE HIERARCHY (CHAIN OF AUTHORITY)
+What systems enforce them
 
-ROOTED is governed in **strict descending order of authority**:
+What documents hold legal authority
 
----
+👉 If anything contradicts this index → this index wins.
 
-### 1️⃣ ROOTED PLATFORM CONSTITUTION (SUPREME AUTHORITY)
+🛑 ZERO-OVERRIDE STOP LAYER (SUPREME LOCK)
 
-**File:** `ROOTED_PLATFORM_CONSTITUTION.md`  
+Authority Level: ABSOLUTE
+Enforcement: GitHub → Database → Admin RPCs → UI
+Effective Date: First Public Launch
 
-Defines:
+If ANY of the following ever conflict with this Stop Layer:
 
-- Platform identity & mission  
-- Ethics and non-negotiable boundaries  
-- Anti-profiling & non-surveillance law  
-- Power limits on admins, devs, institutions  
-- Supreme child safety clause  
-- Sanctuary & nonprofit absolute protection  
-- Founder non-centralization  
-- Git-locked authority  
+Features
 
-➡ If anything conflicts with the Constitution → **the Constitution always wins.**
+Monetization
 
----
+Contracts
 
-### 2️⃣ CANONICAL GOVERNANCE LAW FILES (ONLY LEGAL LAWS)
+UI behavior
 
-These are the **only legally binding governance law documents inside ROOTED**:
+Admin actions
 
-1. **ROOTED Governance & Ethics**  
-   `ROOTED_GOVERNANCE_ETHICS.md`  
-   - Consent-first design  
-   - Political neutrality  
-   - Anti-surveillance  
-   - Non-extractive growth  
-   ✅ Active Law  
+Partner requests
 
-2. **ROOTED Data Sovereignty & User Consent**  
-   `ROOTED_DATA_SOVEREIGNTY_LAW.md`  
-   - User owns all data  
-   - No resale  
-   - No third-party monetization  
-   - Export & deletion rights  
-   ✅ Active Law  
+Investor pressure
 
-3. **ROOTED Platform Access & Power Limitation**  
-   `ROOTED_ACCESS_POWER_LAW.md`  
-   - Role/tier enforcement  
-   - Feature flags are law  
-   - GitHub is authority  
-   ✅ Active Law  
+👉 THIS STOP LAYER WINS. NO EXCEPTIONS.
 
-4. **ROOTED Community Trust & Safety Law**  
-   `ROOTED_COMMUNITY_TRUST_LAW.md`  
-   - Moderation required  
-   - Child protection overrides growth  
-   - Permanent bans for predation & abuse  
-   ✅ Active Law  
+✅ PERMANENTLY LOCKED PLATFORM LAWS (ONLY LEGAL AUTHORITY)
 
-5. **ROOTED Sanctuary & Nonprofit Protection Law**  
-   `ROOTED_SANCTUARY_NONPROFIT_LAW.md`  
-   - No commerce  
-   - Volunteer + education only  
-   ✅ Active Law  
+These files function as non-overrideable platform law:
 
-6. **ROOTED Admin Overrides & Emergency Access Law**  
-   `ROOTED_ADMIN_OVERRIDES_LAW.md`  
-   - Logged emergency overrides only  
-   ✅ Active Law  
+ROOTED_PLATFORM_CONSTITUTION.md
 
-7. **ROOTED Contributor Governance Notice**  
-   `ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md`  
-   - Developers are legally bound  
-   - No silent features  
-   ✅ Active Law  
+ROOTED_DATA_SOVEREIGNTY_LAW.md
 
-8. **ROOTED Account Governance Law**  
-   `ROOTED_ACCOUNT_GOVERNANCE_LAW.md`  
-   - `public.user_tiers` = sole source of truth  
-   - `user_admin_actions` = immutable audit trail  
-   - `account_deletion_requests` = only legal deletion path  
-   ✅ Active Law  
+ROOTED_ACCESS_POWER_LAW.md
 
-9. **ROOTED Kids Mode & Youth Protection Law**  
-   `ROOTED_KIDS_MODE_GOVERNANCE.md`  
-   - Kids Mode is legal governance  
-   - No commerce, no messaging, no ads  
-   ✅ Active Law  
+ROOTED_COMMUNITY_TRUST_LAW.md
 
----
+ROOTED_SANCTUARY_NONPROFIT_LAW.md
 
-### 3️⃣ DATABASE ENFORCEMENT (LAW BECOMES CODE)
+ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md
 
-#### 3.1 Account Governance Layer
+ROOTED_KIDS_MODE_GOVERNANCE.md
 
-Enforced through:
+ROOTED_ADMIN_GOVERNANCE.md
 
-- `public.user_tiers`
-- `public.user_admin_actions`
-- `public.account_deletion_requests`
+ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md
 
-Law:
+If it is not expressed in one of these files → it has NO authority inside ROOTED.
 
-- ❌ No manual SQL updates to role/tier/status  
-- ❌ No deletion outside legal deletion pipeline  
-- ✅ All admin mutations must be logged  
-
----
-
-#### 3.2 Canonical Taxonomy & Safety Layer
-
-Enforced through:
-
-- `specialty_types`
-- `experience_types`
-- `compliance_overlays`
-- `landmark_types`
-- `kids_mode_overlays`
-
-Law:
-
-- ❌ No hard deletes  
-- ❌ No semantic repurposing  
-- ✅ Additive expansion only  
-
----
-
-### 4️⃣ ADMIN OVERSIGHT & MUTATION
-
-Admins operate only through:
-
-- Logged Admin UI
-- Admin RPCs
-
-Law:
-
-- ❌ No silent authority  
-- ✅ Every action auditable  
-
----
-
-### 5️⃣ USER INTERFACE (DISPLAY-ONLY LAYER)
-
-UI is:
-
-- Bound by RLS, Views, Feature Flags, Admin RPCs  
-- Never a source of truth  
-
-Law:
-
-- ❌ UI cannot override governance  
-- ❌ UI cannot suppress legal rights  
-
----
-
-## 🧒 SUPREME CHILD SAFETY CLAUSE (GLOBAL OVERRIDE)
+🧒 SUPREME CHILD SAFETY CLAUSE (GLOBAL OVERRIDE)
 
 If child safety ever conflicts with:
 
-- Revenue  
-- Growth  
-- Ads  
-- Analytics  
-- Institutions  
-- Investors  
+Revenue
 
-➡ **Child Safety ALWAYS wins. No exceptions.**
+Growth
 
----
+Advertising
 
-## 🧾 RATIFICATION
+Partnerships
 
-Ratified by:
+Institutional pressure
 
-- ✅ The ROOTED Founder  
-- ✅ The Governance Framework  
-- ✅ First Public Launch  
+Investor pressure
 
-Once ratified:
+✅ CHILD SAFETY ALWAYS WINS — THIS OVERRIDES EVERYTHING.
 
-- ❌ Cannot be overridden by UI  
-- ❌ Cannot be overridden by admins  
-- ❌ Cannot be overridden by monetization  
-- ❌ Cannot be overridden by investors  
+Overrides:
 
----
+Marketplace logic
 
-ROOTED is not just software.  
-It is a **governed civic system with law embedded into code.**
+Analytics logic
+
+Monetization logic
+
+Partner agreements
+
+Marketing strategy
+
+🧒 ROOTED KIDS MODE — LEGAL SAFETY SYSTEM
+
+Kids Mode is not a feature.
+It is a legal-grade safety sandbox.
+
+✅ CANONICAL AGE TIERS (UI-ENFORCED, NEVER STORED)
+Age	Tier	Capability
+0–3	Parent-Only Passive	View-only
+4–7	Guided Exploration	View-only
+8–11	Independent Discovery	View-only
+12–13	Limited Participation	Education + volunteer preview
+13+	Legal Community Account	Full community role
+❌ Kids Mode MUST NEVER show:
+
+Pricing
+
+Purchases
+
+Bookings
+
+Fundraising
+
+Ads
+
+RFQs
+
+Bids
+
+Messaging
+
+Commercial CTAs
+
+Political content
+
+Religious instruction
+
+🚫 ROOTED ANTI-PROFILING & NON-IDENTITY SORTING LAW (ABSOLUTE)
+
+ROOTED does NOT permit profiling or discovery ranking by:
+
+Race
+
+Ethnicity
+
+Skin color
+
+Religion
+
+Political belief
+
+Gender identity
+
+Sexual orientation
+
+Immigration status
+
+Family structure
+
+Disability
+
+✅ Never required
+✅ Never inferred
+✅ Never ranked
+✅ Never targeted
+✅ Never monetized
+
+✅ STORY OVER SEGMENTATION DOCTRINE
+
+Businesses are discovered by:
+
+Craft
+
+Ethics
+
+Safety
+
+Education
+
+Environmental care
+
+Community service
+
+❌ NOT identity marketing or demographic targeting.
+
+🐾 SANCTUARY & NONPROFIT ABSOLUTE PROTECTION
+
+Sanctuaries, rescues & mission-only nonprofits:
+
+❌ No commerce
+
+❌ No bidding
+
+❌ No bulk markets
+
+✅ Volunteer & education events only
+
+✅ Always moderation-required
+
+✅ Always discovery-safe
+
+Their purpose is public good only — never profit.
+
+⚙️ NO UNLIMITED POWER PRINCIPLE
+
+No human, admin, founder, contractor, system, or service account may possess:
+
+❌ Unlogged override authority
+
+❌ Silent access to restricted data
+
+❌ The ability to bypass:
+
+RLS
+
+Feature flags
+
+Moderation
+
+Kids Mode
+
+Compliance overlays
+
+🧾 GIT IS LAW
+
+All enforceable authority must live in:
+
+GitHub governance files
+
+SQL policies
+
+RLS rules
+
+Canonical Views
+
+Exposed RPCs
+
+👉 If it is not in GitHub → it does NOT legally exist.
