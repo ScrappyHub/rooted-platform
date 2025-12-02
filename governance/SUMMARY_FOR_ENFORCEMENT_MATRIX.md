@@ -32,7 +32,7 @@ If a developer breaks the matrix → the code is illegal.
 
 ---
 
-🔒 1. ENFORCEMENT OVERVIEW
+# 🔒 1. ENFORCEMENT OVERVIEW
 
 Each ROOTED governance law must map to:
 
@@ -52,7 +52,7 @@ If ANY row below is broken → the system becomes non-compliant.
 
 ---
 
-📘 2. THE FULL ENFORCEMENT MATRIX
+# 📘 2. THE FULL ENFORCEMENT MATRIX
 
 
 
@@ -171,7 +171,7 @@ ROOTED_KIDS_MODE_GOVERNANCE.md
 
 ---
 
-🔨 3. MUTATION RULES (CANONICAL)
+# 🔨 3. MUTATION RULES (CANONICAL)
 ❌ You may NOT mutate directly:
 
 providers
@@ -196,7 +196,7 @@ SECURITY DEFINER Admin RPCs
 
 ---
 
-🛑 4. NON-NEGOTIABLE RLS GUARDRAILS
+# 🛑 4. NON-NEGOTIABLE RLS GUARDRAILS
 
 These cannot ever be bypassed:
 
@@ -220,22 +220,24 @@ Everything else is optional — these are not.
 
 ---
 
-📚 5. CROSS-REFERENCE MAP
-Law File	Defines	Enforced By
-ROOTED_PLATFORM_CONSTITUTION.md	Identity, ethics, children, profiling	Every database layer
-ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md	Absolute override	ALL layers
-ROOTED_DATA_SOVEREIGNTY_LAW.md	No tracking, no resale	Profiles + RLS
-ROOTED_COMMUNITY_TRUST_LAW.md	Moderation + trust	moderation_queue
-ROOTED_ACCESS_POWER_LAW.md	Power limits	user_tiers, audit tables
-ROOTED_KIDS_MODE_GOVERNANCE.md	Child filters	kids_mode_overlays
-ROOTED_SANCTUARY_NONPROFIT_LAW.md	No commerce for sanctuaries	provider_type
-ROOTED_ACCOUNT_GOVERNANCE_LAW.md	Role, tier, deletion	user_tiers, deletion_requests
-ROOTED_ADMIN_GOVERNANCE.md	Admin RPC limits	admin_* RPCs
-ROOTED_VOLUNTEER_PARTICIPATION_LAW.md	Youth participation	events
+# 📚 5. CROSS-REFERENCE MAP
+
+| Law File | Defines | Enforced By |
+|----------|----------|--------------|
+| ROOTED_PLATFORM_CONSTITUTION.md | Platform identity, ethics, child safety supremacy, anti-profiling doctrine | All database layers, all RLS, all views, all RPCs, UI constraints |
+| ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md | Absolute override authority | ALL layers (GitHub → Database → Admin → UI) |
+| ROOTED_DATA_SOVEREIGNTY_LAW.md | No tracking, no resale, user data ownership | profiles, auth.users, RLS policies |
+| ROOTED_COMMUNITY_TRUST_LAW.md | Moderation, trust, visibility requirements | moderation_queue, discovery views |
+| ROOTED_ACCESS_POWER_LAW.md | Power limits, feature flags, role enforcement | user_tiers, audit tables, feature flags |
+| ROOTED_KIDS_MODE_GOVERNANCE.md | Child visibility filters, kids-safe content | kids_mode_overlays, kids-safe views |
+| ROOTED_SANCTUARY_NONPROFIT_LAW.md | No commerce for sanctuaries | provider_type, RLS on market tables |
+| ROOTED_ACCOUNT_GOVERNANCE_LAW.md | Role, tier, status, deletion pipeline | user_tiers, account_deletion_requests |
+| ROOTED_ADMIN_GOVERNANCE.md | Admin RPC limits, audit enforcement | admin_* RPCs, user_admin_actions |
+| ROOTED_VOLUNTEER_PARTICIPATION_LAW.md | Youth participation & volunteer protection | events, event_registrations, age gating |
 
 ---
 
-🧩 6. FINAL ENGINEERING GUARANTEE
+# 🧩 6. FINAL ENGINEERING GUARANTEE
 
 If a developer follows this matrix:
 
