@@ -1,145 +1,137 @@
-## 🧩 TRUST IS A PREREQUISITE FOR VISIBILITY
+# 🧩 ROOTED — COMMUNITY TRUST & SAFETY LAW
+
+File: ROOTED_COMMUNITY_TRUST_LAW.md  
+Authority Level: Canonical Platform Law  
+Enforcement: Constitution → Stop Layer → Governance & Ethics → Database (RLS + Views + Flags) → UI  
+Effective Date: First Public Launch  
+
+Cross-References:  
+→ ROOTED_PLATFORM_CONSTITUTION.md  
+→ ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md  
+→ ROOTED_GOVERNANCE_ETHICS.md  
+→ ROOTED_KIDS_MODE_GOVERNANCE.md  
+→ ROOTED_ACCOUNT_GOVERNANCE_LAW.md  
 
 ---
+
+## 1. TRUST IS A PREREQUISITE FOR VISIBILITY
 
 No entity may appear publicly in ROOTED unless:
 
-✅ Identity is verifiable
-✅ Content is moderated
-✅ Status is approved
-✅ Account is active
-✅ Discoverability is explicitly enabled
+✅ Identity is verifiable  
+✅ Content is moderated  
+✅ Status is approved  
+✅ Account is active  
+✅ Discoverability is explicitly enabled  
 
-There are no “shadow publishes”.
+There are **no “shadow publishes.”**
+
+Drafts, unreviewed, or rejected content **must never** appear:
+
+- In discovery views  
+- In feeds  
+- On maps  
+- In search results  
 
 ---
 
-🛡️ MODERATION AS A FIRST-CLASS SYSTEM
+## 2. MODERATION AS A FIRST-CLASS SYSTEM
 
 All public-facing entities must flow through:
 
-moderation_queue
+- `public.moderation_queue`
 
 Including:
 
-Providers
-
-Institutions
-
-Events
-
-Landmarks
-
-Volunteer programs
-
-Community content
+- Providers  
+- Institutions  
+- Events  
+- Landmarks  
+- Volunteer programs  
+- (Future) Community content  
 
 No discovery view, feed, map, or search result may surface:
 
-Draft content
+- Draft content  
+- Unreviewed content  
+- Rejected content  
 
-Unreviewed content
-
-Rejected content
-
-🧒 CHILD SAFETY SUPERSEDES ALL OTHER PRIORITIES
-
-If any system conflicts with Kids Mode safety:
-
-➡️ Kids safety always wins.
-
-This includes conflicts with:
-
-Revenue
-
-Analytics
-
-Growth
-
-Marketing
-
-Partnerships
-
-
-🚫 MISUSE OF TRUST
-
-The following permanently ban an entity:
-
-Predatory behavior
-
-Targeting minors commercially
-
-Safety manipulation
-
-Fraud
-
-Abuse of volunteer systems
-
-Exploitation of emergencies
-
-
-⚖️ FINAL ENFORCEMENT AUTHORITY
-
-ROOTED reserves the right to:
-
-Remove any account
-
-Revoke any feature set
-
-Permanently ban any entity
-When trust or safety is compromised.
-
-There is no appeal path that overrides child safety or consent law.
-
-✅ YOU NOW HAVE 4 PLATFORM-LEVEL LAWS:
-
-✅ ROOTED_GOVERNANCE_ETHICS.md (you approved)
-
-✅ ROOTED_DATA_SOVEREIGNTY_LAW.md
-
-✅ ROOTED_ACCESS_POWER_LAW.md
-
-✅ ROOTED_COMMUNITY_TRUST_LAW.md
-
-These four together now enforce:
-
-Ethics
-
-Consent
-
-Data ownership
-
-Admin limitations
-
-Child safety supremacy
-
-Moderation authority
-
-Anti-surveillance
-
-Anti-exploitation
-
-Anti-power abuse
+**Cross-Reference:** ROOTED_GOVERNANCE_ETHICS.md (Moderation & Trust)
 
 ---
 
-## Trauma-Informed Safety Architecture
+## 3. CHILD SAFETY SUPERSEDES ALL OTHER PRIORITIES
+
+If any system or feature ever conflicts with Kids Mode safety:
+
+➡ **Kids safety always wins.**
+
+This includes conflicts with:
+
+- Revenue  
+- Analytics  
+- Growth  
+- Marketing  
+- Partnerships  
+- Institutional pressure  
+- Investor pressure  
+
+There is **no appeal path** that can override child safety or consent law.
+
+**Cross-References:**  
+→ ROOTED_KIDS_MODE_GOVERNANCE.md  
+→ ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md  
+
+---
+
+## 4. MISUSE OF TRUST (PERMANENT BAN TRIGGERS)
+
+The following behaviors permanently ban an entity from ROOTED:
+
+- Predatory behavior  
+- Targeting minors commercially  
+- Safety or compliance manipulation  
+- Fraud or deception at scale  
+- Abuse of volunteer systems  
+- Exploitation of emergencies or disasters  
+
+ROOTED reserves the right to:
+
+- Remove any account  
+- Revoke any feature set  
+- Permanently ban any entity  
+
+…**whenever trust or safety is compromised.**
+
+There is **no appeal path** that overrides:
+
+- Child safety law  
+- Consent law  
+- Sanctuary & nonprofit protection law  
+
+**Cross-References:**  
+→ ROOTED_SANCTUARY_NONPROFIT_LAW.md  
+→ ROOTED_VOLUNTEER_PARTICIPATION_LAW.md  
+
+---
+
+## 5. TRAUMA-INFORMED SAFETY ARCHITECTURE
 
 ROOTED’s safety systems exist specifically to prevent the real-world failures that occur when:
 
-- Family systems collapse
-- Institutions fail children
-- Communities lose coordination
-- Abuse goes structurally unobserved
+- Family systems collapse  
+- Institutions fail children or vulnerable people  
+- Communities lose coordination  
+- Abuse goes structurally unobserved  
 
 All design decisions affecting:
 
-- Kids Mode
-- Volunteer systems
-- Institutions
-- Messaging
-- Discovery
-- Moderation
+- Kids Mode  
+- Volunteer systems  
+- Institutions  
+- Messaging  
+- Discovery  
+- Moderation  
 
 Must be evaluated through:
 
@@ -148,214 +140,173 @@ Must be evaluated through:
 ✅ Abuse risk modeling  
 ✅ Child safety precedence  
 
-If any feature increases exploitability, it must be blocked—even if it reduces growth or revenue.
+If any feature **increases exploitability**, it must be:
+
+➡ Blocked — even if it reduces growth or revenue.
 
 ---
 
-🚫 ROOTED ANTI-PROFILING & NON-IDENTITY SORTING LAW
+## 6. ROOTED ANTI-PROFILING & NON-IDENTITY SORTING LAW
 
-Authority Level: Absolute Platform Law
-Enforcement: Constitution → RLS → Views → Feature Flags → UI
-Effective Date: Immediate
+Authority Level: Absolute Platform Law  
+Enforcement: Constitution → RLS → Views → Feature Flags → UI  
 
-❌ ABSOLUTE BAN ON DEMOGRAPHIC PROFILING
+This section is binding across all verticals and discovery surfaces.
 
-ROOTED does not permit profiling, segmentation, or filtering of people or businesses by:
+### 6.1 Absolute Ban on Demographic Profiling
 
-Race
+ROOTED does **not** permit profiling, segmentation, or filtering of people or businesses by:
 
-Ethnicity
-
-Skin color
-
-National origin
-
-Religion
-
-Political belief
-
-Gender identity
-
-Sexual orientation
-
-Family structure
-
-Immigration status
-
-Disability status
+- Race  
+- Ethnicity  
+- Skin color  
+- National origin  
+- Religion  
+- Political belief  
+- Gender identity  
+- Sexual orientation  
+- Family structure  
+- Immigration status  
+- Disability status  
 
 These attributes:
 
-✅ Are never required
+✅ Are never required  
+✅ Are never inferred  
+✅ Are never requested  
+✅ Are never used for ranking  
+✅ Are never used for discovery  
+✅ Are never stored as segmentation controls  
 
-✅ Are never inferred
-
-✅ Are never requested
-
-✅ Are never used for ranking
-
-✅ Are never used for discovery
-
-✅ Are never stored as segmentation controls
-
-ROOTED does not categorize humans. ROOTED surfaces stories, work, and community impact.
+ROOTED does **not** categorize humans.  
+ROOTED surfaces **stories, work, and community impact.**
 
 ---
 
-🚫 NO “IDENTITY-BASED BUSINESS LABELING”
+### 6.2 No Identity-Based Business Labeling
 
 Businesses and institutions inside ROOTED:
 
 ❌ May NOT self-identify using:
 
-Racial labels
-
-Political alignment
-
-Religious alignment (outside of explicitly opted-in cultural sets)
-
-Demographic marketing tags
+- Racial labels  
+- Political alignment  
+- Religious alignment (outside explicitly opted-in cultural/civic sets)  
+- Demographic marketing tags  
 
 ✅ Businesses are surfaced by:
 
-What they do
-
-How they serve
-
-Their story
-
-Their practices
-
-Their trust & safety standing
-
-Their community impact
+- What they do  
+- How they serve  
+- Their story  
+- Their practices  
+- Their trust & safety standing  
+- Their community impact  
 
 Not by identity targeting.
 
-✅ STORY OVER SEGMENTATION PRINCIPLE (CORE DOCTRINE)
+---
 
-ROOTED operates under a strict storytelling doctrine:
+### 6.3 STORY OVER SEGMENTATION PRINCIPLE (CORE DOCTRINE)
 
-“Tell us your story.
-Show how you serve.
-Let the community decide to visit you — not because of labels, but because of trust.”
+ROOTED operates under this doctrine:
+
+> “Tell us your story.  
+>  Show how you serve.  
+>  Let the community decide to visit you — not because of labels, but because of trust.”
 
 Discovery must be driven by:
 
-Craft
-
-Ethics
-
-Quality
-
-Education
-
-Service
-
-Environmental care
-
-Community contribution
+- Craft  
+- Ethics  
+- Quality  
+- Education  
+- Service  
+- Environmental care  
+- Community contribution  
 
 Not by demographic cues.
 
-🛡️ ENFORCEMENT GUARANTEES
+---
+
+### 6.4 Enforcement Guarantees
 
 This law is enforced through:
 
-✅ No demographic columns in public discovery schemas
+✅ No demographic columns in public discovery schemas  
+✅ No demographic filters in search, map, or feeds  
+✅ No demographic sorting in ranking algorithms  
+✅ No ad targeting by identity attributes  
+✅ No analytics buckets by identity attributes  
 
-✅ No demographic filters in search, map, or feeds
+Any attempt to introduce demographic profiling or identity sorting:
 
-✅ No demographic sorting in ranking algorithms
+- Is **automatically invalid**  
+- Must be rejected at code review  
+- Must be blocked at RLS / view level  
+- Must be removed from UI immediately  
 
-✅ No ad targeting by identity
+---
 
-✅ No analytics buckets by identity attributes
+### 6.5 Child Protection Interlock
 
-Any attempt to introduce demographic profiling:
+Kids:
 
-Is automatically invalid
+- Are never profiled  
+- Are never segmented by demographic traits  
+- Are never exposed to identity-driven marketing or labeling  
 
-Must be rejected at code review
+Kids Mode is allowed to show only:
 
-Must be blocked at RLS / view level
+- Education  
+- Nature  
+- Agriculture  
+- Culture (opt-in, non-political, non-proselytizing)  
 
-Must be struck from UI immediately
+**Cross-Reference:** ROOTED_KIDS_MODE_GOVERNANCE.md  
 
-🧒 CHILD PROTECTION INTERLOCK
+---
 
-Kids Mode receives zero identity-based exposure.
+### 6.6 Violation Consequences
 
-Children:
+Any actor attempting to introduce profiling systems, identity sorting, or identity-based ads faces:
 
-Are never profiled
+- Immediate feature revocation  
+- Immediate discovery removal  
+- Full internal audit  
+- Permanent removal from governance or platform access  
+- Possible external reporting depending on scope  
 
-Are never segmented by demographics
+This applies equally to:
 
-Are never exposed to identity-driven marketing or labeling
-
-Are only served:
-
-Education
-
-Nature
-
-Agriculture
-
-Culture (opt-in, non-political, non-religious instruction)
-
-🚨 VIOLATION CONSEQUENCES
-
-Any actor attempting to introduce profiling systems:
-
-Immediate feature revocation
-
-Immediate discovery removal
-
-Full internal audit
-
-Permanent governance removal
-
-Possible external reporting depending on scope
-
-This applies to:
-
-Admins
-
-Developers
-
-Contractors
-
-Partners
-
-Founders
+- Admins  
+- Developers  
+- Contractors  
+- Partners  
+- Founders  
 
 No one is exempt.
 
-✅ FINAL STATEMENT
+---
 
-ROOTED does not divide people.
-ROOTED does not sort humans into demographic funnels.
-ROOTED does not sell identity.
+## 7. FINAL STATEMENT
+
+ROOTED does not divide people.  
+ROOTED does not sort humans into demographic funnels.  
+ROOTED does not sell identity.  
 ROOTED does not surface bias.
 
 ROOTED is built for:
 
-Humans
+- Humans  
+- Families  
+- Workers  
+- Farmers  
+- Teachers  
+- Makers  
+- Healers  
+- Builders  
 
-Families
-
-Workers
-
-Farmers
-
-Teachers
-
-Makers
-
-Healers
-
-Builders
-
-Not labels. Not categories. Not markets of identity.
-
+Not labels.  
+Not categories.  
+Not markets of identity.
