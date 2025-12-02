@@ -1,216 +1,279 @@
-🌱 ROOTED — SEASONAL KNOWLEDGE STREAMS (CANONICAL LAW)
-🧭 PURPOSE
+# 🌱 ROOTED — SEASONAL KNOWLEDGE STREAMS LAW (CANONICAL)
 
-ROOTED supports seasonal cultural knowledge as a non-extractive, non-commercial, educational benefit to the entire community.
+Version: Canonical  
+Authority Level: Platform Law  
+Enforcement: Constitution → Governance Ethics → Kids Mode Governance → Feature Flags → UI  
+Effective Date: First Public Deployment  
 
-This includes:
+Cross-References:  
+→ ROOTED_PLATFORM_CONSTITUTION.md  
+→ ROOTED_STOP_LAYER.md  
+→ ROOTED_GOVERNANCE_ETHICS.md  
+→ ROOTED_KIDS_MODE_GOVERNANCE.md  
+→ ROOTED_COMMUNITY_TRUST_LAW.md  
 
-Seasonal seeds
+---
 
-Seasonal produce
+## 🧭 PURPOSE
 
-Seasonal crafts (indoor & outdoor)
+ROOTED supports seasonal cultural knowledge as a **non-extractive, non-commercial, educational benefit** to the entire community.
 
-Seasonal recipes (premium only)
+Seasonal Knowledge Streams include:
 
-These systems exist for:
+- Seasonal seeds  
+- Seasonal produce  
+- Seasonal crafts (indoor & outdoor)  
+- Seasonal recipes (Premium Plus only)  
 
-✅ Cultural continuity
-✅ Agricultural literacy
-✅ Family education
-✅ Community skill-sharing
-✅ Youth-safe enrichment
+They exist to support:
 
-They are not growth hacks, ad engines, or monetization funnels.
+✅ Cultural continuity  
+✅ Agricultural literacy  
+✅ Family education  
+✅ Community skill-sharing  
+✅ Youth-safe enrichment  
 
-🗓️ GLOBAL STRUCTURE — 12 MONTH ROTATION (LOCKED)
+They are **not**:
+
+❌ Growth hacks  
+❌ Ad engines  
+❌ Monetization funnels  
+❌ Behavioral profiling pipelines  
+
+---
+
+## 🗓️ GLOBAL STRUCTURE — 12-MONTH ROTATION (LOCKED)
 
 ROOTED operates on a true seasonal calendar:
 
-Each year contains:
+- 12 monthly cycles per year  
+- Each month is mapped to a Season (Spring, Summer, Fall, Winter)  
+- All seasonal content rotates on **calendar month boundaries**  
 
-✅ 12 Monthly Cycles
+Law:
 
-✅ Each cycle is mapped to a Season:
+- ❌ No user-based personalization of seasonal content  
+- ❌ No demographic-based targeting  
+- ❌ No identity profiling in seasonal surfaces  
 
-Spring
+Seasonal content is **calendar-based, not user-profile-based**.
 
-Summer
+---
 
-Fall
-
-Winter
-
-All seasonal content rotates on calendar month boundaries.
-No user-based personalization, profiling, or targeting is allowed.
-
-🌿 1️⃣ SEASONAL PRODUCE PAGE (ALL USERS)
-
-✅ One produce page per month
-✅ Rotates automatically by season
-✅ Visible to:
-
-Guests
-
-Community Members
-
-Vendors
-
-Institutions
-
-Includes:
-
-In-season fruits & vegetables
-
-Storage education
-
-Fresh vs preserved guidance
-
-Non-commercial preparation tips
-
-❌ No pricing
-❌ No shopping carts
-❌ No vendor ranking
-❌ No sponsored product placement
-
-This is education only, not a marketplace.
-
-🌱 2️⃣ SEASONAL SEED PAGES (FOUNDER-CURATED, VIEWABLE TO ALL)
-
-✅ 12 Founder-curated Seed Pages
-✅ 1 Page per Month
-✅ Visible to all users
-✅ Educational in nature
-
-Includes:
-
-What can be planted this month
-
-Indoor vs outdoor starts
-
-Regional adaptation awareness
-
-Soil & light guidance
-
-❌ No affiliate links
-❌ No seed brand promotions
-❌ No sponsored placement
-
-This is community knowledge, not e-commerce.
-
-🧵 3️⃣ SEASONAL CRAFTS — COMMUNITY-WIDE
-
-Each month includes 4 craft guides:
-
-✅ 2 Indoor Crafts
-
-✅ 2 Outdoor / Nature Crafts
-
-Visible to:
-
-✅ All Community Members
-✅ Vendors (optional contributor)
-✅ Institutions (optional contributor)
-
-All crafts:
-
-Must be Kids Safe to appear in Kids Mode
-
-Must pass moderation
-
-Must be non-commercial
-
-Must not contain external sales funnels
-
-🍲 4️⃣ SEASONAL RECIPES — PREMIUM PLUS ONLY (LOCKED)
-
-This is the only monetized seasonal knowledge layer.
+## 🌿 1️⃣ SEASONAL PRODUCE PAGE (ALL USERS)
 
 Rules:
 
-✅ Only Premium Plus members can view recipes
-✅ 1 Monthly Recipe Set at a time
-✅ Rotates strictly by month
-✅ No permanent back-catalog access without active Premium Plus
+- ✅ Exactly **one produce page per month**  
+- ✅ Rotates automatically by month / season  
+- ✅ Visible to:
+  - Guests  
+  - Community members  
+  - Vendors  
+  - Institutions  
 
-❌ No Kids Mode access (unless education-only demo snippets are explicitly approved)
-❌ No family profiling
-❌ No diet targeting
-❌ No behavioral food tracking
+Content includes:
 
-Recipes are:
+- In-season fruits & vegetables  
+- Storage education  
+- Fresh vs preserved guidance  
+- Non-commercial preparation tips  
 
-Cultural
+Prohibited:
 
-Seasonal
+❌ Pricing  
+❌ Shopping carts  
+❌ Direct vendor ranking  
+❌ Sponsored product placement  
 
-Educational
+This is **education only**, not a marketplace.
 
-Not extractive
+---
 
+## 🌱 2️⃣ SEASONAL SEED PAGES (FOUNDER-CURATED, VIEWABLE TO ALL)
+
+Rules:
+
+- ✅ 12 Founder-curated seed pages (1 per month)  
+- ✅ Visible to all users  
+- ✅ Educational in nature  
+
+Content includes:
+
+- What can be planted this month  
+- Indoor vs outdoor starts  
+- Regional adaptation awareness  
+- Soil & light guidance  
+
+Prohibited:
+
+❌ Affiliate links  
+❌ Seed brand promotions  
+❌ Sponsored placement  
+❌ Targeted seed marketing  
+
+This is **community knowledge, not e-commerce**.
+
+---
+
+## 🧵 3️⃣ SEASONAL CRAFTS — COMMUNITY-WIDE
+
+Each month includes **4 craft guides**:
+
+- ✅ 2 Indoor crafts  
+- ✅ 2 Outdoor / nature crafts  
+
+Visible to:
+
+- ✅ All community members  
+- ✅ Vendors (optional contributors)  
+- ✅ Institutions (optional contributors)  
+
+Law:
+
+All crafts:
+
+- ✅ Must be kids-safe to appear in Kids Mode  
+- ✅ Must pass moderation  
+- ✅ Must be non-commercial  
+- ✅ Must not contain external sales funnels  
+
+Prohibited:
+
+❌ Product placement  
+❌ Shoppable links  
+❌ Brand-led “craft marketing”  
+
+---
+
+## 🍲 4️⃣ SEASONAL RECIPES — PREMIUM PLUS ONLY (LOCKED)
+
+This is the **only monetized** seasonal knowledge layer.
+
+Rules:
+
+- ✅ Only Premium Plus members can view full recipes  
+- ✅ Exactly one monthly recipe set at a time  
+- ✅ Rotates strictly by calendar month  
+- ✅ No permanent back-catalog access without an *active* Premium Plus subscription  
+
+Kids Mode restrictions:
+
+- ❌ No Kids Mode access to full recipes  
+- ❌ No paywalled recipes in Kids surfaces  
+- ❌ No family profiling  
+- ❌ No diet- or body-targeted personalization  
+- ❌ No behavioral food tracking  
+
+Recipes must be:
+
+- Cultural  
+- Seasonal  
+- Educational  
+
+Not extractive.  
 No data mining of eating behavior is permitted.
 
-👶 KIDS MODE RESTRICTIONS (ABSOLUTE)
+---
 
-Kids Mode may only access:
+## 👶 5️⃣ KIDS MODE RESTRICTIONS (ABSOLUTE)
 
-✅ Produce education
-✅ Seeds education
-✅ Crafts (if marked kids-safe)
+Kids Mode may ONLY access:
 
-Kids Mode may never access:
+✅ Seasonal produce education  
+✅ Seasonal seed education  
+✅ Seasonal crafts that are explicitly marked kids-safe and approved  
 
-❌ Recipes behind paywalls
-❌ Food monetization
-❌ Brand-linked food content
-❌ Purchases
-❌ Subscriptions
-❌ Fundraising
+Kids Mode may NEVER access:
 
-🏫 VENDORS & INSTITUTIONS — OPTIONAL PARTICIPATION
+❌ Paywalled recipes  
+❌ Any food monetization flows  
+❌ Brand-linked food content  
+❌ Purchases or subscription flows  
+❌ Fundraising or donation CTAs  
 
-Vendors & Institutions may:
+Any seasonal content shown in Kids Mode must comply with:
 
-✅ Submit seasonal crafts
-✅ Submit educational seed guides
-✅ Submit produce education posts
+→ ROOTED_KIDS_MODE_GOVERNANCE.md  
+→ ROOTED_COMMUNITY_TRUST_LAW.md  
+
+---
+
+## 🏫 6️⃣ VENDORS & INSTITUTIONS — OPTIONAL PARTICIPATION
+
+Vendors & institutions may:
+
+- ✅ Submit seasonal crafts  
+- ✅ Submit educational seed guides  
+- ✅ Submit produce education posts  
 
 Only if:
 
-Moderation approved
+- ✅ Content passes moderation  
+- ✅ No commerce is attached  
+- ✅ No brand funneling is present  
+- ✅ No pricing or sales CTAs appear  
 
-No commerce attached
+They may NOT:
 
-No brand funneling
+❌ Attach products or carts  
+❌ Attach affiliate links  
+❌ Convert educational content into sales funnels  
 
-No pricing
+---
 
-No sales CTAs
+## 📊 7️⃣ IMPACT & COMMUNITY METRICS (NON-EXPLOITATIVE)
 
-They may not:
+ROOTED may measure:
 
-❌ Attach products
-❌ Attach affiliate links
-❌ Convert educational content into sales funnels
+- Aggregate views of seasonal content  
+- Anonymous engagement statistics  
+- High-level “community impact” indicators  
 
-⚖️ ENFORCEMENT
+But:
 
-All Seasonal Knowledge Streams are governed by:
+- ❌ No user-level behavior tracking  
+- ❌ No diet, health, or body-related profiling  
+- ❌ No ad-targeting segments  
 
-ROOTED_GOVERNANCE_ETHICS.md
+Metrics exist to understand **community benefit**, not to target individuals.
 
-ROOTED_COMMUNITY_TRUST_LAW.md
+---
 
-ROOTED_KIDS_MODE_GOVERNANCE.md
+## ⚖️ 8️⃣ ENFORCEMENT
 
-Moderation pipeline
+Seasonal Knowledge Streams are governed by:
 
-Feature flags
+- ROOTED_PLATFORM_CONSTITUTION.md  
+- ROOTED_STOP_LAYER.md  
+- ROOTED_GOVERNANCE_ETHICS.md  
+- ROOTED_KIDS_MODE_GOVERNANCE.md  
+- ROOTED_COMMUNITY_TRUST_LAW.md  
 
-Any violation of these rules:
+Enforcement mechanisms:
 
-Causes immediate removal
+- Moderation pipeline  
+- Feature flags  
+- Non-commercial views  
+- Kids Mode filters  
 
-Triggers admin audit
+Any violation:
 
-May result in provider suspension
+- Triggers immediate removal of the violating content  
+- Triggers admin audit of the entity  
+- May result in provider suspension or removal  
+
+---
+
+## ✅ FINAL DECLARATION
+
+Seasonal knowledge inside ROOTED is:
+
+For families  
+For kids  
+For growers  
+For educators  
+For communities  
+
+Not for extraction, not for targeting, not for ads.  
+It is a **shared commons of seasonal understanding**, permanently protected by law.
