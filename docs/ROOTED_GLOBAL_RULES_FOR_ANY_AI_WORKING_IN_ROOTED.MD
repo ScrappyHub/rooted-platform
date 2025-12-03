@@ -8,7 +8,7 @@ Cross-References:
 - /governance/ROOTED_ACCESS_POWER_LAW.md  
 - /governance/ROOTED_KIDS_MODE_GOVERNANCE.md  
 - /governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md  
-- /docs/Moderation_System.md  
+- /docs/ROOTED_Moderation_System.md  
 
 These rules apply to **all AI agents** running anywhere in ROOTED (web, mobile, tools, admin panels).
 
