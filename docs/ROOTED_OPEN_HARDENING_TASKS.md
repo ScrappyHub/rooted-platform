@@ -6,7 +6,7 @@ Cross-References:
 - /governance/ROOTED_PLATFORM_CONSTITUTION.md  
 - /governance/ROOTED_KIDS_MODE_GOVERNANCE.md  
 - /governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md  
-- /docs/Master_Debug_Toolkit.md  
+- /docs/ROOTED_Master_Debug_Toolkit.md  
 
 Status: **Phase 1 – Community + Core Markets**
 
