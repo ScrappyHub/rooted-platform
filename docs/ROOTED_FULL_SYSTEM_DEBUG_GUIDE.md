@@ -1,653 +1,383 @@
-ROOTED – FULL SYSTEM DEBUG GUIDE (HONEST PASS)
 
-This is the master debug playbook for everything that exists today across ROOTED:
+---
 
-ROOTED Core (auth, roles, RLS, media, GEO, analytics)
+## 4️⃣ ROOTED_FULL_SYSTEM_DEBUG_GUIDE.md  
+📍 **File:** `/docs/ROOTED_FULL_SYSTEM_DEBUG_GUIDE.md`
 
-ROOTED Community Vertical (directory, feeds, events, landmarks, basic marketplaces)
+```md
+# 🧪 ROOTED – FULL SYSTEM DEBUG GUIDE (HONEST PASS)
 
-ROOTED Construction Vertical (schema + hardening docs, pre-production)
+Cross-References:
 
-Future verticals (healthcare, education, arts & culture, environment, disaster, emergency, workforce, etc.) → planning only, not live, do not treat as active software.
+- /docs/Master_Debug_Toolkit.md  
+- /governance/ENFORCEMENT_MATRIX.md  
+- /governance/ROOTED_PLATFORM_CONSTITUTION.md  
 
-This guide is brutally honest:
-If something is not built, it says so.
-If something is fragile, it says so.
-If something is production-strong, it says so.
+This is the **master debug playbook** for everything that exists today across ROOTED.
 
-0. How To Use This Guide
+---
 
-When you (or another dev / AI) are debugging ROOTED:
+## 0️⃣ How to Use This Guide
 
-Start at Layer 1 – Core Platform (Supabase, auth, roles).
+When you (dev / AI / maintainer) debug ROOTED:
 
-Then debug Community Vertical (the only fully live vertical).
+1. Start at **Layer 1 – Core Platform** (Supabase, auth, roles, RLS)  
+2. Then debug **Community vertical** (only fully live vertical)  
+3. Then apply **Construction hardening checklist** (backend only)  
+4. Treat other vertical repos as **documentation & roadmap**, not live apps  
 
-Then apply the Construction Hardening Checklist (backend only).
+Never assume a feature exists just because a doc mentions it.
 
-Treat all other vertical repos as documentation & roadmap, not active apps.
+---
 
-Never assume a feature exists because a document mentions it.
-This doc is the source of truth for “what we can debug right now”.
+## 1️⃣ Debug Layers Overview
 
-1. Debug Layers Overview
-1.1 Layers
+### 1.1 Layers
 
-ROOTED has these main layers:
+ROOTED major layers:
 
-Core Platform
+- **Core Platform**
 
-Supabase project
+  - Supabase project  
+  - `user_tiers`, feature_flags  
+  - Providers, media, GEO, analytics  
+  - RLS policies and security  
 
-user_tiers, feature_flags
+- **Community Vertical (LIVE)**
 
-Providers, media, GEO, analytics
+  - Directory (vendors / institutions / landmarks)  
+  - Feeds & comments (restricted)  
+  - Events & volunteer listings  
+  - Kids Mode front-end  
+  - Seasonal & holiday overlays (logic present; wiring pending in some areas)  
+  - Basic analytics surface  
 
-RLS policies and security
+- **Construction Vertical (PRE-PRODUCTION)**
 
-Community Vertical (LIVE)
+  - Schemas & flows designed  
+  - Pre-production audit report  
+  - Hardening checklist  
+  - Backend only (no full UI yet)  
 
-Directory (vendors / institutions / landmarks)
+- **Future Verticals (PLANNING ONLY)**
 
-Feeds & comments (with restrictions)
+  - Healthcare, Education, Arts & Culture, Environment, Disaster, Emergency, Workforce, etc.  
+  - Repos = frameworks + docs, not functioning apps  
 
-Events & volunteer listings
+---
 
-Kids Mode front-end
+## 2️⃣ Global Debug Tools
 
-Seasonal & holiday overlays (logic present, some wiring pending)
+Use these across all layers:
 
-Basic analytics surface
+- Supabase Dashboard (table editor, SQL editor, RLS tester)  
+- Browser dev tools (Network, Console, Storage)  
+- Device/responsive tools for mobile behavior  
+- Supabase JS client logs  
+- Future: edge function logs, ETL logs  
 
-Construction Vertical (PRE-PRODUCTION)
+If this guide mentions a tool you don’t have (like edge logs) → it’s **planned**, not required yet.
 
-Fully written schemas & flows
+---
 
-Pre-production audit report
+## 3️⃣ CORE PLATFORM – DEBUG CHECKLIST
 
-Hardening checklist
+### 3.1 Auth & `user_tiers`
 
-Backend only so far (no app UI wired yet)
-
-Future Verticals (PLANNING ONLY)
-
-Healthcare
-
-Arts & culture
-
-Education
-
-Environment
-
-Disaster, Emergency, Workforce, etc.
-
-Repos exist, but are framework + docs, not functioning apps.
-
-2. Global Debug Tools (What You Use)
-
-For every layer, your standard toolkit is:
-
-Supabase Dashboard
-
-Table editor
-
-SQL editor
-
-RLS policy viewer & tester
-
-Front End
-
-Browser dev tools (Network, Console, Storage)
-
-Mobile device / dev tools (responsive views)
-
-Feature flags in UI (toggles, kids mode, login states)
-
-HTTP / API
-
-Postman / Thunder Client / Insomnia for direct API calls (once you expose endpoints)
-
-Supabase client logs / JS network calls from the app
-
-Logging & Observability (Future)
-
-Console logging in front-end
-
-Supabase logs (for auth, RLS errors)
-
-Edge function logs (once implemented)
-
-If a debug step mentions a tool you don’t have yet (like edge logs), that means: planned, not yet wired.
-
-3. CORE PLATFORM – DEBUG CHECKLIST
-3.1 Auth & user_tiers
-
-Goal: every signed-in user has exactly one correct user_tiers row and role/tier behaves as expected.
+Goal: Every signed-in user has exactly one correct `user_tiers` row and behaves accordingly.
 
 Steps:
 
-In Supabase:
+- In Supabase:
 
-Open user_tiers table.
+  - Open `user_tiers`  
+  - For test accounts, confirm:
 
-For each test account:
+    - `role` ∈ {vendor, institution, admin, individual/community}  
+    - `tier` ∈ {free, premium, premium_plus}  
+    - `feature_flags` JSON matches expectations  
 
-role is one of: vendor, institution, admin, individual/community.
+- In app (Community UI):
 
-tier is one of: free, premium, premium_plus.
+  - Log in as:
 
-feature_flags JSON exists and matches expectations.
+    - Free vendor  
+    - Premium Plus vendor  
+    - Institution  
+    - Individual  
 
-In app (Community UI):
+  - Confirm:
 
-Log in as each type:
-
-Free vendor
-
-Premium Plus vendor
-
-Institution
-
-Individual
-
-Confirm:
-
-They see the right dashboard / sections.
-
-They do not see tools outside their tier (e.g., free vendor shouldn’t see premium analytics).
+    - Correct dashboard  
+    - No access to tools outside their tier  
 
 If it fails:
 
-Likely missing or wrong user_tiers row.
+- Missing or wrong `user_tiers` row  
+- Or RLS silently rejecting select → check Supabase logs  
 
-RLS might be rejecting the query silently (check Supabase logs).
+---
 
-3.2 RLS & Permissions
+### 3.2 RLS & Permissions
 
-Goal: No one can read/write what they shouldn’t, and free users can still do allowed actions.
+Goal: No one can read/write what they shouldn’t — and allowed actions still work.
 
-High-risk tables to sanity check:
+High-risk tables:
 
-providers
-
-provider_media / vendor_media
-
-rfqs, bids, bulk_offers
-
-conversations, conversation_participants, messages
-
-events, event_registrations
-
-landmarks
-
-feed_items, feed_comments, feed_likes
-
-vendor_analytics_*
-
-Debug pattern:
+- `providers`  
+- `provider_media`, `vendor_media`  
+- `rfqs`, `bids`, `bulk_offers`  
+- `conversations`, `conversation_participants`, `messages`  
+- `events`, `event_registrations`  
+- `landmarks`  
+- `feed_items`, `feed_comments`, `feed_likes`  
+- `vendor_analytics_*`  
 
 For each table:
 
-In a new private window, log in as each test user type (or use Supabase row-level testing).
+- Log in as various roles OR use Supabase row-level testing  
+- Try: SELECT, INSERT (own stuff), UPDATE (own stuff), DELETE (where allowed)  
 
-Try:
+Look for:
 
-SELECT (view)
+- “new row violates row-level security policy” → RLS working but maybe too strict  
+- Seeing too much data → RLS too permissive  
 
-INSERT (create)
+---
 
-UPDATE (edit own item)
-
-DELETE (where allowed)
-
-Confirm:
-
-Vendor can update only their own rows.
-
-Institution can see what they should, not others’ internal data.
-
-Admin sees everything where policy allows.
-
-If you hit errors like:
-
-new row violates row-level security policy
-
-→ The policy is working, but you might need a more specific condition.
-
-If you never hit RLS errors but see too much data → RLS is too weak.
-
-3.3 Media & Storage
+### 3.3 Media & Storage
 
 Buckets:
 
-rooted-public-media
-
-rooted-protected-media
-
-Debug:
-
-Upload from UI as:
-
-Vendor
-
-Institution
-
-Confirm:
-
-Upload succeeds and shows in UI.
-
-Public images load without auth where expected.
-
-Protected media does not open in a private/incognito tab without auth.
-
-In Supabase:
-
-Browse objects.
-
-Check path naming conventions (e.g., /vendors/{id}/...).
-
-3.4 GEO & Discovery
-
-You already have global GEO rules documented.
-Debug steps:
-
-In Community UI:
-
-Trigger “Discover Vendors / Map”.
-
-Change radius, category, and filters.
-
-Confirm:
-
-You see only curated vendors (controlled by GEO rules).
-
-Municipal layers are not visible to regular users (this was a previous issue).
-
-In Supabase:
-
-Check the providers / GEO-related tables and confirm:
-
-No random providers are marked as “featured” without intention.
-
-No municipality / backend-only data is flagged as public.
-
-If a municipal entity shows up:
-→ That’s a UI bug + mis-flagged record.
-
-4. COMMUNITY VERTICAL – UI & FLOW DEBUG
-
-This is your live vertical. Treat this as production.
-
-4.1 Directory (Vendors / Institutions / Community Spots)
-
-Debug Steps:
-
-Search:
-
-By name
-
-By category (farm, bakery, butcher, etc.)
-
-By distance
-
-Confirm:
-
-Results are accurate.
-
-No duplicates.
-
-Closed or inactive providers don’t show.
-
-For each provider, open profile:
-
-Media loads.
-
-Description doesn’t break layout.
-
-No admin-only fields leaking (internal tags, notes, etc.).
-
-4.2 Feed (Community Posts)
-
-You’ve said you don’t want heavy social mechanics.
+- `rooted-public-media`  
+- `rooted-protected-media`  
 
 Debug:
 
-Create posts as:
+- Upload via UI as vendor & institution  
+- Confirm:
 
-Individual
-
-Vendor
-
-Institution
-
-Confirm:
-
-Posts appear in the correct feed.
-
-Kids Mode never shows full public feed (just curated / kids-safe content).
-
-Comments & Likes:
-
-Comments should be restricted / low-emphasis.
-
-Likes exist but not central (no like spam views).
-
-No one can post anonymously.
-
-If you see:
-
-Comment boxes in Kids Mode
-
-Engagement-heavy UI (like counts everywhere)
-
-→ That’s UI to de-emphasize or hide.
-
-4.3 Events & Volunteering
-
-Debug:
-
-Create a public event (non-kids).
-
-Create a kids-safe event.
-
-Create a volunteer opportunity.
+  - Media appears in UI  
+  - Public media loads without auth where expected  
+  - Protected media does **not** load in incognito  
 
 Check:
 
-Event cards show:
+- Naming conventions: `/vendors/{id}/...`  
+- Correct policies per bucket  
 
-Date, time, location
+---
 
-Whether volunteer or regular event
-
-Kids Mode:
-
-Shows only kids-safe events
-
-Hides prices and payment CTAs
-
-Registration:
-
-Buttons work
-
-Confirmations are clear
-
-4.4 Kids Mode (CRITICAL)
-
-Treat this as safety-critical UI, not just a theme.
-
-Debug Flow:
-
-Enter Kids Mode:
-
-Requires parent flow / explicit toggle.
-
-Feels visibly “different” (colors, icons).
-
-Once inside:
-
-No prices
-
-No RFQs
-
-No messaging
-
-No donation/fundraiser surfaces
-
-No “post to feed” anywhere
-
-Try:
-
-Tapping on every nav button.
-
-Opening map.
-
-Browsing events and vendors.
-
-If anything commerce-like or adult feed shows in Kids Mode → bug.
-
-4.5 Seasonal & Holiday UI
-
-You’ve designed this as:
-
-Season baseline always on
-
-Holidays opt-in overlays only, never forced, never based on religion/demographics
+### 3.4 GEO & Discovery
 
 Debug:
 
-Change system date (or simulate) to:
+- In Community UI:
 
-A regular day
+  - Use “Discover” / map  
+  - Adjust radius, category, filters  
 
-A holiday you support
+- Confirm:
 
-Confirm:
+  - Only curated vendors show  
+  - Municipal backend-only entities are hidden  
 
-Season-only visuals by default
+If municipal entities leak into public map → mis-flag + UI bug.
 
-Holiday overlays appear only when:
+---
 
-User opted in
+## 4️⃣ COMMUNITY VERTICAL – UI & FLOW DEBUG
 
-Business opted in
+This is your **only live vertical**. Treat it like production.
 
-Content is kid-safe (if in Kids Mode)
+### 4.1 Directory
 
-If you see holiday stuff with no consent → logic bug / unfinished wiring.
+- Search by name, category, distance  
+- Confirm:
 
-4.6 Support / Contact
+  - Accurate results  
+  - No duplicates  
+  - Inactive providers don’t appear  
+  - No admin-only fields leaking  
 
-You have a support form wired to your email.
+---
+
+### 4.2 Feed
+
+- Post as individual, vendor, institution  
+- Confirm:
+
+  - Posts appear where intended  
+  - Kids Mode does **not** show global feed  
+  - Comments/likes are present but de-emphasized  
+  - No anonymous posting  
+
+If you see feed UI in Kids Mode → UI + routing bug.
+
+---
+
+### 4.3 Events & Volunteering
+
+- Create:
+
+  - Public event  
+  - Kids-safe event  
+  - Volunteer opportunity  
+
+Check:
+
+- Cards show correct info  
+- Kids Mode:
+
+  - Only kids-safe events  
+  - No prices, pay CTAs, or donation flows  
+
+- Registration flows are clear and non-abusive  
+
+---
+
+### 4.4 Kids Mode (CRITICAL)
 
 Debug:
 
-On desktop & mobile:
+- Enter Kids Mode:
 
-Check that “Contact / Support” is visible and not buried.
+  - Requires parent flow / explicit toggle  
+  - Visual difference from normal mode  
 
-Submit a test support request.
+- Once inside:
+
+  - No prices  
+  - No RFQs  
+  - No bids  
+  - No bulk  
+  - No “post” or messaging  
+  - No donation/fundraiser flows  
+
+If any commerce or social-heavy UI appears → treat as a **law violation**.
+
+---
+
+### 4.5 Seasonal & Holiday UI
+
+Design:
+
+- Seasons = baseline  
+- Holidays = always opt-in (user + business)  
+
+Debug:
+
+- Simulate regular day vs holiday window  
+- Confirm:
+
+  - Seasonal visuals show by default  
+  - Holiday overlays only when both sides opted in  
+  - Kids Mode never sees unwanted holiday content  
+
+---
+
+### 4.6 Support / Contact
+
+- Find support/contact surfaces (desktop + mobile)  
+- Submit test request  
 
 Confirm:
 
-UI shows success message.
+- Clear success feedback  
+- Email / request actually arrives  
 
-Email arrives via Resend (or whatever provider you wired).
+---
 
-If mobile contact feels hidden → UI refinement needed, not backend.
+## 5️⃣ CONSTRUCTION VERTICAL – BACKEND HARDENING DEBUG
 
-5. CONSTRUCTION VERTICAL – BACKEND HARDENING DEBUG
+Use these docs:
 
-This vertical is backend design + audits, not public UI.
+- CONSTRUCTION_AUDIT_PREPRODUCTION.md  
+- CONSTRUCTION_BACKEND_HARDENING_CHECKLIST.md  
+- DATABASE_ENTITY_MODEL.md  
+- ROLE_PERMISSION_MATRIX.md  
+- AUTOMATION_FLOWS.md  
+- RISK_FAILURE_ANALYSIS.md  
 
-Use your existing docs:
+Reality:
 
-CONSTRUCTION_AUDIT_PREPRODUCTION.md
+- No fully live Construction UI yet  
+- Schemas & flows are **designed**, not all deployed  
 
-CONSTRUCTION_AUDIT_EXECUTIVE_SUMMARY.md
+Debug now:
 
-CONSTRUCTION_BACKEND_HARDENING_CHECKLIST.md
+- Ensure DB tables match docs (names, key columns)  
+- Test RLS for any created tables (contractor vs institution vs admin)  
 
-DATABASE_ENTITY_MODEL.md
+Everything else = design-stage review.
 
-ROLE_PERMISSION_MATRIX.md
+---
 
-AUTOMATION_FLOWS.md
-
-RISK_FAILURE_ANALYSIS.md
-
-5.1 Reality Check (Honest)
-
-There is no live construction app UI yet.
-
-Schemas and flows are pre-production.
-
-You have known critical gaps (escrow, COI, bid deadline, etc.) already called out in the audit.
-
-5.2 What You Can Debug Right Now
-
-Schemas vs. docs:
-
-Ensure that the tables that do exist in Supabase match names & key columns in docs.
-
-RLS consistency:
-
-For any tables you’ve already created from the design, test:
-
-Contractor view
-
-Institution view
-
-Admin view
-
-Hardening checklist:
-
-Use CONSTRUCTION_BACKEND_HARDENING_CHECKLIST.md as the step-by-step process.
-
-Check off items as you implement them in SQL.
-
-Everything else for construction is design-stage debug, not live-system debug.
-
-6. FUTURE VERTICALS – HONEST STATUS
+## 6️⃣ FUTURE VERTICALS – HONEST STATUS
 
 Repos like:
 
-rooted-healthcare
+- rooted-healthcare  
+- rooted-education  
+- rooted-arts-culture  
+- rooted-environment  
+- rooted-disaster  
+- rooted-emergency  
+- rooted-workforce  
 
-rooted-education
+are:
 
-rooted-arts-culture
-
-rooted-environment
-
-rooted-workforce
-
-rooted-disaster
-
-rooted-emergency
-
-rooted-utilities, etc.
-
-are currently:
-
-✅ Clearly described
-
-✅ Scoped with role/permission ideas
-
-✅ GEO rules linked back to rooted-core docs
-
-❌ NOT wired to Figma
-
-❌ NOT wired to Supabase
-
-❌ NOT live
+- ✅ Scoped & documented  
+- ❌ Not wired to Figma or Supabase as live apps  
 
 Debug stance:
 
-You cannot debug these like apps, because they aren’t apps yet.
+- Only review docs for contradictions or safety issues  
+- Mark them as “future phase – documentation only” in README  
 
-You can review docs for:
+---
 
-Contradictions
+## 7️⃣ GLOBAL “HONEST GAPS” LIST
 
-Role rule conflicts
+Not fully done yet:
 
-Discovery leaks
+- 🔴 Payments / escrow (Stripe flows, legal)  
+- 🔴 Advanced analytics ETL (jobs/schedules)  
+- 🟠 Holiday / cultural overlays (end-to-end testing)  
+- 🟠 Messaging moderation & reporting tools  
+- 🟠 Construction critical hardening (COI, escrow, verification, deadlines)  
 
-Safety / compliance issues
+Stable but must be monitored:
 
-Mark them as “future phase – documentation only” in your README to avoid confusion for other devs.
+- 🟢 Core auth + roles (`user_tiers`, feature_flags)  
 
-7. GLOBAL “HONEST GAPS” LIST
+---
 
-Here’s the blunt status of things that are not fully done:
+## 8️⃣ QUICK EMERGENCY DEBUG CHECKLIST
 
-🔴 Payments / escrow:
+When something feels broken, ask:
 
-Not fully implemented.
+1. Who am I logged in as?  
+   - Check `user_tiers` row  
 
-Any “pay” or “donate” flows must be considered placeholder until wired to Stripe/etc + legal cleared.
+2. Is RLS blocking me?  
+   - Look for RLS errors; check Supabase logs  
 
-🔴 Advanced analytics ETL:
+3. Is this allowed by governance?  
+   - Kids Mode? Sanctuary? Role? Tier?  
 
-Tables exist (design), but scheduled jobs / edge functions likely not wired.
+4. Is this feature actually built yet?  
+   - If it’s a non-Community vertical: probably not  
 
-Any advanced analytics dashboards are visual only until ETL exists.
+5. GEO or discovery?  
+   - Verify provider/event should be visible by rules  
 
-🟠 Holiday / cultural overlays:
+6. Media or storage?  
+   - Try raw media URL; check bucket & policy  
 
-Logic is designed.
+7. Is it just UI state?  
+   - Clear cache, logout/login, check feature flags  
 
-Need end-to-end test to confirm opt-in behavior and respect for Kids Mode.
+If still unclear:
 
-🟠 Messaging moderation & reporting:
-
-Conversation + messages tables exist.
-
-Need clear moderation UI + flows for abuse reporting.
-
-🟠 Construction critical security hardening:
-
-You have a full audit.
-
-Critical issues (admin verification, bid deadline, COI, escrow, etc.) are design-ready but not yet all implemented in DB.
-
-🟢 Core auth + roles:
-
-You do have a stable user_tiers + feature_flags model.
-
-Needs continual testing as you add tiers or UI routing changes.
-
-8. SIMPLE “RUN THIS WHEN STUFF BREAKS” CHECKLIST
-
-When anything feels broken, run this top-down:
-
-Who am I logged in as?
-
-Check user_tiers row in Supabase.
-
-Is RLS blocking me?
-
-Look for RLS error messages or check Supabase logs.
-
-Is the UI allowed to show this?
-
-Kids Mode?
-
-Role?
-
-Tier?
-
-Is this feature actually built yet?
-
-If it’s construction / healthcare / emergency vertical UI → probably not wired yet.
-
-Is this a GEO or discovery issue?
-
-Check whether the provider / event should be visible based on discovery rules.
-
-Is this a media/storage issue?
-
-Try loading the raw media URL.
-
-Check bucket + path + permissions.
-
-Is this just UI state bugging out?
-
-Clear cache, reload, log out/in.
-
-Check for stale feature flags or state not resetting on nav.
-
-If it’s still weird:
-
-Write a short bug report:
-
-Role / tier
-
-Mode (kids / normal)
-
-Page / feature
-
-What you expected
-
-What actually happened
+- File a bug using `BUG_REPORT_TEMPLATE.md`  
