@@ -6,7 +6,7 @@ Cross-References:
 - /governance/ROOTED_COMMUNITY_TRUST_LAW.md  
 - /governance/ROOTED_PLATFORM_CONSTITUTION.md  
 - /governance/ROOTED_ANTI_PROFILING_LAW.md (if split out)  
-- /docs/TAXONOMY_CANONICAL.md  
+- /docs/ROOTED_TAXONOMY_CANONICAL.md  
 
 Purpose: This document defines the **non-negotiable contract** between:
 
