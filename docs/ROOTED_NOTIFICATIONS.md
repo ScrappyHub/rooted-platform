@@ -7,7 +7,7 @@ Cross-References:
 - /governance/ROOTED_DATA_SOVEREIGNTY_LAW.md
 - /governance/ROOTED_ACCESS_POWER_LAW.md
 - /governance/ROOTED_ADMIN_GOVERNANCE.md
-- /docs/Moderation_System.md
+- /docs/ROOTED_Moderation_System.md
 - /governance/ROOTED_KIDS_MODE_GOVERNANCE.md
 
 ---
