@@ -1,83 +1,95 @@
-# ROOTED — CANONICAL TAXONOMY & SEEDING REPORT (v1)
+# 🌐 ROOTED — CANONICAL TAXONOMY & SEEDING REPORT (v1)
+
 Status: ✅ LOCKED | ✅ PRODUCTION-READY | ✅ FUTURE-PROOF  
-Owner / Architect: Alec  
-Scope: ROOTED Core + All Present & Future Verticals  
+
+Owner / Architect: **Alec**
+
+Scope: ROOTED Core + All Present & Future Verticals
+
+Cross-References:
+
+- /docs/ROOTED_SEEDING_CANONICAL.sql  
+- /governance/ROOTED_PLATFORM_CONSTITUTION.md  
+- /governance/ROOTED_KIDS_MODE_GOVERNANCE.md  
+- /governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md  
+- /governance/ENFORCEMENT_MATRIX.md  
 
 ---
 
-## 1. Purpose of This Document
+## 1️⃣ Purpose of This Document
 
-This document formally certifies that ROOTED’s **core taxonomic foundation** is:
+This document formally certifies that ROOTED’s core taxonomic foundation is:
 
-- Fully designed
-- Fully seeded
-- Governed
-- Future-proofed for 20+ verticals
-- Not subject to re-architecture for expansion
+- Fully designed  
+- Fully seeded  
+- Governed by law  
+- Future-proofed for 20+ verticals  
+- Not subject to re-architecture for expansion  
 
 ✅ All verticals plug into this foundation.  
-✅ No new core tables are required for expansion.  
-✅ Only optional specialty *extensions* may ever be added.
+✅ No new **core** tables are required for expansion.  
+✅ Only optional specialty extensions may ever be added.
 
 ---
 
-## 2. Canonical Core Tables Now Locked
+## 2️⃣ Canonical Core Tables (LOCKED)
 
-The following tables are now considered **structural infrastructure**:
+The following tables are now structural infrastructure:
 
-| Table | Purpose | Status |
-|------|----------|--------|
-| `badges` | Trust & verification layer | ✅ Locked |
-| `specialty_types` | Global provider & institution taxonomy | ✅ Locked |
-| `experience_types` | Cross-vertical experience system | ✅ Locked |
-| `compliance_overlays` | Legal & safety governance | ✅ Locked |
-| `landmark_types` | Map intelligence & discovery | ✅ Locked |
+| Table              | Purpose                               | Status   |
+|--------------------|----------------------------------------|----------|
+| `badges`           | Trust & verification layer             | ✅ Locked |
+| `specialty_types`  | Global provider & institution taxonomy | ✅ Locked |
+| `experience_types` | Cross-vertical experience system       | ✅ Locked |
+| `compliance_overlays` | Legal & safety governance          | ✅ Locked |
+| `landmark_types`   | Map intelligence & discovery           | ✅ Locked |
 | `kids_mode_overlays` | Child-safe educational translation | ✅ Locked |
 
-These tables are:
+Rules:
 
-- Admin-insert only  
-- No hard deletes  
+- Admin-insert only (via tools/migrations)  
+- No hard deletes (deprecation only)  
 - Version-controlled via migrations  
 - Never UI-mutated directly  
 
 ---
 
-## 3. Trust & Discovery Layer — `badges` (LOCKED)
+## 3️⃣ Trust & Discovery Layer — `badges` (LOCKED)
 
-Seeded Canonical Values:
+Seeded canonical values:
 
-- INSURED  
-- LICENSED  
-- ETHICALLY_SOURCED  
-- ORGANIC  
-- GREEN  
-- YOUTH_SAFE  
-- EMERGENCY_CERTIFIED  
-- GOVERNMENT_PARTNER  
-- COMMUNITY_VERIFIED  
+- `INSURED`  
+- `LICENSED`  
+- `ETHICALLY_SOURCED`  
+- `ORGANIC`  
+- `GREEN`  
+- `YOUTH_SAFE`  
+- `EMERGENCY_CERTIFIED`  
+- `GOVERNMENT_PARTNER`  
+- `COMMUNITY_VERIFIED`  
 
-Purpose:
+Purposes:
 
-- Discovery ranking
-- Youth safety signaling
-- Emergency & government credibility
-- Sustainability & ethics transparency
-- Procurement trust validation
+- Discovery ranking & boost  
+- Youth safety signaling  
+- Emergency & government credibility  
+- Sustainability & ethics transparency  
+- Procurement trust validation  
+
+Badges feed directly into discovery views and market eligibility rules.
 
 ---
 
-## 4. Global Specialty Taxonomy — `specialty_types` (LOCKED)
+## 4️⃣ Global Specialty Taxonomy — `specialty_types` (LOCKED)
 
-This table is the **permanent backbone** for:
+Backbone for:
 
-- Providers
-- Institutions
-- RFQs / Bids / Bulk Offers
-- Events & Experiences
-- Landmarks & Map Layers
+- Providers & institutions  
+- RFQs / Bids / Bulk Offers  
+- Events & Experiences  
+- Landmarks & map layers  
 
-### Supported Vertical Groups (20)
+Supported **vertical groups** (20):
 
 1. AGRICULTURE_FOOD  
 2. CONSTRUCTION  
@@ -100,13 +112,13 @@ This table is the **permanent backbone** for:
 19. PUBLIC_SAFETY  
 20. RESEARCH_PLANNING  
 
-✅ Every vertical in the 20-vertical ROOTED roadmap maps directly to at least one of these groups.
+✅ Every vertical in the 20-vertical ROOTED roadmap maps to at least one of these groups.
 
 ---
 
-## 5. Cross-Vertical Experiences — `experience_types` (LOCKED)
+## 5️⃣ Cross-Vertical Experiences — `experience_types` (LOCKED)
 
-Canonical Experience Types:
+Canonical experience types:
 
 - FARM_TOUR  
 - HARVEST_DAY  
@@ -114,28 +126,28 @@ Canonical Experience Types:
 - JOB_SHADOW  
 - FIELD_TRIP  
 - DISASTER_DRILL  
+- EMERGENCY_TRAINING  
 - CLEANUP_DAY  
 - TREE_PLANTING  
 - ART_WORKSHOP  
 - SCIENCE_WORKSHOP  
-- EMERGENCY_TRAINING  
 - HISTORIC_TOUR  
 - VOLUNTEER_SHIFT  
 
 Each experience is governed by:
 
-- `requires_waiver`
-- `kids_allowed`
-- `insurance_required`
-- `seasonal_lockable`
+- `requires_waiver`  
+- `kids_allowed`  
+- `insurance_required`  
+- `seasonal_lockable`  
 
-This enables **safe reuse of experiences across every vertical** with correct legal gating.
+This enables safe reuse across verticals with consistent legal gating.
 
 ---
 
-## 6. Legal & Safety Governance — `compliance_overlays` (LOCKED)
+## 6️⃣ Legal & Safety Governance — `compliance_overlays` (LOCKED)
 
-Canonical Compliance Engine:
+Canonical compliance engine overlays:
 
 - FOOD_SAFETY  
 - INSURANCE_REQUIRED  
@@ -148,21 +160,21 @@ Canonical Compliance Engine:
 - ENVIRONMENTAL_REPORTING  
 - EMERGENCY_PRIORITY_ACCESS  
 
-These overlays attach to:
+Attach to:
 
-- Specialties
-- Providers
-- RFQs
-- Experiences
-- Landmarks
+- Specialties  
+- Providers  
+- RFQs / bids  
+- Experiences  
+- Landmarks  
 
-This gives ROOTED **court-defensible operational compliance** without family exposure or medical data storage.
+This gives ROOTED **court-defensible** operational compliance without needing to store medical charts or sensitive family records.
 
 ---
 
-## 7. Map Intelligence & Landmarks — `landmark_types` (LOCKED)
+## 7️⃣ Map Intelligence & Landmarks — `landmark_types` (LOCKED)
 
-Canonical Landmarks:
+Canonical landmark types:
 
 - HISTORIC_FARM  
 - HISTORIC_BRIDGE  
@@ -177,19 +189,18 @@ Canonical Landmarks:
 - NATURE_PRESERVE  
 - PUBLIC_MONUMENT  
 
-Used for:
+Uses:
 
-- Cultural discovery
-- Seasonal overlays
-- Educational tours
-- Emergency shelter routing
-- Regional identity modeling
+- Cultural + historical discovery  
+- Seasonal & educational overlays  
+- Emergency shelter / infrastructure awareness  
+- Regional identity modeling  
 
 ---
 
-## 8. Kids Mode Educational Translation — `kids_mode_overlays` (LOCKED)
+## 8️⃣ Kids Mode Educational Translation — `kids_mode_overlays` (LOCKED)
 
-Canonical Overlays:
+Canonical overlays:
 
 - ANIMAL_EDUCATION  
 - FOOD_SYSTEMS  
@@ -201,13 +212,16 @@ Canonical Overlays:
 - STEM_EDUCATION  
 - EMOTIONAL_EDUCATION  
 
-Used to **translate civic infrastructure into age-appropriate education**, not just block access.
+Purpose:
+
+- Translate civic infrastructure into **age-appropriate** educational views  
+- Not just block access — reframe for learning  
 
 ---
 
-## 9. Feature Flag Vertical Governance (DESIGN LOCKED)
+## 9️⃣ Feature Flag Vertical Governance (DESIGN LOCKED)
 
-Canonical Default Feature Flags:
+Suggested default `feature_flags` baseline:
 
 ```json
 {
@@ -224,3 +238,38 @@ Canonical Default Feature Flags:
   "kids_mode_enabled": true,
   "seasonal_marketing_opt_in": false
 }
+This is a design lock:
+
+Future verticals toggle via feature flags
+
+Taxonomy tables remain unchanged
+
+🔟 Change Management
+Any proposed change to:
+
+badges
+
+specialty_types
+
+experience_types
+
+compliance_overlays
+
+landmark_types
+
+kids_mode_overlays
+
+must:
+
+Reference this document and SEEDING_CANONICAL_V1.sql
+
+Provide a migration plan (no hard deletes)
+
+Be reviewed against governance laws
+
+If a change conflicts with law or breaks vertical mapping:
+
+The taxonomy stays. The feature request is redesigned.
+
+yaml
+Copy code
