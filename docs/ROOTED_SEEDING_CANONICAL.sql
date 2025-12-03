@@ -3,7 +3,7 @@
 -- Safe to run multiple times (ON CONFLICT DO NOTHING)
 --
 -- Cross-References:
---   /docs/TAXONOMY_CANONICAL.md
+--   /docs/ROOTED_TAXONOMY_CANONICAL.md
 --   /governance/ROOTED_PLATFORM_CONSTITUTION.md
 --   /governance/ROOTED_KIDS_MODE_GOVERNANCE.md
 --   /governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md
