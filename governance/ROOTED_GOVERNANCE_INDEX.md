@@ -1,4 +1,4 @@
-# 🏛️ ROOTED — GOVERNANCE INDEX & CHAIN OF AUTHORITY (v3 CANONICAL)
+# 🏛️ ROOTED — GOVERNANCE INDEX & CHAIN OF AUTHORITY (CANONICAL)
 
 File: /governance/ROOTED_GOVERNANCE_INDEX.md  
 Authority Level: **Supreme Governance Router**  
