@@ -393,4 +393,4 @@ When something feels broken, ask:
 
 If still unclear:
 
-- File a bug using `BUG_REPORT_TEMPLATE.md`  
+- File a bug using `ROOTED_BUG_REPORT_TEMPLATE.md`  
