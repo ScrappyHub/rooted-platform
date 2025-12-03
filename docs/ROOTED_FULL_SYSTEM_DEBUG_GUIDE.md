@@ -1,3 +1,16 @@
+FINAL NOTE
+
+This file is not a wish list.
+It is a finite, canonical bug + risk ledger tied directly to governance.
+
+When an item is fixed:
+
+Update this file
+
+Reference the commit or migration
+
+Move the item to a “Resolved in vX.Y” section
+
 
 ---
 
