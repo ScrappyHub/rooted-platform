@@ -1,4 +1,4 @@
-## ROOTED PLATFORM CONSTITUTION (FINAL)
+# 📜 ROOTED PLATFORM CONSTITUTION (FINAL)
 
 Authority Level: SUPREME PLATFORM LAW
 Enforcement Chain: GitHub → Database → Admin RPCs → UI
