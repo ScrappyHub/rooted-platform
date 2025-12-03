@@ -1,4 +1,4 @@
-🧩 ROOTED — FRONTEND PLATFORM CONTRACT (CANONICAL)
+# 🧩 ROOTED — FRONTEND PLATFORM CONTRACT (CANONICAL)
 
 Authority Level: Binding Engineering Contract
 Applies To: All frontend / edge / app code for ROOTED Community + future verticals
@@ -32,7 +32,9 @@ ROOTED_ADMIN_GOVERNANCE.md
 
 ROOTED_ACCOUNT_GOVERNANCE_LAW.md
 
-1. Core Principles (Frontend Must Obey)
+---
+
+## 1. Core Principles (Frontend Must Obey)
 
 Frontend is display-only, not authority.
 
@@ -56,7 +58,9 @@ Recreates business rules that already live in views / RPCs
 
 You are wiring UI to the law — not re-implementing it.
 
-2. Canonical Auth + Role/Tier Fetch
+---
+
+## 2. Canonical Auth + Role/Tier Fetch
 
 After any successful login, you MUST fetch the user’s ROOTED identity via a single RPC, not ad-hoc table reads.
 
@@ -71,6 +75,8 @@ export async function handlePostLoginRouting(goTo: (path: string) => void) {
     goTo('/login');
     return;
   }
+
+---
 
   // 2) Ask backend who this user is in ROOTED terms
   const { data: roleInfo, error: roleError } = await supabase
@@ -96,6 +102,8 @@ export async function handlePostLoginRouting(goTo: (path: string) => void) {
     goTo('/security/setup-2fa');
     return;
   }
+
+---
 
   // 4) Route by role + tier
   if (role === 'admin') {
@@ -133,16 +141,18 @@ export async function handlePostLoginRouting(goTo: (path: string) => void) {
   }
 }
 
+---
 
 Usage after sign-in:
 
 // after successful login:
 await handlePostLoginRouting(goTo);
 
-
 This helper is the only allowed routing entrypoint.
 
-3. 2FA Enforcement (Admins & Institutions)
+---
+
+## 3. 2FA Enforcement (Admins & Institutions)
 
 In alignment with ROOTED_ADMIN_GOVERNANCE.md and ROOTED_ACCESS_POWER_LAW.md:
 
@@ -156,7 +166,9 @@ Frontend rule (already embedded in handlePostLoginRouting):
 
 If role in ('admin', 'institution') AND !has_2fa → route to /security/setup-2fa and block further access.
 
-4. Subscription State: How UI Checks Billing
+---
+
+## 4. Subscription State: How UI Checks Billing
 
 Frontend must never speak to Stripe directly.
 
@@ -176,6 +188,8 @@ if (!hasPremium) {
   // show upgrade UI / lock icons / disabled states
 }
 
+---
+
 
 Stripe is handled in backend webhooks; frontend only reads normalized fields:
 
@@ -187,7 +201,9 @@ user_tiers.feature_flags.*
 
 This aligns with ROOTED_BILLING_ABUSE_TEST_MATRIX.md and prevents billing exploit attempts.
 
-5. Feature Flags → UI Capabilities
+---
+
+## 5. Feature Flags → UI Capabilities
 
 Frontend must never hard-code tier → feature mappings.
 It must read feature_flags and let the DB decide.
@@ -226,7 +242,9 @@ function VendorDashboard({ roleInfo }: { roleInfo: RoleInfo }) {
 Backend (laws) defines what flags each tier gets.
 Frontend just reads flags, it never guesses.
 
-6. Discovery & Map Contract (Views Only)
+---
+
+## 6. Discovery & Map Contract (Views Only)
 
 Per ROOTED_COMMUNITY_TRUST_LAW.md and the Stop Layer, public discovery must only use canonical views.
 
@@ -267,6 +285,8 @@ recheck is_active
 
 The view already enforces those.
 
+---
+
 6.2 Seasonal “Featured This Season”
 
 Use:
@@ -281,6 +301,7 @@ const { data, error } = await supabase
 // Use top 6–8 as featured carousel
 const featured = (data ?? []).slice(0, 8);
 
+---
 
 UI rules:
 
@@ -290,7 +311,9 @@ No direct use of providers to “boost” anyone.
 
 Visual badges like “In Season” are purely UI labels; they do not change data.
 
-7. Kids Mode — Frontend Behavior
+---
+
+## 7. Kids Mode — Frontend Behavior
 
 Per ROOTED_KIDS_MODE_GOVERNANCE.md and the Constitution:
 
@@ -310,6 +333,8 @@ messaging
 
 ads
 
+---
+
 7.1 Routing
 
 If feature_flags.is_kids_mode === true, community user must route into:
@@ -322,6 +347,8 @@ Kids Mode screens:
 show only kids-safe content from kids-safe views (e.g. kids_safe_events_v1, kids_landmarks_v1, kids_seasonal_v1).
 
 never show call-to-action for commerce.
+
+---
 
 7.2 UI Rules
 
@@ -355,7 +382,9 @@ ROOTED_KIDS_MODE_GOVERNANCE.md
 
 ROOTED_SEASONAL_KNOWLEDGE_STREAMS_LAW.md
 
-8. Seasonal Knowledge Streams — Frontend Contract
+---
+
+## 8. Seasonal Knowledge Streams — Frontend Contract
 
 Per ROOTED_SEASONAL_KNOWLEDGE_STREAMS_LAW.md:
 
@@ -366,6 +395,8 @@ Frontend reads from seasonal views, e.g.:
 seasonal_current_month_v1 (public education)
 
 kids_seasonal_v1 (kids-safe subset)
+
+---
 
 UI MUST:
 
@@ -389,6 +420,8 @@ vendor ranking
 
 sponsored placement
 
+---
+
 8.2 Recipes (Premium Plus Only)
 
 Recipes are the only monetized seasonal layer:
@@ -409,7 +442,9 @@ safe, education-only snippets explicitly approved.
 
 No user-specific food profiling, tracking, or diet targeting is allowed.
 
-9. Applications & Submissions (RPC-Only)
+---
+
+## 9. Applications & Submissions (RPC-Only)
 
 All “apply” flows must call RPCs, never insert directly into core tables.
 
@@ -434,7 +469,9 @@ Frontend must not call:
 
 Those tables are governed by admin / moderation pipelines.
 
-10. Notifications & Moderation Events
+---
+
+## 10. Notifications & Moderation Events
 
 Approvals, rejections, and system messages use a notification RPC or direct insert into notifications (if allowed by RLS).
 
@@ -466,7 +503,9 @@ await supabase
 
 UI shows notifications read-only; it never bypasses moderation or approval logic.
 
-11. Media Uploads — Safe Pattern
+---
+
+## 11. Media Uploads — Safe Pattern
 
 All media uploads must:
 
@@ -494,7 +533,9 @@ await supabase
 
 Frontend must never set owner_user_id to anything other than user.id.
 
-12. Vendor / Institution Dashboards — Gating
+---
+
+## 12. Vendor / Institution Dashboards — Gating
 
 Inside vendor/institution dashboards, every advanced section must be gated by feature flags and subscription status together.
 
@@ -522,7 +563,9 @@ if (role === 'vendor') {
 
 If either the feature flag or subscription state says “no,” the UI must treat it as locked.
 
-13. Pre-Commit Frontend Checklist (Mini)
+---
+
+## 13. Pre-Commit Frontend Checklist (Mini)
 
 Before merging any frontend change that touches:
 
