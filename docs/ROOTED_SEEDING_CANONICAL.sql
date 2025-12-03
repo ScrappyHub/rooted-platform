@@ -1,6 +1,24 @@
--- SEEDING_CANONICAL_V1.sql
+-- ROOTED_SEEDING_CANONICAL.sql
 -- ROOTED canonical taxonomy + governance seeds
 -- Safe to run multiple times (ON CONFLICT DO NOTHING)
+--
+-- Cross-References:
+--   /docs/TAXONOMY_CANONICAL.md
+--   /governance/ROOTED_PLATFORM_CONSTITUTION.md
+--   /governance/ROOTED_KIDS_MODE_GOVERNANCE.md
+--   /governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md
+--   /governance/ENFORCEMENT_MATRIX.md
+--
+-- This migration establishes the canonical:
+--   - Trust badges
+--   - Global specialty taxonomy
+--   - Cross-vertical experience types
+--   - Compliance overlays
+--   - Landmark types
+--   - Kids Mode overlays
+--
+-- These tables are considered structural infrastructure and must not be
+-- dropped or hard-reset in production.
 
 BEGIN;
 
@@ -140,7 +158,7 @@ VALUES
 -- ⚡ UTILITIES & ENERGY
 ('ELECTRIC_PROVIDER', 'Electric Provider', 'UTILITIES_ENERGY', true, true, true),
 ('WATER_PROVIDER', 'Water Provider', 'UTILITIES_ENERGY', true, true, true),
-('GAS_PROVIDER', 'Gas Provider', 'Gas Provider', 'UTILITIES_ENERGY', true, true, true),
+('GAS_PROVIDER', 'Gas Provider', 'UTILITIES_ENERGY', true, true, true),
 ('INTERNET_PROVIDER', 'Internet Provider', 'UTILITIES_ENERGY', true, true, true),
 ('RENEWABLE_ENERGY', 'Renewable Energy', 'UTILITIES_ENERGY', true, true, true),
 
