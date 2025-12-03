@@ -1,95 +1,119 @@
-✅ ROOTED — MASTER BUG & RISK LIST (CANONICAL v1)
+
+---
+
+## `Master_Debug_Toolkit.md`
+
+```md
+# ✅ ROOTED — MASTER BUG & RISK LIST (CANONICAL v1)
 
 Status as of now:
-Governance, taxonomy, Kids Mode, and compliance are ✅ structurally complete
-What remains are integration, UI enforcement, and edge-case safeguards
 
-🟥 PRIORITY 1 — CRITICAL GOVERNANCE INTEGRATION BUGS
+- Governance, taxonomy, Kids Mode, and compliance are ✅ structurally complete.  
+- Remaining work is: integration, UI enforcement, and edge-case safeguards.
 
-(These are the only items that can compromise your law if left unchecked)
+Cross-References:
 
-1️⃣ Admin UI Not Yet Hard-Gated by is_admin()
+- `/governance/ROOTED_PLATFORM_CONSTITUTION.md`  
+- `/governance/ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md`  
+- `/governance/ROOTED_KIDS_MODE_GOVERNANCE.md`  
+- `/governance/ROOTED_COMMUNITY_TRUST_LAW.md`  
+- `/governance/ROOTED_DATA_SOVEREIGNTY_LAW.md`  
+- `/governance/ROOTED_ACCESS_POWER_LAW.md`  
+- `/governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md`  
+- `/governance/ROOTED_ADMIN_GOVERNANCE.md`  
+- `/governance/ROOTED_ACCOUNT_GOVERNANCE_LAW.md`  
+- `/governance/ENFORCEMENT_MATRIX.md`  
 
-Risk:
-Your views are read-only and secured, but if the Admin UI route itself is not server-gated, a non-admin could still attempt to load panels.
+Use this file as your **debug + risk map** when auditing the platform.
 
-Fix Required:
+---
 
-Every admin route must verify:
+## 🟥 PRIORITY 1 — CRITICAL GOVERNANCE INTEGRATION BUGS
 
-user_tiers.role = 'admin'
+(These are the only items that can compromise your law if left unchecked.)
 
-AND is_admin() server-side
+### 1️⃣ Admin UI Not Yet Hard-Gated by `is_admin()`
 
-Never trust front-end role claims alone
+**Risk:** views and SQL are secure, but if admin routes are not server-gated, a non-admin could still attempt to load admin panels.
 
-2️⃣ Provider-Level Auto-Inheritance Not Yet Enforced
+**Fix Required:**
 
-You have:
+- Every admin route must verify:
+  - `user_tiers.role = 'admin'`  
+  - `public.is_admin()` server-side  
+- Never trust front-end role claims alone.
 
-✅ Specialty → Compliance overlays
+**Governance Links:**
 
-✅ Specialty → Kids overlays
+- `/governance/ROOTED_ADMIN_GOVERNANCE.md`  
+- `/governance/ROOTED_ACCESS_POWER_LAW.md`  
 
-But unless you explicitly wired:
+---
 
-Provider → Specialty inheritance
-…a provider could exist without inheriting its legal safety net.
-
-Risk:
-A FARM provider without FOOD_SAFETY enforced.
-
-Fix Required (Logic Level):
-
-On provider create/update:
-
-Pull admin_specialty_governance_v1
-
-Auto-apply:
-
-compliance overlays
-
-kids overlays
-
-Do NOT duplicate logic in multiple services
-
-3️⃣ Experience Creation Not Yet Validated Against Governance View
+### 2️⃣ Provider-Level Auto-Inheritance Not Yet Enforced
 
 You have:
 
-✅ Experience governance view
+- Specialty → compliance overlays  
+- Specialty → Kids overlays  
 
-✅ Kids overlays
+But if provider creation/update doesn’t **enforce inheritance**, a provider could exist without its legal safety net.
 
-✅ Insurance & waiver flags
+**Risk:** e.g. a FARM provider without FOOD_SAFETY enforced.
 
-But unless you validate on insert, someone could submit:
+**Fix Required (Logic Level):**
 
-A kids-enabled experience that requires a waiver but skips it
+- On provider create/update:
+  - Pull `admin_specialty_governance_v1`  
+  - Auto-apply:
+    - compliance overlays  
+    - kids overlays  
+- Do **not** duplicate this logic in multiple services.
 
-An experience without insurance when required
+**Governance Links:**
 
-Fix Required:
+- `/governance/ROOTED_KIDS_MODE_GOVERNANCE.md`  
+- `/governance/ROOTED_COMMUNITY_TRUST_LAW.md`  
 
-On experience submission:
+---
 
-Reject if:
+### 3️⃣ Experience Creation Not Yet Validated Against Governance View
 
-requires_waiver = true and no waiver attached
+You have:
 
-insurance_required = true and provider lacks insurance badge
+- Experience governance view  
+- Kids overlays  
+- Insurance & waiver flags  
 
-kids_allowed = false and Kids Mode is enabled
+Without validation at submission time, someone could attempt:
 
-🟧 PRIORITY 2 — YOUTH & SAFETY EDGE-CASE BUGS
-4️⃣ Kids Mode Still Depends on UI Filtering Only
+- kids-enabled experience that requires a waiver but skips it  
+- experience without insurance when required  
 
-You’ve done the data law correctly — but unless backend queries enforce:
+**Fix Required:**
 
+- On experience submission, reject if:
+  - `requires_waiver = true` and no waiver attached  
+  - `insurance_required = true` and provider lacks insurance badge  
+  - `kids_allowed = false` and Kids Mode surface is trying to show it  
+
+**Governance Links:**
+
+- `/governance/ROOTED_KIDS_MODE_GOVERNANCE.md`  
+- `/governance/ROOTED_COMMUNITY_TRUST_LAW.md`  
+
+---
+
+## 🟧 PRIORITY 2 — YOUTH & SAFETY EDGE-CASE BUGS
+
+### 4️⃣ Kids Mode Still Depends on UI Filtering Only
+
+Data law is correct, but if backend queries don’t enforce:
+
+```sql
 WHERE kids_allowed = true
 
-
-Kids Mode could still leak adult-only content via API.
+then Kids Mode could still leak adult-only content via API.
 
 Fix Required:
 
@@ -101,28 +125,39 @@ Discovery API
 
 Search API
 
-Never rely on frontend-only filtering
+Never rely on front-end-only filtering.
+
+Governance Links:
+
+/governance/ROOTED_KIDS_MODE_GOVERNANCE.md
+
+/governance/ENFORCEMENT_MATRIX.md
 
 5️⃣ Sensitive Compliance Overlays Not Yet Cross-Validated
 
 Example risks:
 
-A provider marked HI_PII_RESTRICTED but still allowed to upload free-form documents
+Provider marked HI_PII_RESTRICTED but allowed to upload free-form documents.
 
-A NO_MEDICAL_DATA entity given a medical-style form
+NO_MEDICAL_DATA entity given a medical-style form.
 
 Fix Required:
 
-Form schema must change based on:
+Form schema must change based on compliance overlays.
 
-Compliance overlays
+Document upload types must be filtered by overlay.
 
-Document upload types must be filtered by overlay
+Governance Links:
+
+/governance/ROOTED_DATA_SOVEREIGNTY_LAW.md
+
+/governance/ROOTED_PLATFORM_CONSTITUTION.md
 
 🟨 PRIORITY 3 — DISCOVERY & TRUST SIGNAL BUGS
+
 6️⃣ Discovery Badges Not Yet Enforced as Requirements
 
-You seeded:
+You seeded badges:
 
 INSURED
 
@@ -132,23 +167,23 @@ YOUTH_SAFE
 
 EMERGENCY_CERTIFIED
 
-But unless enforced:
-
-A GENERAL_CONTRACTOR could appear public without LICENSED
+If discovery doesn’t enforce these, a GENERAL_CONTRACTOR might appear public without LICENSED.
 
 Fix Required:
 
 Discovery rules:
 
-If LICENSE_REQUIRED → must have LICENSED badge
+If LICENSE_REQUIRED → provider must have LICENSED badge
 
-If INSURANCE_REQUIRED → must have INSURED badge
+If INSURANCE_REQUIRED → provider must have INSURED badge
 
 Otherwise:
 
-Hide from public
+Hide from public or mark clearly as “unverified”.
 
-Mark as “unverified”
+Governance Links:
+
+/governance/ROOTED_COMMUNITY_TRUST_LAW.md
 
 7️⃣ Vertical Feature Flags Not Yet Hard-Blocking Routes
 
@@ -164,71 +199,50 @@ Fix Required:
 
 Every vertical route must verify:
 
-feature_flags.<vertical>_access = true
+relevant feature_flags._access = true
 
 Otherwise:
 
-Redirect
+Redirect to a locked screen / explanation.
 
-Or show locked gate
+Governance Links:
+
+/governance/ROOTED_ACCESS_POWER_LAW.md
 
 🟩 PRIORITY 4 — ADMIN SAFETY + OPERATIONAL BUGS (LOW RISK)
 8️⃣ Audit Read UI May Not Be Built Yet
 
 You are writing to user_admin_actions ✅
-But you likely do not yet have:
+But you might not yet have:
 
-An Admin audit viewer
+Admin audit viewer
 
 Filters by action_type, date, target_user
 
-Impact:
-Low risk, but important for long-term trust.
+Impact: low risk, but important for long-term trust and forensic debugging.
+
+Governance Links:
+
+/governance/ROOTED_ADMIN_GOVERNANCE.md
 
 9️⃣ Deprecation Flags Not Yet Implemented
 
-Your governance law says:
+Governance says:
 
-“Do not delete — mark deprecated”
+“Do not delete — mark deprecated.”
 
-But your tables currently do NOT include:
+But tables may not yet include:
 
 is_deprecated
 
 deprecated_at
 
-Impact:
-Future cleanup will be harder.
+Impact: future cleanup and migrations become harder.
 
 🔟 Cross-Vertical Soft Conflicts Not Yet Modeled
 
 Example:
 
-A provider tagged as:
+A provider tagged as both THERAPY_CENTER and YOUTH_PROGRAM but no explicit conflict rules exist.
 
-THERAPY_CENTER
-
-YOUTH_PROGRAM
-
-But no explicit cross-conflict rule exists yet.
-
-Impact:
-Not dangerous now — but relevant in Phase 3+.
-
-✅ WHAT IS OFFICIALLY NOT A BUG ANYMORE
-
-These systems are closed and clean:
-
-✅ Admin Governance
-✅ Account status mutation paths
-✅ Role & tier enforcement model
-✅ Taxonomy seeding
-✅ Specialty → Compliance mapping
-✅ Specialty → Kids Mode mapping
-✅ Experience → Kids Mode mapping
-✅ Compliance law registry
-✅ Read-only Admin Governance Dashboard
-✅ Insert-only doctrine
-✅ No silent deletes doctrine
-
-These are foundationally complete.
+Impact: not dangerous now, but important in Phase 3+ vertical launches.
