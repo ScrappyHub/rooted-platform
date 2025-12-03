@@ -295,3 +295,23 @@ function getSystemPrompt({ role, isKidsMode, isAdminRoute, isCrisis }) {
   // Default public/community support
   return ROOTED_COMMUNITY_BASE_PROMPT + ROOTED_COMMUNITY_SUPPORT_PROMPT;
 }
+
+---
+
+## 5️⃣ Governance Sanity Checklist
+
+Before shipping any AI change, confirm:
+
+❌ Does it let anyone bypass Kids Mode?
+
+❌ Does it give sanctuaries access to revenue tools?
+
+❌ Does it bypass moderation?
+
+❌ Does it invent new laws/roles/tiers?
+
+✅ Does it treat Community as the only live vertical?
+
+✅ Does it keep ROOTED calm, grounded, local, non-addictive?
+
+If any answer is wrong → the change is invalid under /governance.
