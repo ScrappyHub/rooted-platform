@@ -7,6 +7,7 @@ Enforcement Chain:
 CONSTITUTION  
 → STOP LAYER  
 → CANONICAL LAW FILES  
+→ SYSTEM & VERTICAL STRUCTURE GOVERNANCE  
 → DATABASE (RLS + VIEWS + RPCs)  
 → ADMIN ACTIONS  
 → UI SURFACES  
@@ -22,10 +23,10 @@ This file is the **single authoritative router** for all governance inside ROOTE
 
 It defines:
 
-- What laws exist
-- What order they apply in
-- How conflicts are resolved
-- Which systems enforce which laws
+- What laws exist  
+- What order they apply in  
+- How conflicts are resolved  
+- Which systems enforce which laws  
 - What documents carry **legal authority**
 
 > If anything contradicts this file → **THIS FILE WINS.**
@@ -41,18 +42,18 @@ No UI, feature, admin action, investor request, or experiment may bypass this ch
 
 ### **1️⃣ ROOTED PLATFORM CONSTITUTION (SUPREME AUTHORITY)**
 
-File:
+File:  
 `ROOTED_PLATFORM_CONSTITUTION.md`
 
 Defines:
 
-- Platform identity & non-negotiable mission
-- Anti-profiling & anti-surveillance doctrine
-- Supreme child safety law
-- Sanctuary & nonprofit absolute protection
-- Founder non-centralization & successor lock
-- Git-locked authority
-- No unlimited power principle
+- Platform identity & non-negotiable mission  
+- Anti-profiling & anti-surveillance doctrine  
+- Supreme child safety law  
+- Sanctuary & nonprofit absolute protection  
+- Founder non-centralization & successor lock  
+- Git-locked authority  
+- No unlimited power principle  
 
 ➡ If **ANYTHING** conflicts with the Constitution →  
 **The Constitution ALWAYS wins.**
@@ -61,22 +62,22 @@ Defines:
 
 ### **2️⃣ ROOTED CONSTITUTIONAL STOP LAYER (ENFORCEMENT SHIELD)**
 
-File:
+File:  
 `ROOTED_STOP_LAYER.md`
 
 Purpose:
 
-- Freezes all critical governance permanently
-- Blocks:
-  - Political override
-  - Investor override
-  - Admin override
-  - Emergency override of Kids Mode
-- Locks:
-  - Kids Mode
-  - Sanctuary Protection
-  - Data Sovereignty
-- Prohibits silent power anywhere in the system
+- Freezes all critical governance permanently  
+- Blocks:  
+  - Political override  
+  - Investor override  
+  - Admin override  
+  - Emergency override of Kids Mode  
+- Locks:  
+  - Kids Mode  
+  - Sanctuary Protection  
+  - Data Sovereignty  
+- Prohibits silent power anywhere in the system  
 
 ➡ If anything attempts to bypass governance →  
 **The Stop Layer nullifies it instantly.**
@@ -87,30 +88,57 @@ Purpose:
 
 These are the **ONLY documents** below the Constitution that can define:
 
-- Power
-- Access
-- Safety
-- Data use
-- Monetization
-- Enforcement authority
+- Power  
+- Access  
+- Safety  
+- Data use  
+- Monetization  
+- Enforcement authority  
 
 **The Canonical Law Set:**
 
-- `ROOTED_GOVERNANCE_ETHICS.md`
-- `ROOTED_DATA_SOVEREIGNTY_LAW.md`
-- `ROOTED_ACCESS_POWER_LAW.md`
-- `ROOTED_COMMUNITY_TRUST_LAW.md`
-- `ROOTED_SANCTUARY_NONPROFIT_LAW.md`
-- `ROOTED_KIDS_MODE_GOVERNANCE.md`
-- `ROOTED_ADMIN_GOVERNANCE.md`
-- `ROOTED_ACCOUNT_GOVERNANCE_LAW.md`
-- `ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md`
-- `ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md`
-- `ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION.md`
+- `ROOTED_GOVERNANCE_ETHICS.md`  
+- `ROOTED_DATA_SOVEREIGNTY_LAW.md`  
+- `ROOTED_ACCESS_POWER_LAW.md`  
+- `ROOTED_COMMUNITY_TRUST_LAW.md`  
+- `ROOTED_SANCTUARY_NONPROFIT_LAW.md`  
+- `ROOTED_KIDS_MODE_GOVERNANCE.md`  
+- `ROOTED_ADMIN_GOVERNANCE.md`  
+- `ROOTED_ACCOUNT_GOVERNANCE_LAW.md`  
+- `ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md`  
+- `ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md`  
+- `ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION.md`  
 
 ➡ **NO document outside this list may define power, access, safety, or monetization rights.**
 
 All other documents are **implementation references**, not law.
+
+---
+
+### **3.5️⃣ SYSTEM & VERTICAL STRUCTURE GOVERNANCE (BINDING)**
+
+These files define **how** the lawful platform is allowed to be structured:
+
+- How identity, roles, tiers, and feature flags work across all verticals  
+- How existing accounts may participate in multiple verticals (without duplicate identities)  
+- How Kids Mode, sanctuary protection, and non-commercial rules propagate through verticals  
+- How cross-vertical access is granted, limited, and revoked  
+
+**Canonical System Structure Files:**
+
+- `ROOTED_CORE_SYSTEM_GOVERNANCE.md`  
+- `ROOTED_VERTICAL_ACCESS_CONTRACT.md`  
+
+These files:
+
+- ✅ May **not** override the Constitution  
+- ✅ May **not** override the STOP LAYER  
+- ✅ May **not** weaken Kids Mode or Sanctuary Law  
+- ✅ **Do** bind all vertical governance docs (Community, Education, Construction, Arts & Culture, Experiences, future verticals)  
+- ✅ **Do** bind frontend & backend routing, role/tier handling, and cross-vertical identity behavior  
+
+If any vertical implementation, UI flow, or backend service conflicts with these files →  
+**The implementation is invalid and must be corrected.**
 
 ---
 
@@ -120,31 +148,31 @@ The database is the **first real enforcement surface** for governance.
 
 Enforcement Layers:
 
-- ✅ RLS Policies
-- ✅ Security Definer RPCs
-- ✅ Read-Only Views
-- ✅ Insert-Only Pipelines
-- ✅ Audit Tables
+- ✅ RLS Policies  
+- ✅ Security Definer RPCs  
+- ✅ Read-Only Views  
+- ✅ Insert-Only Pipelines  
+- ✅ Audit Tables  
 
-Canonical Enforced Tables:
+Canonical Enforced Tables (non-exhaustive, but binding examples):
 
-- `user_tiers`
-- `user_admin_actions`
-- `moderation_queue`
-- `providers`
-- `events`
-- `landmarks`
-- `rfqs`
-- `bids`
-- `bulk_offers`
-- `notifications`
+- `user_tiers`  
+- `user_admin_actions`  
+- `moderation_queue`  
+- `providers`  
+- `events`  
+- `landmarks`  
+- `rfqs`  
+- `bids`  
+- `bulk_offers`  
+- `notifications`  
 
 Rules:
 
-- UI is **never trusted alone**
-- Admins **never bypass RLS**
-- Service roles **never bypass governance law**
-- All violations become **audit events**
+- UI is **never trusted alone**  
+- Admins **never bypass RLS**  
+- Service roles **never bypass governance law**  
+- All violations become **audit events**  
 
 ---
 
@@ -154,24 +182,24 @@ Admins sit **below the database** in the chain.
 
 They:
 
-- ✅ Execute law via RPCs
-- ✅ Moderate content
-- ✅ Assign roles & feature flags
-- ✅ Verify badges & sanctuaries
+- ✅ Execute law via RPCs  
+- ✅ Moderate content  
+- ✅ Assign roles & feature flags  
+- ✅ Verify badges & sanctuaries  
 
 They **DO NOT**:
 
-- Override Kids Mode
-- Grant sanctuary monetization
-- Inject discovery bias
-- Delete audit history
-- Alter governance law
+- Override Kids Mode  
+- Grant sanctuary monetization  
+- Inject discovery bias  
+- Delete audit history  
+- Alter governance law  
 
 All admin actions:
 
-- Must route through RPCs
-- Must write to `user_admin_actions`
-- Must respect `public.is_admin()` + `account_status = active`
+- Must route through RPCs  
+- Must write to `user_admin_actions`  
+- Must respect `public.is_admin()` + `account_status = active`  
 
 ---
 
@@ -179,20 +207,20 @@ All admin actions:
 
 The UI:
 
-- Reflects governance
-- DOES NOT define governance
-- NEVER overrides:
-  - RLS
-  - Feature flags
-  - Moderation status
-  - Kids Mode
-  - Sanctuary protection
+- Reflects governance  
+- DOES NOT define governance  
+- NEVER overrides:  
+  - RLS  
+  - Feature flags  
+  - Moderation status  
+  - Kids Mode  
+  - Sanctuary protection  
 
 If UI behavior ever conflicts with:
 
-- Database enforcement
-- Governance law
-- Canonical contracts
+- Database enforcement  
+- Governance law  
+- Canonical contracts  
 
 ➡ The UI is **wrong and must be fixed**.
 
@@ -202,22 +230,22 @@ If UI behavior ever conflicts with:
 
 These documents **do not define law**, but they **bind implementation**:
 
-- `ROOTED_SECURITY.md`
-- `ROOTED_SECURITY_DISCOVERY_CONTRACT.md`
-- `ROOTED_MODERATION_SYSTEM.md`
-- `ROOTED_NOTIFICATIONS.md`
-- `ROOTED_MASTER_DEBUG_TOOLKIT.md`
-- `ROOTED_PRE_LAUNCH_ABUSE_TEST_MATRIX.md`
-- `ROOTED_SEEDING_CANONICAL.sql`
-- `ROOTED_TAXONOMY_CANONICAL.md`
-- `ROOTED_FULL_SYSTEM_DEBUG_GUIDE.md`
-- `ROOTED_OPEN_HARDENING_TASKS.md`
+- `ROOTED_SECURITY.md`  
+- `ROOTED_SECURITY_DISCOVERY_CONTRACT.md`  
+- `ROOTED_MODERATION_SYSTEM.md`  
+- `ROOTED_NOTIFICATIONS.md`  
+- `ROOTED_MASTER_DEBUG_TOOLKIT.md`  
+- `ROOTED_PRE_LAUNCH_ABUSE_TEST_MATRIX.md`  
+- `ROOTED_SEEDING_CANONICAL.sql`  
+- `ROOTED_TAXONOMY_CANONICAL.md`  
+- `ROOTED_FULL_SYSTEM_DEBUG_GUIDE.md`  
+- `ROOTED_OPEN_HARDENING_TASKS.md`  
 
 These files:
 
-- Must never conflict with law
-- Must implement law exactly
-- Can evolve only if law allows it
+- Must never conflict with law  
+- Must implement law exactly  
+- Can evolve only if law allows it  
 
 ---
 
@@ -230,7 +258,7 @@ Admin vs RLS → **RLS wins**
 Feature Request vs Governance → **Governance wins**  
 Business Goal vs Kids Mode → **Kids Mode wins**  
 Profit vs Sanctuary Protection → **Sanctuary wins**  
-Speed vs Auditability → **Auditability wins**
+Speed vs Auditability → **Auditability wins**  
 
 There is **no exception path**.
 
@@ -238,15 +266,15 @@ There is **no exception path**.
 
 ## 🛑 9️⃣ FORBIDDEN GOVERNANCE ACTIONS (PERMANENTLY ILLEGAL)
 
-- Bypassing Kids Mode filters
-- Granting monetization to sanctuaries
-- Creating shadow admin roles
-- Mutating `user_tiers` outside RPCs
-- Silent deletion of audit records
-- Discovery bias injection
-- Demographic-based ranking
-- Political content propagation
-- Emergency override of law
+- Bypassing Kids Mode filters  
+- Granting monetization to sanctuaries  
+- Creating shadow admin roles  
+- Mutating `user_tiers` outside RPCs  
+- Silent deletion of audit records  
+- Discovery bias injection  
+- Demographic-based ranking  
+- Political content propagation  
+- Emergency override of law  
 
 Any attempt to implement these is treated as a **platform violation**.
 
@@ -256,14 +284,14 @@ Any attempt to implement these is treated as a **platform violation**.
 
 This Governance Index is:
 
-- ✅ Binding on all contributors
-- ✅ Binding on all admins
-- ✅ Binding on all AI systems
-- ✅ Binding on all future verticals
-- ✅ Binding across all ROOTED codebases
+- ✅ Binding on all contributors  
+- ✅ Binding on all admins  
+- ✅ Binding on all AI systems  
+- ✅ Binding on all future verticals  
+- ✅ Binding across all ROOTED codebases  
 
 Once this file is committed:
 
-> **ROOTED governance is officially frozen at the authority level.**
+> **ROOTED governance is officially frozen at the authority level.**  
 
 Everything that follows is **pure execution only**.
