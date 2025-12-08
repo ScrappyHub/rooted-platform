@@ -1,4 +1,4 @@
- 🧩 ROOTED — FRONTEND PLATFORM CONTRACT (CANONICAL)
+# 🧩 ROOTED — FRONTEND PLATFORM CONTRACT (CANONICAL)
 
 Authority Level: Binding Engineering Contract  
 Applies To: All frontend / edge / app code for ROOTED (Community, Education, Construction, Experiences, Arts & Culture)  
