@@ -1,134 +1,158 @@
-# ROOTED_VERTICAL_ACCESS_CONTRACT.md
+✅ FINAL — ROOTED_VERTICAL_ACCESS_CONTRACT.md (CANONICAL)
 
-Authority Level: HIGH (below CORE_SYSTEM_GOVERNANCE, above vertical docs)  
-Scope: How a single ROOTED identity can access multiple verticals.  
-If this file and a vertical doc disagree → this file wins.  
+Authority Level: HIGH (Below Core System Governance, Above Vertical Docs)
+Scope: How ONE ROOTED identity accesses MANY verticals
+Conflict Rule:
 
----
-
-## 0. Cross-References
-
-- `/governance/ROOTED_PLATFORM_CONSTITUTION.md`
-- `/governance/ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md`
-- `/governance/ROOTED_CORE_SYSTEM_GOVERNANCE.md`
-- `/governance/ROOTED_ACCESS_POWER_LAW.md`
-- `/governance/ROOTED_ACCOUNT_GOVERNANCE_LAW.md`
-- `/governance/ROOTED_KIDS_MODE_GOVERNANCE.md`
-- `/governance/ROOTED_COMMUNITY_VERTICAL_GOVERNANCE.md`
-- `/governance/ROOTED_EDUCATION_VERTICAL_GOVERNANCE.md`
-- `/governance/ROOTED_CONSTRUCTION_VERTICAL_GOVERNANCE.md`
-- `/governance/ROOTED_EXPERIENCES_VERTICAL_GOVERNANCE.md`
-- `/governance/ROOTED_ARTS_CULTURE_VERTICAL_GOVERNANCE.md`
-
-Implementation references:
-
-- `/docs/ROOTED_FRONTEND_SYSTEM_CONTRACT.md`
-- `/docs/Master_Debug_Toolkit.md`
+If this file conflicts with a vertical doc → THIS FILE WINS
 
 ---
 
-## 1. Single Account Principle
+0. Canonical Cross-References
 
-1. All humans have **one ROOTED account** (one `auth.users` row).  
-2. Vertical access is controlled by:
-   - `user_tiers.role`
-   - `user_tiers.tier`
-   - `user_tiers.feature_flags`
-3. No vertical may require a second login, second email, or a shadow identity.
+/governance/ROOTED_PLATFORM_CONSTITUTION.md
 
----
+/governance/ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md
 
-## 2. Vertical Access Flags
+/governance/ROOTED_CORE_SYSTEM_GOVERNANCE.md
 
-Each vertical uses explicit feature flags (examples, not schema):
+/governance/ROOTED_ACCESS_POWER_LAW.md
 
-- `vertical_community_access`
-- `vertical_education_access`
-- `vertical_construction_access`
-- `vertical_experiences_access`
-- `vertical_arts_culture_access`
+/governance/ROOTED_ACCOUNT_GOVERNANCE_LAW.md
 
-A user:
+/governance/ROOTED_KIDS_MODE_GOVERNANCE.md
 
-- May see **discovery-only** surfaces without these flags (e.g. Community map).  
-- Must have the proper flag(s) to:
-  - Host events / trips / experiences.
-  - Use dashboards, RFQs, bids, bulk market, analytics.
-  - Post into that vertical’s B2B tools.
+Vertical Governance
 
-Backend defines which flags exist; frontend must **only read** and never invent them.
+/governance/ROOTED_COMMUNITY_VERTICAL_GOVERNANCE.md
+
+/governance/ROOTED_EDUCATION_VERTICAL_GOVERNANCE.md
+
+/governance/ROOTED_CONSTRUCTION_VERTICAL_GOVERNANCE.md
+
+/governance/ROOTED_EXPERIENCES_VERTICAL_GOVERNANCE.md
+
+/governance/ROOTED_ARTS_CULTURE_VERTICAL_GOVERNANCE.md
 
 ---
 
-## 3. Trust-Based Invitations Between Verticals
+Implementation
 
-Examples (non-exhaustive):
+/docs/ROOTED_FRONTEND_SYSTEM_CONTRACT.md
 
-- A vendor with a clean history in **Community** may be invited into **Experiences**.
-- An institution with repeated successful field trips may gain **Education** premium or premium_plus capabilities.
-- A volunteer with N+ completed events in Community may be allowed to submit Experiences once.
-
-Any such cross-vertical upgrade must:
-
-1. Be initiated or confirmed by Admin Governance or clear automated criteria.  
-2. Set the appropriate feature flags and/or role/tier.  
-3. Never bypass Kids, Sanctuary, or Access & Power law.
-
-Vertical docs (**Education, Construction, Experiences, Arts & Culture**) must describe their own “who can join” rules, but this file enforces:
-
-> no second account, no shadow identity.
+/docs/Master_Debug_Toolkit.md
 
 ---
 
-## 4. Kids Mode & Non-Commercial Surfaces
+1. Single Account Law (Non-Negotiable)
 
-Vertical access must never undermine Kids Mode:
+One human → One ROOTED identity
 
-- Kids Mode remains **non-commercial** in all verticals.
-- No feature flag may create a “paid Kids Mode”.
-- Vendors/institutions may feed approved content into Kids Mode surfaces, but:
-  - No analytics
-  - No monetization
-  - No pressure flows
+No vertical may create:
 
-Community and Education vertical docs define where Kids Mode appears, but must reference:
+Additional accounts
 
-- `/governance/ROOTED_KIDS_MODE_GOVERNANCE.md`
-- this contract
-- `/governance/ROOTED_CORE_SYSTEM_GOVERNANCE.md`
+Shadow usernames
+
+Alternate email identities
+
+All access routes through user_tiers.
 
 ---
 
-## 5. Admin, Institutions, and 2FA (Vertical-Aware)
+2. Vertical Access Feature Flags (Lawful Mechanism)
 
-- Admin roles (`role = 'admin'`) are vertical-wide by design but power is **limited by law**.
-- Institutions must meet stronger security requirements (e.g., 2FA) to use vertical tools.
+Each vertical requires explicit access flags such as:
 
-This contract requires:
+vertical_community_access
 
-- 2FA enforcement logic for:
-  - Admin routes
-  - Institution dashboards  
-- Frontend checks may redirect; backend checks (RLS/RPC) must **block**.
+vertical_education_access
 
-The precise technical enforcement lives in:
+vertical_construction_access
 
-- `/governance/ROOTED_ADMIN_GOVERNANCE.md`
-- `/docs/ROOTED_FRONTEND_SYSTEM_CONTRACT.md`
+vertical_experiences_access
+
+vertical_arts_culture_access
+
+Discovery may be visible without flags.
+Creation, dashboards, RFQs, bids, analytics, and bulk MUST require flags.
+
+🚫 Frontend may NEVER invent flags.
 
 ---
 
-## 6. Changes & Review
+3. Trust-Based Invites Across Verticals
 
-Any change that:
+Examples:
 
-- Introduces a new vertical,
-- Changes vertical access flags,
-- Alters trust-based promotion logic,
+Community → Experiences
 
-…must:
+Education → Experiences
 
-1. Update this file.  
-2. Update `/governance/ROOTED_CORE_SYSTEM_GOVERNANCE.md`.  
-3. Be checked against the Stop Layer and Enforcement Matrix.  
-4. Be documented in `/docs/Master_Debug_Toolkit.md` as a risk review item.
+Volunteer → Creator
+
+These upgrades must:
+
+Be Admin-confirmed OR automation-approved under governance.
+
+Set feature flags explicitly.
+
+Never bypass:
+
+Kids Mode
+
+Sanctuaries
+
+Tier law
+
+---
+
+4. Kids Mode & Non-Commercial Binding
+
+No vertical may monetize Kids Mode.
+
+No analytics may be exposed.
+
+Content may flow in, never pressure flows out.
+
+---
+
+5. Admins, Institutions & 2FA
+
+Admins are global but law-bound.
+
+Institutions must run with elevated security (2FA).
+
+Enforcement MUST exist in:
+
+Frontend redirects
+
+Backend RLS
+
+RPC validation
+
+Failure = Platform governance breach.
+
+---
+
+6. Change Control
+
+Any modification to:
+
+Flags
+
+Invite logic
+
+Vertical boundaries
+
+Requires updating:
+
+This file
+
+Core System Governance
+
+Master Debug Toolkit
+
+---
+
+✅ STATUS: VERTICAL ACCESS IS NOW CANONICALLY LOCKED
