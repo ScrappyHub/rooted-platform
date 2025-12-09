@@ -1,263 +1,228 @@
-FINAL — ROOTED_CORE_SYSTEM_GOVERNANCE.md (CANONICAL)
+# 🧬 ROOTED — CORE SYSTEM GOVERNANCE (CANONICAL)
 
-Authority Level: HIGH (Below Stop Layer & Constitution, Above All Vertical Docs)
-Effective Scope: All ROOTED Verticals
-Conflict Rule:
+**Authority Level:** HIGH  
+*(Below the Stop Layer & Constitution, Above All Vertical Docs)*  
+**Effective Scope:** All ROOTED Verticals  
 
-If this file conflicts with a Vertical Doc → THIS FILE WINS
+## ⚠️ Conflict Rule
 
-If this file conflicts with Stop Layer or Constitution → STOP LAYER + CONSTITUTION WIN
+- If this file conflicts with a **Vertical Governance Doc** → **THIS FILE WINS**
+- If this file conflicts with the **Stop Layer or Constitution** → **STOP LAYER + CONSTITUTION WIN**
 
-0. Canonical Cross-References
+---
 
-Supreme Authority
+## 0. 🔗 Canonical Cross-References
 
-/governance/ROOTED_PLATFORM_CONSTITUTION.md
+### ✅ Supreme Authority
 
-/governance/ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md
+- `/governance/ROOTED_PLATFORM_CONSTITUTION.md`
+- `/governance/ROOTED_CONSTITUTIONAL_LEGAL_STOP_LAYER.md`
 
-Primary Inherited Law
+### ✅ Primary Inherited Law
 
-/governance/ROOTED_KIDS_MODE_GOVERNANCE.md
+- `/governance/ROOTED_KIDS_MODE_GOVERNANCE.md`
+- `/governance/ROOTED_DATA_SOVEREIGNTY_LAW.md`
+- `/governance/ROOTED_ACCESS_POWER_LAW.md`
+- `/governance/ROOTED_COMMUNITY_TRUST_LAW.md`
+- `/governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md`
+- `/governance/ROOTED_ADMIN_GOVERNANCE.md`
+- `/governance/ROOTED_ACCOUNT_GOVERNANCE_LAW.md`
+- `/governance/ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md`
+- `/governance/ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION.md`
+- `/governance/ENFORCEMENT_MATRIX.md`
 
-/governance/ROOTED_DATA_SOVEREIGNTY_LAW.md
+### ✅ Bound Vertical Governance
 
-/governance/ROOTED_ACCESS_POWER_LAW.md
+- `/governance/ROOTED_COMMUNITY_VERTICAL_GOVERNANCE.md`
+- `/governance/ROOTED_EDUCATION_VERTICAL_GOVERNANCE.md`
+- `/governance/ROOTED_CONSTRUCTION_VERTICAL_GOVERNANCE.md`
+- `/governance/ROOTED_EXPERIENCES_VERTICAL_GOVERNANCE.md`
+- `/governance/ROOTED_ARTS_CULTURE_VERTICAL_GOVERNANCE.md`
 
-/governance/ROOTED_COMMUNITY_TRUST_LAW.md
+### ✅ Implementation Contracts (Non-Law, Binding)
 
-/governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md
+- `/governance/ROOTED_VERTICAL_ACCESS_CONTRACT.md`
+- `/docs/ROOTED_FRONTEND_SYSTEM_CONTRACT.md`
+- `/docs/Master_Debug_Toolkit.md`
+- `/docs/ROOTED_FULL_SYSTEM_DEBUG_GUIDE.md`
 
-/governance/ROOTED_ADMIN_GOVERNANCE.md
+---
 
-/governance/ROOTED_ACCOUNT_GOVERNANCE_LAW.md
+## 1. 🎯 Purpose of This File
 
-/governance/ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md
+This file is the **system-wide governor** that binds:
 
-/governance/ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION.md
+- Identity
+- Roles & tiers
+- Feature flags
+- Vertical interoperation
+- Kids Mode & Sanctuary behavior across ROOTED
 
-/governance/ENFORCEMENT_MATRIX.md
+This file **DOES NOT**:
 
-Bound Vertical Governance
+- Define database schema  
+- Define UI design  
+- Override the Stop Layer or Constitution  
 
-/governance/ROOTED_COMMUNITY_VERTICAL_GOVERNANCE.md
+---
 
-/governance/ROOTED_EDUCATION_VERTICAL_GOVERNANCE.md
+## 2. 🆔 Single Identity Doctrine (Hard Law)
 
-/governance/ROOTED_CONSTRUCTION_VERTICAL_GOVERNANCE.md
+- Every human has **ONE ROOTED identity**
+- One `auth.users` row  
+- One `public.user_tiers` row  
+- Multiple verticals may attach to this same identity  
 
-/governance/ROOTED_EXPERIENCES_VERTICAL_GOVERNANCE.md
+🚫 No second account  
+🚫 No shadow login  
+🚫 No duplicate identity per vertical  
 
-/governance/ROOTED_ARTS_CULTURE_VERTICAL_GOVERNANCE.md
+All verticals **MUST** reuse:
 
-Implementation Contracts (Non-Law, Binding)
+- `user_tiers.role`
+- `user_tiers.tier`
+- `user_tiers.feature_flags`
 
-/governance/ROOTED_VERTICAL_ACCESS_CONTRACT.md
+---
 
-/docs/ROOTED_FRONTEND_SYSTEM_CONTRACT.md
+## 3. ⚖️ Roles, Tiers & Power (Cross-Law Binding Summary)
 
-/docs/Master_Debug_Toolkit.md
+### Roles
+- `community_member`
+- `vendor`
+- `institution`
+- `admin`
 
-/docs/ROOTED_FULL_SYSTEM_DEBUG_GUIDE.md
+### Tiers
+- `free`
+- `premium`
+- `premium_plus`
 
-1. Purpose of This File
-
-This file is the system-wide governor that binds:
-
-Identity
-
-Roles & tiers
-
-Feature flags
-
-Vertical interoperation
-
-Kids Mode & Sanctuary behavior across ROOTED
-
-This file DOES NOT:
-
-Define database schema
-
-Define UI design
-
-Override the Stop Layer or Constitution
-
-2. Single Identity Doctrine (Hard Law)
-
-Every human has ONE ROOTED identity
-
-One auth.users row
-
-One public.user_tiers row
-
-Multiple verticals may attach to this same identity
-
-🚫 No second account
-🚫 No shadow login
-🚫 No duplicate identity per vertical
-
-All verticals must reuse:
-
-user_tiers.role
-
-user_tiers.tier
-
-user_tiers.feature_flags
-
-3. Roles, Tiers, & Power (Cross-Law Binding Summary)
-
-Roles
-
-community_member
-
-vendor
-
-institution
-
-admin
-
-Tiers
-
-free
-
-premium
-
-premium_plus
-
-Non-Negotiable Rule
+### 🔒 Non-Negotiable Rule
 
 No tier upgrade may bypass:
 
-Kids Mode Law
+- Kids Mode Law
+- Sanctuary Law
+- Admin Governance Law
+- Data Sovereignty Law  
 
-Sanctuary Law
+**More power never overrides safety.**
 
-Admin Governance Law
+---
 
-Data Sovereignty Law
-
-More power never overrides safety.
-
-4. ROOTED Vertical Model (Law-Bound)
+## 4. 🧭 ROOTED Vertical Model (Law-Bound)
 
 ROOTED operates five verticals:
 
-Community — civic discovery, food, land, trust
-
-Education — institutions, learning, field trips, sessions
-
-Construction — B2B infrastructure & services
-
-Experiences — guided activities, outdoor & adventure
-
-Arts & Culture — venues, galleries, shows, cultural life
+1. **Community** — civic discovery, food, land, trust  
+2. **Education** — institutions, learning, field trips, sessions  
+3. **Construction** — B2B infrastructure & services  
+4. **Experiences** — guided activities, outdoor & adventure  
+5. **Arts & Culture** — venues, galleries, shows, cultural life  
 
 Each vertical:
 
-Must define its scope in its own vertical governance
+- Must define its scope in its own Vertical Governance file  
+- May **NOT** override:
+  - Kids Mode
+  - Sanctuary Protection
+  - Access & Power Law
+  - Data Law  
+- Must use the **same identity + tier system**
 
-May NOT override:
+---
 
-Kids Mode
+## 5. 🧒 Kids Mode & 🐾 Sanctuary Binding Across All Verticals
 
-Sanctuary protection
+### 🧒 Kids Mode
 
-Access & Power law
+Defined **ONLY** in:
 
-Data law
-
-Must use the same identity + tier system
-
-5. Kids Mode & Sanctuary Binding Across All Verticals
-Kids Mode
-
-Defined ONLY in /governance/ROOTED_KIDS_MODE_GOVERNANCE.md
+- `/governance/ROOTED_KIDS_MODE_GOVERNANCE.md`
 
 All verticals must enforce:
 
-Non-commercial
+- Non-commercial
+- No messaging
+- No donations
+- No analytics
+- No pressure mechanics  
 
-No messaging
+Vertical docs may describe *where* Kids content appears,  
+but **may never weaken protection.**
 
-No donations
+---
 
-No analytics
+### 🐾 Sanctuaries & Rescues
 
-No pressure mechanics
+Governed **ONLY** by:
 
-Vertical docs may describe where Kids content appears, but never weaken protection.
+- `/governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md`
 
-Sanctuaries & Rescues
+Sanctuaries must **NEVER**:
 
-Governed ONLY by /governance/ROOTED_SANCTUARY_NONPROFIT_LAW.md
+- Monetize
+- Bid
+- Use RFQs
+- Enter bulk markets  
 
-Must NEVER:
+They may **ONLY**:
 
-Monetize
+- Host volunteer work
+- Host education  
 
-Bid
+Only **Community** (and explicitly authorized verticals) may surface sanctuaries.
 
-Use RFQs
+---
 
-Enter bulk markets
-
-May ONLY:
-
-Host volunteer
-
-Host education
-
-Only Community (and explicitly authorized verticals) may surface sanctuaries.
-
-6. Vertical Access & Invitations
+## 6. 🔑 Vertical Access & Invitations
 
 All vertical access rules live in:
 
-/governance/ROOTED_VERTICAL_ACCESS_CONTRACT.md
+- `/governance/ROOTED_VERTICAL_ACCESS_CONTRACT.md`
 
-This file enforces cross-vertical integrity.
-Vertical docs may NOT redefine identity or access mechanics.
+This file enforces **cross-vertical integrity**.  
+Vertical docs **may NOT redefine identity or access mechanics.**
 
-7. Frontend & Figma Are Bound but Not Law
+---
 
-Frontend, Vercel, Figma, UI flows:
+## 7. 🖥️ Frontend & Figma Are Bound — But Not Law
 
-May only IMPLEMENT law
+Frontend, Vercel, Figma, and UI flows:
 
-May NOT DEFINE law
+- ✅ May only **IMPLEMENT** law  
+- ❌ May **NOT DEFINE** law  
 
 Contracts live in:
 
-/docs/ROOTED_FRONTEND_SYSTEM_CONTRACT.md
+- `/docs/ROOTED_FRONTEND_SYSTEM_CONTRACT.md`
 
-8. Change Control (Hard Lock)
+---
+
+## 8. 🛑 Change Control (Hard Lock)
 
 Any change that impacts:
 
-Roles
+- Roles
+- Tiers
+- Kids Mode
+- Sanctuaries
+- Vertical access
+- Identity
 
-Tiers
+**MUST:**
 
-Kids Mode
+1. Update this file  
+2. Update Vertical Governance  
+3. Pass:
+   - Stop Layer
+   - Enforcement Matrix
+   - Pre-Commit Checklist  
 
-Sanctuaries
+---
 
-Vertical access
+## ✅ STATUS
 
-Identity
-
-MUST:
-
-Update this file
-
-Update Vertical Governance
-
-Pass:
-
-Stop Layer
-
-Enforcement Matrix
-
-Pre-Commit Checklist
-
-✅ STATUS: CORE SYSTEM GOVERNANCE IS NOW CANONICALLY LOCKED
+**CORE SYSTEM GOVERNANCE IS NOW CANONICALLY LOCKED**  
+All work beyond this point is **execution only**.
