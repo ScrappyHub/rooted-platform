@@ -33,6 +33,54 @@ public.user_admin_actions
 
 ---
 
+🔒 FOUNDING PROVIDER ECONOMIC ENTITLEMENT LAW (CANONICAL)
+
+§1 — Definition
+A Founding Provider is the first provider account ever created in the ROOTED system whose provider row is assigned a valid primary_vertical.
+
+§2 — Immutable Status
+The Founding Provider receives a non-revocable, lifetime economic entitlement consisting of:
+
+Lifetime Premium Tier (cannot be downgraded)
+
+Permanent 50% discount on any upgrade to Premium Plus
+
+A Founders Badge displaying publicly on their provider profile
+
+Internal is_founding_member = true written to their provider record
+
+§3 — Authority Chain
+
+This badge may not be granted manually by admins.
+
+No table, RPC, or UI may modify or delete the founding privilege.
+
+Only the Founding Provider Enrollment Trigger may assign it, and only once.
+
+§4 — Economics Law Enforcement
+Billing systems, edge functions, and upgrade flows must always read:
+
+providers.is_founding_member = true
+OR
+
+user_tiers.feature_flags->>'founding_member' = 'true'
+
+to determine:
+
+Free Premium tier forever
+
+Discounted Premium Plus rate
+
+§5 — Non-transferability
+The founding status cannot be transferred, sold, inherited, or applied to any other provider account.
+
+§6 — Registry
+The founding provider’s UUID must be permanently registered in:
+
+ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION.md
+
+---
+
 ## ✅ LEGAL DELETION PIPELINE
 
 ALL deletions must route through:
