@@ -280,6 +280,74 @@ Any attempt to implement these is treated as a **platform violation**.
 
 ---
 
+# ROOTED Vertical Summaries (Canonical)
+
+## COMMUNITY PILLAR
+- ROOTED Community  
+  Non-commercial public layer. Maps, discovery, events, landmarks. LIVE.
+
+- ROOTED Agriculture  
+  Food systems, farms, markets, local producers.
+
+- ROOTED Environment  
+  Ecosystem awareness, environmental education.
+
+- ROOTED Community Services  
+  Neighborhood orgs, mutual aid, local services.
+
+---
+
+## EDUCATION & YOUTH PILLAR
+- ROOTED Education  
+  Field trips, youth learning, enrichment programs.
+
+- ROOTED Science & Maker  
+  STEM, robotics, fabrication, innovation labs.
+
+- ROOTED Mental Health  
+  Non-clinical educational resource navigation.
+
+---
+
+## CULTURE & EXPERIENCES
+- ROOTED Arts & Culture  
+  Galleries, venues, cultural centers.
+
+- ROOTED Experiences  
+  Guided activities, adventure, exploration.
+
+- ROOTED Land Resources  
+  Soil, water, forestry, conservation education.
+
+---
+
+## INFRASTRUCTURE & WORKFORCE
+- ROOTED Construction  
+  Contractor discovery, RFQ→bid markets, workforce pools.
+
+- ROOTED Meta Infrastructure  
+  Explainers for civic systems & ROOTED systems transparency.
+
+- ROOTED Regional Intelligence  
+  Macro-level seasonal & regional environmental/usage signals.
+
+---
+
+## INDUSTRY & PRODUCTION
+- ROOTED Manufacturing  
+  Community-scale fabrication, makers → production education.
+
+---
+
+## SAFETY & RESILIENCE
+- ROOTED Emergency  
+  Safety education, preparedness (non-911).
+
+- ROOTED Disaster  
+  Recovery literacy, hazard awareness.
+
+---
+
 ## ✅ 1️⃣0️⃣ CANONICAL STATUS
 
 This Governance Index is:
