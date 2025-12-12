@@ -91,6 +91,31 @@ ROOTED_SANCTUARY_NONPROFIT_LAW.md
 
 ---
 
+## Vertical Governance Clause (2025 Update)
+
+ROOTED operates 21 verticals, grouped into Community, Education, Infrastructure,
+Culture, Production, and Safety pillars.
+
+Only ROOTED Core defines power, identity, access, and monetization rights.
+All verticals inherit:
+
+- Kids Mode governance
+- Sanctuary & Nonprofit Law
+- Anti-Profiling Law
+- Discovery & GEO Rules
+- Admin Authorization Law
+- Payment Safety & Tier Safety Laws
+
+No vertical may create:
+- Its own identity system
+- Its own monetization system
+- Its own policy system
+- Its own governance layer
+
+Verticals = expression of the core, not replacements for it.
+
+---
+
 ⚙️ NO UNLIMITED POWER
 
 No admin, founder, developer, or system may bypass governance.
