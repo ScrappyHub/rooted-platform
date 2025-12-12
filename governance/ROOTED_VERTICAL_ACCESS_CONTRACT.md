@@ -155,4 +155,23 @@ Master Debug Toolkit
 
 ---
 
+# ROOTED Vertical Access Matrix (Canonical)
+
+| Role           | Community | Agri | Env | Education | Maker | Exp | Arts | Const | Regional Intel | Meta Infra |
+|----------------|-----------|------|-----|-----------|--------|------|------|--------|-----------------|--------------|
+| Individual     | View      | View | View | View      | View   | View | View | View   | View            | View         |
+| Vendor Free    | Provider  | Provider | Provider | Limited | Limited | Host-limited | Host-limited | ❌ | View | View |
+| Vendor Premium | Provider+ | Provider+ | Provider | Partner | Limited | Host | Host | ❌ | View | View |
+| Vendor Premium+| Provider++ | Provider++ | Provider | Partner | Partner | Host | Host | Bid/Bulk | View | View |
+| Institution    | Provider  | Provider | Provider | Full | Limited | Host | Host | RFQ/Bid | View | View |
+| Admin          | All       | All | All | All       | All   | All | All | All | All | All |
+
+**Notes:**
+- Mental Health: view-only for all, no commercial actions.
+- Land Resources: view-only for most, host for vetted institutions.
+- Regional Intelligence: view-only across all roles.
+- Meta Infrastructure: educational only, no provider operations.
+
+---
+
 ✅ STATUS: VERTICAL ACCESS IS NOW CANONICALLY LOCKED
