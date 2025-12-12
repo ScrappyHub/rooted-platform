@@ -239,6 +239,32 @@ Any change that impacts:
 
 ---
 
+## Vertical Inheritance Rule
+
+Every vertical is an application layer on top of ROOTED Core.
+ROOTED Core owns:
+
+- Identity (roles, tiers)
+- Permissions (RLS)
+- Feature flags
+- Providers + Media
+- Events, Landmarks, Messaging
+- RFQs, Bids, Bulk, Workforce
+- Seasonal & regional intelligence
+- Kids Mode & sanctuary enforcement
+- Notifications & moderation
+- Billing & payment governance
+
+Verticals may NOT redefine:
+- roles
+- tiers
+- access rules
+- moderation power
+- discovery/GEO law
+- kids/sanctuary/profiling rules
+
+---
+
 ## ✅ STATUS
 
 **CORE SYSTEM GOVERNANCE IS NOW CANONICALLY LOCKED**  
