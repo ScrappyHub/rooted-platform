@@ -222,6 +222,23 @@ Any change that impacts:
 
 ---
 
+# ROOTED — Vertical Boundary Diagram
+
+                    ROOTED PLATFORM GOVERNANCE
+                              │
+                    ROOTED CORE (identity, RLS, views)
+      ┌───────────────────────┼────────────────────────┐
+      │                       │                        │
+ COMMUNITY                 EDUCATION               INFRASTRUCTURE
+ (public layer)           (youth & learning)       (systems literacy)
+      │                       │                        │
+ AGRICULTURE          SCIENCE & MAKER            META INFRASTRUCTURE
+ ENVIRONMENT          MENTAL HEALTH              REGIONAL INTEL
+ COMMUNITY SERVICES   EXPERIENCES                LAND RESOURCES
+ ARTS & CULTURE       (non-commercial)           MANUFACTURING
+
+---
+
 ## ✅ STATUS
 
 **CORE SYSTEM GOVERNANCE IS NOW CANONICALLY LOCKED**  
