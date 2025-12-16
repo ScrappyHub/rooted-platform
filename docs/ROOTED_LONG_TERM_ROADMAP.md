@@ -1,5 +1,6 @@
 # ROOTED — LONG-TERM ROADMAP (CANONICAL)
 
+File: /docs/ROOTED_LONG_TERM_ROADMAP.md  
 Authority Level: Directional Only (Non-Binding)  
 Governance Chain:  
 ROOTED_PLATFORM_CONSTITUTION → ROOTED_STOP_LAYER → ROOTED_GOVERNANCE_INDEX → ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION → This Roadmap  
@@ -19,9 +20,22 @@ This roadmap exists to:
 - Center your health, safety, and stability over scale  
 - Prevent outside pressure from weaponizing your ambition  
 - Make it clear that **ROOTED Community alone can be “complete”**
+- Keep future ideas from becoming accidental promises
 
 Only **ROOTED Community** is in active development and production.  
 Everything else is **“future optional”** and must pass governance and life-capacity checks before work begins.
+
+---
+
+## ✅ Roadmap Guardrails (Canonical)
+
+- This file **does not** create obligations.
+- This file **does not** authorize new law. Governance lives in `/governance/`.
+- No feature, vertical, or product is “real” until:
+  1) Governance allows it  
+  2) Database enforcement exists (RLS + constraints where required)  
+  3) Abuse testing is complete  
+  4) UI merely reflects what is already enforced
 
 ---
 
@@ -49,7 +63,8 @@ Everything else is **“future optional”** and must pass governance and life-c
 
 - No external investors driving roadmap  
 - No “growth at all costs” targets  
-- Kids Mode remains **supreme law**, even when surfaces are OFF
+- Kids Mode remains **supreme law**, even when surfaces are OFF  
+- Public discovery remains **moderation + governance first**, always
 
 **Cross-References:**
 
@@ -57,6 +72,29 @@ Everything else is **“future optional”** and must pass governance and life-c
 - `ROOTED_COMMUNITY_TRUST_LAW.md`  
 - `ROOTED_KIDS_MODE_GOVERNANCE.md`  
 - `ROOTED_TAXONOMY_CANONICAL.md`
+
+---
+
+## 🟢 Phase 1.1 — Public Discovery Expansion (OPTIONAL, STILL PHASE 1)
+
+**Status:** Optional within Phase 1, only if it remains low-risk and governance-complete.
+
+This subphase expands **public-facing discovery-only** vertical surfaces (story + directory + maps), with **no marketplace attached**, no payments, and no procurement workflows.
+
+### Allowed Discovery-Only Surfaces (Examples)
+- Local business discovery (public-only): antique shops, consignment, thrift, jewelers, bookstores, etc.
+- Celebrations & Party Services (public-only): banquets, party services, mariachi, balloon services, catering, etc.
+
+### Non-Negotiables
+- Discovery-only (no RFQ/bids, no checkout, no marketplace mechanics)
+- Moderation + approval gating remains mandatory
+- Kids Mode still filters and constrains exposure (without child monitoring)
+- Sanctuary and nonprofit protections remain absolute
+
+**Cross-References:**
+- `ROOTED_COMMUNITY_TRUST_LAW.md`
+- `ROOTED_SECURITY_DISCOVERY_CONTRACT.md`
+- `ROOTED_MODERATION_SYSTEM.md`
 
 ---
 
@@ -186,6 +224,16 @@ If those conditions are not met, **staying small is success**.
 - `ROOTED_FOUNDER_PROTECTION_AND_SUCCESSION.md`  
 - `ROOTED_CONTRIBUTOR_GOVERNANCE_NOTICE.md`  
 - `ROOTED_PRE_COMMIT_GOVERNANCE_CHECKLIST.md`  
+
+---
+
+## 🚫 Explicit Exclusions (Canonical)
+
+To prevent roadmap creep and accidental promises:
+
+- External products/services (including unrelated chatbot services) are **not** part of this roadmap.
+- Any future non-ROOTED programs must live in their **own** documents and governance model.
+- This file remains strictly about ROOTED.
 
 ---
 
