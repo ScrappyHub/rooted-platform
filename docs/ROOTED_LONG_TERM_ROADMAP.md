@@ -209,7 +209,7 @@ This roadmap is **explicitly founder-protective**.
 - No phase is **guaranteed**.  
 - No vertical is **promised** to partners, investors, or the public.  
 - You are allowed to **pause**, **stop**, or **sunset** ROOTED at any time.  
-- ROOTED Community can stand as a **beautiful, self-contained chapter** of your life.
+- ROOTED Community can stand as a **beautiful, self-contained chapter** of my life.
 
 ROOTED grows only when:
 
