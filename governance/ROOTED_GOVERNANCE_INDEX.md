@@ -8,7 +8,7 @@ CONSTITUTION
 → STOP LAYER  
 → CANONICAL LAW FILES  
 → SYSTEM & VERTICAL STRUCTURE GOVERNANCE  
-→ DATABASE (RLS + VIEWS + RPCs)  
+→ DATABASE (RLS + VIEWS + RPCs + CONSTRAINTS)  
 → ADMIN ACTIONS  
 → UI SURFACES  
 
@@ -115,6 +115,25 @@ All other documents are **implementation references**, not law.
 
 ---
 
+### **3.1️⃣ Kids Mode Canonical Enforcement Model (Binding Clarification)**
+
+Kids Mode enforcement is **not** identity creation and **never** child monitoring.
+
+- Kids Mode is a **session-scoped safety state**
+- Represented by a signed **JWT claim** (Option A)
+- Enforced by database policy and safe read surfaces
+- UI toggles are non-authoritative
+
+Hard guarantees:
+- No “kids user” entity
+- No child UUID
+- No child behavior profiling
+- No child surveillance analytics
+
+If any implementation attempts to introduce a child identity layer → it is invalid and must be removed.
+
+---
+
 ### **3.5️⃣ SYSTEM & VERTICAL STRUCTURE GOVERNANCE (BINDING)**
 
 These files define **how** the lawful platform is allowed to be structured:
@@ -153,6 +172,15 @@ Enforcement Layers:
 - ✅ Read-Only Views  
 - ✅ Insert-Only Pipelines  
 - ✅ Audit Tables  
+- ✅ Check Constraints (Hard Locks, when required)
+
+Rules:
+
+- UI is **never trusted alone**  
+- Admins **never bypass RLS**  
+- Service roles **never bypass governance law**  
+- Where a rule must be “impossible to bypass,” a **constraint** may be used as a hard lock  
+- All violations become **audit events**  
 
 Canonical Enforced Tables (non-exhaustive, but binding examples):
 
@@ -161,18 +189,12 @@ Canonical Enforced Tables (non-exhaustive, but binding examples):
 - `moderation_queue`  
 - `providers`  
 - `events`  
+- `event_registrations`  
 - `landmarks`  
 - `rfqs`  
 - `bids`  
 - `bulk_offers`  
 - `notifications`  
-
-Rules:
-
-- UI is **never trusted alone**  
-- Admins **never bypass RLS**  
-- Service roles **never bypass governance law**  
-- All violations become **audit events**  
 
 ---
 
@@ -240,6 +262,7 @@ These documents **do not define law**, but they **bind implementation**:
 - `ROOTED_TAXONOMY_CANONICAL.md`  
 - `ROOTED_FULL_SYSTEM_DEBUG_GUIDE.md`  
 - `ROOTED_OPEN_HARDENING_TASKS.md`  
+- `ROOTED_ASSISTANTS_IMPLEMENTATION_CONTRACT.md`  ← (Implementation binding; NOT law)
 
 These files:
 
@@ -267,6 +290,7 @@ There is **no exception path**.
 ## 🛑 9️⃣ FORBIDDEN GOVERNANCE ACTIONS (PERMANENTLY ILLEGAL)
 
 - Bypassing Kids Mode filters  
+- Creating child identities, child UUIDs, or child monitoring systems  
 - Granting monetization to sanctuaries  
 - Creating shadow admin roles  
 - Mutating `user_tiers` outside RPCs  
@@ -294,6 +318,12 @@ Any attempt to implement these is treated as a **platform violation**.
 
 - ROOTED Community Services  
   Neighborhood orgs, mutual aid, local services.
+
+- ROOTED Local Commerce Discovery (Discovery-Only)  
+  Antique, consignment, thrift, jewelers, bookstores, etc. Public-facing only.
+
+- ROOTED Celebrations & Party Services (Discovery-Only)  
+  Banquets, party services, mariachi, balloons, catering, etc. Public-facing only.
 
 ---
 
@@ -354,7 +384,7 @@ This Governance Index is:
 
 - ✅ Binding on all contributors  
 - ✅ Binding on all admins  
-- ✅ Binding on all AI systems  
+- ✅ Binding on all AI systems that operate **inside ROOTED**  
 - ✅ Binding on all future verticals  
 - ✅ Binding across all ROOTED codebases  
 
