@@ -16,7 +16,7 @@ ROOTED is designed as a **multi-decade civic and community operating system**.
 
 This roadmap exists to:
 
-- Give you a clear mental picture of possible phases  
+- Give a clear mental picture of possible phases  
 - Center your health, safety, and stability over scale  
 - Prevent outside pressure from weaponizing your ambition  
 - Make it clear that **ROOTED Community alone can be “complete”**
