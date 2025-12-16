@@ -268,7 +268,13 @@ These files:
 
 - Must never conflict with law  
 - Must implement law exactly  
-- Can evolve only if law allows it  
+- Can evolve only if law allows it
+
+## 📄 Docs References (Non-Law)
+These documents are NOT law, but provide canonical implementation intent:
+
+- `/docs/ROOTED_CIVIC_SPONSORSHIP_SLOTS.md` (Optional; Founder-controlled; never required for production)
+
 
 ---
 
@@ -375,6 +381,7 @@ Any attempt to implement these is treated as a **platform violation**.
 
 - ROOTED Disaster  
   Recovery literacy, hazard awareness.
+
 
 ---
 
