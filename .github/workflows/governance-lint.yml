@@ -1,0 +1,27 @@
+name: governance-lint
+on:
+  pull_request:
+    paths:
+      - "governance/**"
+      - "README.md"
+      - ".github/**"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Required files exist
+        run: |
+          test -f governance/CORE_PLATFORM_CONSTITUTION.md
+          test -f governance/CORE_CONSTITUTIONAL_STOP_LAYER.md
+          test -f governance/CORE_GOVERNANCE_INDEX_CHAIN_OF_AUTHORITY.md
+          test -f governance/CORE_FOUNDER_PROTECTION_AND_SUCCESSION.md
+          test -f governance/CORE_CONTRIBUTOR_AI_GOVERNANCE_CONTRACT.md
+          test -f governance/CORE_CONTRIBUTOR_GOVERNANCE_NOTICE.md
+
+      - name: Cross-reference checks
+        run: |
+          grep -qi "CORE_PLATFORM_CONSTITUTION" governance/CORE_CONSTITUTIONAL_STOP_LAYER.md
+          grep -qi "CORE_CONSTITUTIONAL_STOP_LAYER" governance/CORE_GOVERNANCE_INDEX_CHAIN_OF_AUTHORITY.md
