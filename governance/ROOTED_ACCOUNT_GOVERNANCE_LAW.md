@@ -108,13 +108,25 @@ Founder status never grants admin, provider ownership, payment, refund or any ot
 
 ---
 
+## ✅ PROVIDER OWNERSHIP & RETIREMENT LAW
+
+- **Ownership changes only by approved transfer.** The owner proposes (`rooted_api.propose_provider_ownership_transfer_v1`). The recipient, who must be an active, approved vendor or institution, accepts (`rooted_api.respond_provider_ownership_transfer_v1`). An admin approves (`public.admin_decide_provider_ownership_transfer_v1`, WBS 1.37 admin-session layer). Either party may cancel before the decision.
+- The database refuses **every other owner change** (`PROVIDER_OWNERSHIP_CHANGE_REQUIRES_APPROVAL`), including raw SQL, forged session settings and service code.
+- **Closing a provider means retiring it.** The owner requests (`rooted_api.request_provider_retirement_v1`) and an admin approves (`public.admin_decide_provider_retirement_v1`). `RETIRED` is terminal: the provider becomes inactive and undiscoverable, open transfers are cancelled, and **every record is kept**. Providers are never deleted.
+- A retired provider can't be transferred, reactivated or retired again.
+- Retired providers are historical. They don't block the owner's account deletion or a return to `community`. Live providers do.
+- Founder economics stay with the original founder user (Founding Provider Law §4–§5). Recognition stays with the provider.
+- Every step writes append-only evidence to `rooted_policy.provider_governance_events_v1`. Admin decisions also write `user_admin_actions`.
+
+---
+
 ## ✅ LEGAL DELETION PIPELINE
 
 ALL deletions route through `public.account_deletion_requests` and end in a **soft delete**:
 
 1. The account holder requests deletion (`rooted_api.request_my_account_deletion_v1`) and may cancel while pending (`rooted_api.cancel_my_account_deletion_v1`).
 2. An admin approves or rejects (`public.admin_decide_account_deletion_v1`, WBS 1.37 admin-session layer). An admin cannot approve their own deletion, and an admin account must be demoted before it can be deleted.
-3. Provider ownership and provider memberships must be resolved first. Deletion is not provider dissolution.
+3. Live provider ownership and memberships must be resolved first, by an approved transfer or retirement. Deletion is not provider dissolution.
 4. On approval the account becomes `soft_deleted`: identity banned, sessions revoked, and the request plus evidence retained.
 
 ❌ No hard deletes. Raw deletion of `auth.users` is refused by the database (`ROOTED_HARD_DELETE_FORBIDDEN`). Any future legal-erasure purge must be its own governed, audited migration.  
@@ -131,6 +143,8 @@ ALL deletions route through `public.account_deletion_requests` and end in a **so
 ❌ No monetization overrides  
 ❌ No self-service status changes  
 ❌ No self-selected or unapproved roles  
+❌ No unapproved provider ownership changes  
+❌ No provider deletion (retire instead)  
 
 ---
 
