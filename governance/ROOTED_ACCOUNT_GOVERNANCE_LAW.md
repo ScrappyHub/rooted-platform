@@ -46,6 +46,25 @@ Rules (database-enforced):
 
 ---
 
+## ✅ ROLE CHANGE LAW
+
+- **Onboarding:** a new account chooses its role once (`community`, `vendor` or `institution`) through `public.set_my_role_and_tier`. The choice is recorded (`user_tiers.role_selected_at`, `ROLE_SELECTED` evidence).
+- **After onboarding:** a role change requires **admin approval**. The account holder requests it (`rooted_api.request_my_role_change_v1`), may cancel while pending, and an admin approves or rejects it (`public.admin_decide_role_change_v1`, WBS 1.37 admin-session layer). An admin can never decide their own request.
+- Approval is refused while the account owns providers or holds memberships and would become `community`, or while a paid subscription is live (subscriptions are role-scoped).
+- The only other path is the governed admin RPC `admin_set_role_tier` (never on the admin's own account).
+- The database refuses **every other role write** (`ROLE_CHANGE_REQUIRES_APPROVAL`), including raw SQL, forged session settings and service code.
+- **Every role change is audited:** `ROLE_CHANGED` evidence on every path, plus `user_admin_actions` rows for admin decisions.
+- `admin` is never self-service.
+
+---
+
+## ✅ TIER & ENTITLEMENT LAW
+
+- A paid tier (`premium`, `premium_plus`) exists only with canonical subscription authority (active subscription + matching `billing_entitlements`) or an audited admin grant.
+- Paid feature flags derive from (role, tier). Flags that no governed logic consumes are not allowed (no silent feature injections).
+
+---
+
 ## ✅ ADMIN AUDIT LAW
 
 All privileged changes MUST be logged to:
@@ -110,6 +129,7 @@ ALL deletions route through `public.account_deletion_requests` and end in a **so
 ❌ No silent feature injections  
 ❌ No monetization overrides  
 ❌ No self-service status changes  
+❌ No unapproved role changes after onboarding  
 
 ---
 
