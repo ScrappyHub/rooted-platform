@@ -46,14 +46,15 @@ Rules (database-enforced):
 
 ---
 
-## ✅ ROLE CHANGE LAW
+## ✅ ROLE LAW (NO SELF-SERVICE ROLES)
 
-- **Onboarding:** a new account chooses its role once (`community`, `vendor` or `institution`) through `public.set_my_role_and_tier`. The choice is recorded (`user_tiers.role_selected_at`, `ROLE_SELECTED` evidence).
-- **After onboarding:** a role change requires **admin approval**. The account holder requests it (`rooted_api.request_my_role_change_v1`), may cancel while pending, and an admin approves or rejects it (`public.admin_decide_role_change_v1`, WBS 1.37 admin-session layer). An admin can never decide their own request.
-- Approval is refused while the account owns providers or holds memberships and would become `community`, or while a paid subscription is live (subscriptions are role-scoped).
-- The only other path is the governed admin RPC `admin_set_role_tier` (never on the admin's own account).
-- The database refuses **every other role write** (`ROLE_CHANGE_REQUIRES_APPROVAL`), including raw SQL, forged session settings and service code.
-- **Every role change is audited:** `ROLE_CHANGED` evidence on every path, plus `user_admin_actions` rows for admin decisions.
+- **Every account starts as `community`.** Provisioning any other role is refused (`ACCOUNT_MUST_BE_PROVISIONED_COMMUNITY`).
+- **Nobody chooses or changes their own role**, not at sign-up and not later. `public.set_my_role_and_tier` only toggles kids mode (community accounts only); any role in it is refused (`ROLE_CHANGE_REQUIRES_APPROVAL`).
+- **To become a vendor or institution (or make any role change), an account applies:** `rooted_api.request_my_role_change_v1(to_role, reason, application)`. The applicant may cancel while it's pending. **An admin must approve** (`public.admin_decide_role_change_v1`, WBS 1.37 admin-session layer). An admin can never decide their own request.
+- Approval is refused while the account would become `community` but still owns providers or holds memberships, or while a paid subscription is live (subscriptions are role-scoped).
+- **Existing roles that predate this rule are under ratification review:** each one stays in place until an admin approves (ratified) or rejects (returned to `community`, refused while providers or a subscription remain). The account holder can't cancel a ratification review.
+- The only other role path is the governed admin RPC `admin_set_role_tier`, never on the admin's own account. The database refuses **every other role write**, including raw SQL, forged session settings and service code.
+- **Every role event is audited:** requests, cancellations, decisions and every actual change (`ROLE_CHANGED` on every path) go to append-only evidence, and admin decisions also go to `user_admin_actions`.
 - `admin` is never self-service.
 
 ---
@@ -129,7 +130,7 @@ ALL deletions route through `public.account_deletion_requests` and end in a **so
 ❌ No silent feature injections  
 ❌ No monetization overrides  
 ❌ No self-service status changes  
-❌ No unapproved role changes after onboarding  
+❌ No self-selected or unapproved roles  
 
 ---
 
