@@ -103,7 +103,7 @@ Economic benefits belong to the original founder user and do **not** transfer wi
 Founder economics cannot be transferred, sold, inherited or applied to another account.
 
 §6 — Legacy state  
-The 3 `providers.is_founding_member = true` rows that predate WBS 1.23, the disabled `assign_founding_agriculture_vendor_v1` trigger and the `founding_partners_v1` view are **historical and non-authoritative**. They are frozen, grant nothing and do not consume capacity.
+The 3 `providers.is_founding_member = true` rows that predate WBS 1.23, the disabled legacy vertical-specific founding-vendor trigger and the `founding_partners_v1` view are **historical and non-authoritative**. They are frozen, grant nothing and do not consume capacity.
 
 §7 — Founder ≠ authority  
 Founder status never grants admin, provider ownership, payment, refund or any other authority.
