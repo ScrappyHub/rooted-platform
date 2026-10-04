@@ -81,7 +81,7 @@ public.user_admin_actions
 `user_admin_actions` is append-only and can never be removed with an identity.
 
 These records are permanent: rows can't be deleted and tables can't be truncated, by anyone, including the database owner:
-`user_admin_actions`, `account_governance_events_v1`, `provider_governance_events_v1`, `account_pii_redactions_v1`, `account_deletion_requests`, `role_change_requests_v1`, `billing_cancellation_requests_v1`, the Stripe event ledger (`billing_stripe_events`) and drift findings.
+`user_admin_actions`, `account_governance_events_v1`, `provider_governance_events_v1`, `account_pii_redactions_v1`, `account_deletion_requests`, `role_change_requests_v1`, `billing_cancellation_requests_v1`, the Stripe event ledger (`billing_stripe_events`), drift findings and `providers` (providers are retired, never deleted).
 
 ---
 
