@@ -65,6 +65,10 @@ Rules (database-enforced):
 
 - A paid tier (`premium`, `premium_plus`) exists only with canonical subscription authority (active subscription + matching `billing_entitlements`) or an audited admin grant.
 - Paid feature flags derive from (role, tier). Flags that no governed logic consumes are not allowed (no silent feature injections).
+- **Billing lanes.** Every paid price belongs to exactly one lane: `vendor`, or `institution:<type>` (hospital, jail, nonprofit, school, university, generic). An account may buy, switch to, or be granted access by only the prices of its own lane. A subscription on another lane's price grants nothing.
+- **Institution type.** An institution's billing type comes from its approved application or from an audited admin decision that records how the type was verified. An institution without a recorded type cannot buy a paid plan.
+- **Plan changes.** Customers change plans only within their own lane. An account without a lane may still cancel; cancelling is never blocked.
+- **Drift review.** Paid access that the payment provider does not back is detected and recorded for admin review. It is never downgraded automatically; every downgrade or dismissal is an audited admin decision with notes.
 
 ---
 
