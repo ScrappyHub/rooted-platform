@@ -55,7 +55,7 @@ Rules (database-enforced):
 - Other role changes (for example back to `community`) use `rooted_api.request_my_role_change_v1` and admin approval. Vendor/institution can't be requested that way.
 - Approval is refused while the account would become `community` but still owns providers or holds memberships, or while a paid subscription is live (subscriptions are role-scoped).
 - **Existing roles that predate this rule are under ratification review:** each one stays in place until an admin approves (ratified) or rejects (returned to `community`, refused while providers or a subscription remain). The account holder can't cancel a ratification review.
-- The only other role path is the governed admin RPC `admin_set_role_tier`, never on the admin's own account. The database refuses **every other role write**, including raw SQL, forged session settings and service code.
+- The only other role path is the governed admin RPC `admin_set_role_tier`, never on the admin's own account. The database refuses **every other role write** from application and service connections, including raw SQL and forged session settings. The only exception is break-glass (see Break-Glass Law).
 - **Every role event is audited:** requests, cancellations, decisions and every actual change (`ROLE_CHANGED` on every path) go to append-only evidence, and admin decisions also go to `user_admin_actions`.
 - `admin` is never self-service.
 
@@ -79,6 +79,17 @@ All privileged changes MUST be logged to:
 public.user_admin_actions
 
 `user_admin_actions` is append-only and can never be removed with an identity.
+
+These records are permanent: rows can't be deleted and tables can't be truncated, by anyone, including the database owner:
+`user_admin_actions`, `account_governance_events_v1`, `provider_governance_events_v1`, `account_pii_redactions_v1`, `account_deletion_requests`, `role_change_requests_v1`, `billing_cancellation_requests_v1`, the Stripe event ledger (`billing_stripe_events`) and drift findings.
+
+---
+
+## ✅ BREAK-GLASS LAW
+
+- The database-owner connection (used for migrations and emergencies) is the only connection the role, status and ownership guards let through. It is never available to the app, to service code or to admins through the API.
+- Every role, status and ownership change made through it is recorded as `BREAK_GLASS` evidence automatically. Any other break-glass action must record a `BREAK_GLASS` governance event itself, stating whose instruction it followed and why.
+- Break-glass is not a substitute for an admin decision on a real person's account. It may be used for migrations, test accounts and emergencies. Each use is listed in the next audit.
 
 ---
 
@@ -117,7 +128,7 @@ Founder status never grants admin, provider ownership, payment, refund or any ot
 ## ✅ PROVIDER OWNERSHIP & RETIREMENT LAW
 
 - **Ownership changes only by approved transfer.** The owner proposes (`rooted_api.propose_provider_ownership_transfer_v1`). The recipient, who must be an active, approved vendor or institution, accepts (`rooted_api.respond_provider_ownership_transfer_v1`). An admin approves (`public.admin_decide_provider_ownership_transfer_v1`, WBS 1.37 admin-session layer). Either party may cancel before the decision.
-- The database refuses **every other owner change** (`PROVIDER_OWNERSHIP_CHANGE_REQUIRES_APPROVAL`), including raw SQL, forged session settings and service code.
+- The database refuses **every other owner change** (`PROVIDER_OWNERSHIP_CHANGE_REQUIRES_APPROVAL`) from application and service connections, including raw SQL and forged session settings. The only exception is break-glass (see Break-Glass Law).
 - **Closing a provider means retiring it.** The owner requests (`rooted_api.request_provider_retirement_v1`) and an admin approves (`public.admin_decide_provider_retirement_v1`). `RETIRED` is terminal: the provider becomes inactive and undiscoverable, open transfers are cancelled, and **every record is kept**. Providers are never deleted.
 - A retired provider can't be transferred, reactivated or retired again.
 - Retired providers are historical. They don't block the owner's account deletion or a return to `community`. Live providers do.
