@@ -19,3 +19,11 @@ Privacy: a business may hide its street address. The pin is then moved 200-350 m
 
 ## Not stored
 No religion, age or similar attribute is stored (see Data Sovereignty Law). Dietary/food filters and holiday animations are browser-only.
+
+## Taking a seeded place off ROOTED
+Listed places come from public information, so removal is never a one-click action and a "closed" report is not a removal.
+- Removal is a submission (`seed_removal_requests_v1`, `request_seed_removal_v1`): a signed-in active account states how they are connected (owner, operator, or authorized representative), writes a statement, and uploads 1-6 proof files (license/registration, tax letter, lease or deed, utility/insurance bill, permit, or proof of control of the official site or page).
+- An admin with `provision` reviews the proof (`admin_seed_removal_decide_v1`): approve, reject, or ask for more. A reason is required and is logged. Admins cannot decide their own request.
+- Approval erases the place's details (phone, website, hours, description, address, tags) and keeps only a marker row (name, location, source ids) so a later import cannot bring it back.
+- Places already claimed by an owner are not removed this way; the owner manages them from their account (provider retirement pipeline).
+- Requests arrive in the shared admin mailbox as kind `removal`.
