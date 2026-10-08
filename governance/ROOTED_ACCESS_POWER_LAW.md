@@ -243,3 +243,9 @@ This law applies across:
 If any feature, vertical, partner, or actor attempts to bypass this law:
 
 ➡ This law wins.
+
+---
+
+## CLARIFICATION: OWNER IS A ROLE, NOT AN EXCEPTION (2026-10-10)
+
+"There are NO exceptions, including the Founder" stays absolute. The platform Owner is a database-defined admin role with the widest permission set (see ADMIN_GOVERNANCE, ADMIN_AUTH_MODEL sections 11-14). It does not bypass logging, RLS, Kids Mode protections or any prohibition in this law. Every Owner action is audited the same as any other admin's.

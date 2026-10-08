@@ -80,3 +80,11 @@ Violations trigger:
 - Legal escalation
 
 Revenue does not override sovereignty.
+
+---
+
+## SENSITIVE ATTRIBUTES ARE NOT COLLECTED (2026-10-10)
+
+ROOTED's database holds no religion, faith, age, birth date, ethnicity or similar personal attribute on any profile or account. Personal comfort settings that only change what a visitor sees, such as food filters (pork, alcohol, shellfish, dairy, nuts and so on) and holiday animations, live in the visitor's own browser, are never transmitted or stored by ROOTED, and are never visible to sellers or admins.
+
+Religious content does not run through the agriculture vertical. User videos stay private to their owner. There is no public video publishing, and Kids Mode never shows user videos or user-made listings.

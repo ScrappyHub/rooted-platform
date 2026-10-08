@@ -73,3 +73,23 @@ Violation results in:
 
 Admins are never above the law.
 
+---
+
+## ADMIN ROLES AND THE OWNER (v2, 2026-10-10)
+
+Admin power is split by role. The canonical technical definition is `ADMIN_AUTH_MODEL.md` in rooted-core (sections 11-16).
+
+| Role | May |
+|---|---|
+| Owner | everything below, plus launch switches, verification gate, billing/financial actions, account deletion/restore |
+| Supervisor (manager) | read, moderate, provision, manage technicians |
+| Technician | read, provision (approve applications and set-ups) |
+| Support | read, add notes in the shared mailbox |
+| Viewer | read |
+
+Binding rules:
+
+- The Owner is set only by a direct database change. No admin, role or API can create, change or remove the Owner, and nobody can promote themselves.
+- Every admin write checks the role permission first, then writes `public.user_admin_actions` (or a documented append-only audit trail).
+- The Owner is a role with the widest permissions. The Owner is **not** exempt from audit, RLS or any prohibition in this law.
+- Admins coordinate through a shared mailbox (applications, claims, reports, support requests, notes). Assigning or resolving needs `provision`.
