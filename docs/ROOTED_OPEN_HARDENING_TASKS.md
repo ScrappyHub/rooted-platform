@@ -352,3 +352,11 @@ Remaining work is finite and sequential:
 3) Vertical-by-vertical compliance gating (LICENSED/INSURED) where markets exist
 4) Prepared vs launched capability flags
 5) Final stress test matrix rerun before UI wiring
+
+---
+
+## STATUS UPDATE 2026-10-10
+
+Done and verified in the database: admin role matrix and owner lock (M61), provider locations (M62), moderate permission on document review and the moderation queue (M63), permission guards on all admin write RPCs and audit logging for launch switch, verification gate, lane review, provider suspend/reactivate and badge grants (M64).
+
+Still open: build the not-yet-built Kids Mode objects listed in ENFORCEMENT_MATRIX 2.9 before the `kids_mode` switch is turned on; Twilio phone verification and remove the test OTP (expires 2026-10-08); leaked-password protection toggle; Stripe live webhook check.

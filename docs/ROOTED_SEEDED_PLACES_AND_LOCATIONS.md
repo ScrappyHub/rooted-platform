@@ -1,0 +1,29 @@
+# ROOTED: SEEDED PLACES AND LOCATIONS (CANONICAL, 2026-10-10)
+
+Authority level: implementation contract.
+
+## Seeded places
+- Real farms, markets and similar places loaded from open data (OpenStreetMap, public lists) into `seed_places`, never into `providers`.
+- Seeded places are **never verified**. They show as "listed from public information" and carry source and license.
+- An owner claims a place through the normal role-application pipeline (`seed_place_claims`); an admin with `provision` decides (`admin_seed_claim_decide_v1`). Everyone starts as a community member; vendor/institution status needs approval.
+- Admin import (`admin_seed_commit_v1`): US bounds only, batches up to 2000, de-duplicated within about 200 m by normalized name, classified by `seed_category_rules`. Reports are resolved with `moderate`.
+- The map reads seeded places by viewport (zoom 8 or closer, 150 pin cap).
+
+## Business locations (`provider_locations_v1`)
+Three modes, all owner/manager-only to write (`set_my_provider_location_v1`):
+1. **verified**: street address checked on the map, apartment/suite in its own field.
+2. **typed**: the address exactly as typed, even if the map cannot find it (pin falls back to the street or town).
+3. **described**: for food stands, trucks, rural places; a description (10+ characters), nearest address or intersection, optional device location, optional "I move around".
+
+Privacy: a business may hide its street address. The pin is then moved 200-350 m (stable offset per provider) and the public sees the area only. `get_provider_location_public_v1` returns the address only when the owner chose to show it. US bounds enforced.
+
+## Not stored
+No religion, age or similar attribute is stored (see Data Sovereignty Law). Dietary/food filters and holiday animations are browser-only.
+
+## Taking a seeded place off ROOTED
+Listed places come from public information, so removal is never a one-click action and a "closed" report is not a removal.
+- Removal is a submission (`seed_removal_requests_v1`, `request_seed_removal_v1`): a signed-in active account states how they are connected (owner, operator, or authorized representative), writes a statement, and uploads 1-6 proof files (license/registration, tax letter, lease or deed, utility/insurance bill, permit, or proof of control of the official site or page).
+- An admin with `provision` reviews the proof (`admin_seed_removal_decide_v1`): approve, reject, or ask for more. A reason is required and is logged. Admins cannot decide their own request.
+- Approval erases the place's details (phone, website, hours, description, address, tags) and keeps only a marker row (name, location, source ids) so a later import cannot bring it back.
+- Places already claimed by an owner are not removed this way; the owner manages them from their account (provider retirement pipeline).
+- Requests arrive in the shared admin mailbox as kind `removal`.

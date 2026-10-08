@@ -117,15 +117,18 @@ ROOTED_VOLUNTEER_PARTICIPATION_LAW.md
 
 ## ⚙️ 2.5 ADMIN POWER & ACCESS CONTROL
 
-| Governance Law | SQL Tables | RLS | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
-|----------------|------------|------|------------------|--------------|-----------|----------------|
-| Admin Actions Must Log | user_admin_actions | Insert restricted to RPC | admin_activity_v1 | N/A | ALL admin RPCs | Audit trail visible |
-| No Silent Privilege Escalation | user_tiers | Admin cannot update directly | public_user_tier_v1 | N/A | admin_update_user_role() | No UI bypass |
-| No Direct SQL to Core Tables | ALL CORE | Canonical views deny mutation | Canonical read-only views | N/A | RPC-only mutation | UI cannot change roles |
+| Governance Law | SQL Tables | RLS / Triggers | Canonical Views | Feature Flag | Admin RPC | UI Enforcement |
+|----------------|------------|----------------|-----------------|--------------|-----------|----------------|
+| Admin Actions Must Log | user_admin_actions (append-only) | insert via definer RPC only; append-only trigger | admin_activity_log_v1 | N/A | ALL admin write RPCs via rooted_policy.log_admin_action_v1 | Activity tab on Admin team |
+| No Silent Privilege Escalation | user_tiers, admin_team_v1, platform_owners_v1 | trigger enforce_user_tiers_admin_authority_v1 (OWNER_CANNOT_BE_CHANGED, ADMIN_ROLE_CHANGE_VIA_TEAM_ONLY) | admin_my_access_v1 | N/A | admin_team_set_role_v1, admin_set_admin_v1, admin_set_role_tier | Role picker limited by caller's role |
+| Role-Scoped Permissions | admin_role_permissions_v1 | assert_admin_can_v1(perm) first statement of every admin write RPC | admin_team_list_v1 | N/A | all admin RPCs (see ADMIN_AUTH_MODEL section 12) | Role/permission matrix on Admin team |
+| No Direct SQL to Core Tables | ALL CORE | direct writes denied to clients; photo review and moderation_queue changes guarded by triggers | read-only canonical views | N/A | RPC-only mutation | UI cannot change roles |
+| Shared Operator Mailbox | admin_mailbox_items, admin_mailbox_notes | admins only | admin_mailbox_list_v1 | N/A | admin_mailbox_* | Team mailbox page |
 
 Cross-Refs:
 ROOTED_ADMIN_GOVERNANCE.md  
 ROOTED_ACCESS_POWER_LAW.md  
+rooted-core/docs/ADMIN_AUTH_MODEL.md  
 governance/ROOTED_CONSTITUTIONAL_STOP_LAYER.md
 
 ---
@@ -170,6 +173,23 @@ ROOTED_SEASONAL_KNOWLEDGE_STREAMS_LAW.md
 ROOTED_KIDS_MODE_GOVERNANCE.md
 
 ---
+
+## 2.9 IMPLEMENTATION STATUS (verified against the live database, 2026-10-10)
+
+The tables above name some objects under their target (planned) names. This list records what actually exists, so the matrix never claims more than the database enforces.
+
+| Law row | Implemented as |
+|---|---|
+| Role change RPC `admin_update_user_role` | `admin_set_role_tier`, `admin_decide_role_change_v1`, `admin_team_set_role_v1` |
+| Moderation RPC `admin_moderate_item` | `admin_moderate_submission` (+ `admin_review_document_v1`, `admin_review_lane_item_v1`) |
+| Deletion RPC `admin_process_deletion`, view `pending_deletions_v1` | `admin_decide_account_deletion_v1`, `admin_list_account_deletion_requests_v1`, table `account_deletion_requests` |
+| `admin_activity_v1` | `rooted_api.admin_activity_log_v1` |
+| `admin_set_kids_safe_state`, `admin_assign_kids_overlay`, `kids_safe_content_v1`, `kids_landmarks_v1`, `kids_seasonal_v1` | NOT BUILT. Kids Mode is off at launch (launch switch `kids_mode` = false). The kid-safe views that do exist: `kids_safe_events_v1`, `community_kids_safe_zones_v1`, `landmarks_public_kids_v1`, `seasonal_*_current_v1` with `is_kids_safe`. Build the rest before turning the switch on. |
+| `admin_export_user_data`, `public_user_profile_v1`, `public_user_tier_v1`, `profiles` | NOT BUILT. Profile data is in `user_tiers` and account tables. |
+| `admin_moderate_conversation` | NOT BUILT. |
+| `admin_rotate_seasonal_month`, `seasonal_recipes_v1`, `sanctuary_public_profile_v1` | NOT BUILT as named; seasonal views are `seasonal_*_current_v1`. |
+
+Rule: nothing in this table is marked done until it exists in the database and has a test.
 
 ## 🔨 3. MUTATION RULES (CANONICAL)
 ❌ You may NOT mutate directly:
